@@ -6,10 +6,11 @@ const triviaBoard = (() => {
     
     console.log(gridArea)
     const createQuestionGrid = (questionTotal) =>{
+        let array = [1,2,3,4,5,6,7,8,9,10]
         for (let i=0;i<questionTotal;i++){
             let questionDiv = document.createElement('div');
-            questionDiv.classList.add('class');
-            questionDiv.textContent = 'test';
+            questionDiv.classList.add('question');
+            questionDiv.textContent = array[i];
             gridArea.appendChild(questionDiv);
         }
     }
@@ -19,3 +20,5 @@ const triviaBoard = (() => {
         createQuestionGrid,
     }
 })();
+
+triviaBoard.createQuestionGrid(36)

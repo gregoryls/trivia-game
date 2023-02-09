@@ -1,3 +1,16 @@
 body{
     background-color: gray;
 }
+
+#gridWrapper{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.question{
+    background-color: rgb(48, 3, 48);
+    aspect-ratio: 2/1;
+    width: auto;
+    
+}
