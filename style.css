@@ -8,7 +8,7 @@ body{
     gap: 10px;
 }
 
-.question{
+.question, .questionTopic{
     background-color: rgb(48, 3, 48);
     aspect-ratio: 2/1;
     width: auto;
