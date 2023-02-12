@@ -14,3 +14,30 @@ body{
     width: auto;
     
 }
+
+.modal{
+    width: 40%;
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 4px;
+    padding: 2rem;
+    text-align: center;
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    z-index: 2;
+ }
+ 
+ .overlay{
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     /* width: 100%; */
+     background-color: rgba(0, 0, 0, 0.5);
+     backdrop-filter: blur(3px);
+ }
+ .hidden{
+     display: none;
+ }
