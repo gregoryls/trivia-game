@@ -38,3 +38,5 @@ const triviaBoard = (() => {
 })();
 
 triviaBoard.createQuestionGrid(36)
+
+document.querySelector('h1').innerHTML = '<img src=\'/img/Lunar-Eclipse-Leona.webp\'>';
