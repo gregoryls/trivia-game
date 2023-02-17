@@ -2,6 +2,15 @@
 //to be clicked on and open a modal with the question
 //TODO create player iife
 
+Papa.parse('questions/Trivia - Questions.csv', 
+    {   
+        download:true,
+        complete: function(results){
+            console.log(results.data);
+        }
+    }
+);
+
 const triviaBoard = (() => {
     let gridArea = document.querySelector('#gridWrapper');
     
