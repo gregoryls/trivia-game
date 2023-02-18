@@ -73,6 +73,11 @@ const playerSetup = (() => {
     player2.setPlayerName(2);
     player3.setPlayerName(3);
     player4.setPlayerName(4);
+
+    player1.setPlayerScore(1);
+    player2.setPlayerScore(2);
+    player3.setPlayerScore(3);
+    player4.setPlayerScore(4);
     //allow players to change their displayed name
     const userName = (player) =>{
         let tempName = player.name;
