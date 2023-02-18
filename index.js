@@ -51,9 +51,13 @@ const player = (name,number) =>{
         document.querySelector(`#player${playerNumber}`).textContent = this.name + ':';
         
     }
+    const setPlayerScore = function (playerNumber) {
+        document.querySelector(`#player${playerNumber}Score`).textContent = this.score;
+    }
+    this.name = name;
     this.score = 0;
     this.number = number;
-return {name, number, score, setPlayerName,};
+return {name, number, score, setPlayerName, setPlayerScore};
 }
 
 
@@ -67,8 +71,8 @@ const playerSetup = (() => {
     //set default usernames
     player1.setPlayerName(1);
     player2.setPlayerName(2);
-    player1.setPlayerName(3);
-    player2.setPlayerName(4);
+    player3.setPlayerName(3);
+    player4.setPlayerName(4);
     //allow players to change their displayed name
     const userName = (player) =>{
         let tempName = player.name;
@@ -77,11 +81,18 @@ const playerSetup = (() => {
         if (player.name === null) player.name = tempName;
         player.setPlayerName(player.number);
     }
+    //player names can be clicked to open the change dialogue
     document.querySelector('#player1').addEventListener('click',() =>{
         userName(player1)
     });
     document.querySelector('#player2').addEventListener('click',() =>{
         userName(player2)
+    });
+    document.querySelector('#player3').addEventListener('click',() =>{
+        userName(player3)
+    });
+    document.querySelector('#player4').addEventListener('click',() =>{
+        userName(player4)
     });
 })();
 
