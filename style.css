@@ -41,3 +41,8 @@ body{
  .hidden{
      display: none;
  }
+
+ #playerScores{
+     display: flex;
+     justify-content: space-evenly;
+ }
