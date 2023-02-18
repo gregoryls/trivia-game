@@ -47,17 +47,17 @@ const triviaBoard = (() => {
 })();
 
 const player = (name,number) =>{
-    const setPlayerName = function (playerNumber) {
+    const displayPlayerName = function (playerNumber) {
         document.querySelector(`#player${playerNumber}`).textContent = this.name + ':';
         
     }
-    const setPlayerScore = function (playerNumber) {
+    const displayPlayerScore = function (playerNumber) {
         document.querySelector(`#player${playerNumber}Score`).textContent = this.score;
     }
     this.name = name;
     this.score = 0;
     this.number = number;
-return {name, number, score, setPlayerName, setPlayerScore};
+return {name, number, score, displayPlayerName, displayPlayerScore};
 }
 
 
@@ -68,23 +68,23 @@ const player3 = player('Stan',3);
 const player4 = player('Taylor',4);
 
 const playerSetup = (() => {
-    //set default usernames
-    player1.setPlayerName(1);
-    player2.setPlayerName(2);
-    player3.setPlayerName(3);
-    player4.setPlayerName(4);
-
-    player1.setPlayerScore(1);
-    player2.setPlayerScore(2);
-    player3.setPlayerScore(3);
-    player4.setPlayerScore(4);
+    //display default usernames
+    player1.displayPlayerName(1);
+    player2.displayPlayerName(2);
+    player3.displayPlayerName(3);
+    player4.displayPlayerName(4);
+    //display intial (zero) player scores
+    player1.displayPlayerScore(1);
+    player2.displayPlayerScore(2);
+    player3.displayPlayerScore(3);
+    player4.displayPlayerScore(4);
     //allow players to change their displayed name
     const userName = (player) =>{
         let tempName = player.name;
         player.name = prompt('Please Enter your name','Josh Gunson');
         //prevent player name from disappearing by using previous name
         if (player.name === null) player.name = tempName;
-        player.setPlayerName(player.number);
+        player.displayPlayerName(player.number);
     }
     //player names can be clicked to open the change dialogue
     document.querySelector('#player1').addEventListener('click',() =>{
