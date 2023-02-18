@@ -46,6 +46,44 @@ const triviaBoard = (() => {
     }
 })();
 
+const player = (name,number) =>{
+    const setPlayerName = function (playerNumber) {
+        document.querySelector(`#player${playerNumber}`).textContent = this.name + ':';
+        
+    }
+    this.score = 0;
+    this.number = number;
+return {name, number, score, setPlayerName,};
+}
+
+
+//Initialize the player objects
+const player1 = player('Chase',1);
+const player2 = player('Ethan',2);
+const player3 = player('Stan',3);
+const player4 = player('Taylor',4);
+
+const playerSetup = (() => {
+    //set default usernames
+    player1.setPlayerName(1);
+    player2.setPlayerName(2);
+    player1.setPlayerName(3);
+    player2.setPlayerName(4);
+    //allow players to change their displayed name
+    const userName = (player) =>{
+        let tempName = player.name;
+        player.name = prompt('Please Enter your name','Josh Gunson');
+        //prevent player name from disappearing by using previous name
+        if (player.name === null) player.name = tempName;
+        player.setPlayerName(player.number);
+    }
+    document.querySelector('#player1').addEventListener('click',() =>{
+        userName(player1)
+    });
+    document.querySelector('#player2').addEventListener('click',() =>{
+        userName(player2)
+    });
+})();
 
 const questionModal = (()=>{
     //create a modal that contains general help information on playing the game
@@ -77,4 +115,4 @@ const questionModal = (()=>{
 
 triviaBoard.createQuestionGrid(36)
 
-document.querySelector('h1').innerHTML = '<img src=\'/img/Lunar-Eclipse-Leona.webp\'>';
+// document.querySelector('h1').innerHTML = '<img src=\'/img/Lunar-Eclipse-Leona.webp\'>';
