@@ -46,3 +46,8 @@ body{
      display: flex;
      justify-content: space-evenly;
  }
+ .player{
+     display: flex;
+     align-items: center;
+     gap: 2px;
+ }
