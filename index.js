@@ -45,7 +45,7 @@ const triviaBoard = (() => {
                 //00,20,40,60,80,100
                 questionDiv.classList.add('questionTopic');
                 //use every second array to account for spreadsheet format
-                questionDiv.textContent = getQuestionData.questions[2*i][0];
+                questionDiv.innerHTML = getQuestionData.questions[2*i][0];
             } else {
                 questionDiv.classList.add('question');
                 questionDiv.textContent = questionValues[i-6];
