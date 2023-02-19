@@ -5,6 +5,9 @@
 //https://stackoverflow.com/questions/62905933/iterating-over-results-of-papa-parse-object
 //review these for persuing await/promises with papaparse
 
+//add class to a clicked question to toggle a new css class to remove text and set background color to body background
+
+//also disable it from being clicked again
 
 const getQuestionData = (() =>{
     let questions = [];
@@ -14,7 +17,8 @@ const getQuestionData = (() =>{
             download:true,
             complete: function(results){
                 getQuestionData.questions = results.data;
-                triviaBoard.createQuestionGrid(36)
+                triviaBoard.createQuestionGrid(36);
+                questionModal.addModalEventListener();
                 console.log(results.data);
             }
         }
@@ -116,7 +120,7 @@ const playerSetup = (() => {
 })();
 
 const questionModal = (()=>{
-    //create a modal that contains general help information on playing the game
+    //create a modal that contains a question based on the clicked question tile
     // TODO convert button to question square div
     // const openModalButton = document.querySelector('#helpModal');
     const modal = document.querySelector('.modal');
@@ -137,10 +141,22 @@ const questionModal = (()=>{
     });
 
     // TODO convert this into working when a question square is clicked
-    // openModalButton.addEventListener('click',()=> {
-    //     removeClass(modal,'hidden');
-    //     removeClass(overlay,'hidden');
-    // });
+    const addModalEventListener = ()=>{
+        let questions = document.querySelectorAll('.question');
+        console.log(questions); 
+        questions.forEach(question =>{
+            question.addEventListener('click',()=> {
+                removeClass(modal,'hidden');
+                removeClass(overlay,'hidden');
+            });
+        });
+        // openModalButton.addEventListener('click',()=> {
+        //     removeClass(modal,'hidden');
+        //     removeClass(overlay,'hidden');
+        // });
+    }
+    return {addModalEventListener,
+        }
 })();
 
 // triviaBoard.createQuestionGrid(36)

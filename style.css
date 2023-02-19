@@ -9,7 +9,7 @@ body{
 }
 
 .question, .questionTopic{
-    background-color: rgba(48, 3, 48, 0.911);
+    background-color: rgba(48, 3, 48, 0.74);
     aspect-ratio: 2/1;
     width: auto;
     /* text-align appears to be needed for top left grid square...no idea why */
