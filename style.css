@@ -9,9 +9,15 @@ body{
 }
 
 .question, .questionTopic{
-    background-color: rgb(48, 3, 48);
+    background-color: rgba(48, 3, 48, 0.911);
     aspect-ratio: 2/1;
     width: auto;
+    /* text-align appears to be needed for top left grid square...no idea why */
+    text-align: center;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
     
 }
 
@@ -21,7 +27,7 @@ body{
     border: 1px black solid;
     border-radius: 4px;
     padding: 2rem;
-    text-align: center;
+    /* text-align: center; */
     position: fixed;
     top: 20%;
     left: 30%;
