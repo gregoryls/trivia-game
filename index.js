@@ -17,7 +17,7 @@ const getQuestionData = (() =>{
             download:true,
             complete: function(results){
                 getQuestionData.questions = results.data;
-                triviaBoard.createQuestionGrid(36);
+                triviaBoard.createQuestionGrid(42);
                 questionModal.addModalEventListener();
                 console.log(results.data);
             }
@@ -38,7 +38,8 @@ const triviaBoard = (() => {
                               200,200,200,200,200,200,
                               300,300,300,300,300,300,
                               400,400,400,400,400,400,
-                              500,500,500,500,500,500]
+                              500,500,500,500,500,500,
+                              600,600,600,600,600,600]
         for (let i=0;i<questionTotal;i++){
             // for (i;i<6;i++){
             //     console.log(i);
@@ -144,16 +145,23 @@ const questionModal = (()=>{
     const addModalEventListener = ()=>{
         let questions = document.querySelectorAll('.question');
         console.log(questions); 
-        questions.forEach(question =>{
-            question.addEventListener('click',()=> {
+
+        for (let i=0;i<questions.length;i++){
+            questions[i].addEventListener('click',()=> {
+                if (i<6) modal.innerHTML = getQuestionData.questions[2*i][1];
+                if (i<12 && i>5) modal.innerHTML = getQuestionData.questions[2*i-12][2];
+                if (i<18 && i>11) modal.innerHTML = getQuestionData.questions[2*i-24][3];
+                if (i<24 && i>17) modal.innerHTML = getQuestionData.questions[2*i-36][4];
+                if (i<30 && i>23) modal.innerHTML = getQuestionData.questions[2*i-48][5];
+                if (i<36 && i>29) modal.innerHTML = getQuestionData.questions[2*i-60][6];
+                
                 removeClass(modal,'hidden');
                 removeClass(overlay,'hidden');
             });
-        });
-        // openModalButton.addEventListener('click',()=> {
-        //     removeClass(modal,'hidden');
-        //     removeClass(overlay,'hidden');
-        // });
+        }
+        
+        
+        
     }
     return {addModalEventListener,
         }
