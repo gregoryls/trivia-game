@@ -1,21 +1,34 @@
 //TODO dynamically create 5 columns of 6 rows of boxes
 //to be clicked on and open a modal with the question
 //TODO create player iife
+//https://stackoverflow.com/questions/56427009/how-to-return-papa-parsed-csv-via-promise-async-await
+//https://stackoverflow.com/questions/62905933/iterating-over-results-of-papa-parse-object
+//review these for persuing await/promises with papaparse
 
-Papa.parse('questions/Trivia - Questions.csv', 
-    {   
-        download:true,
-        complete: function(results){
-            console.log(results.data);
+
+const getQuestionData = (() =>{
+    let questions = [];
+    //TODO wrap parse into it's own function
+    Papa.parse('questions/Trivia - Questions.csv', 
+        {   
+            download:true,
+            complete: function(results){
+                getQuestionData.questions = results.data;
+                triviaBoard.createQuestionGrid(36)
+                console.log(results.data);
+            }
         }
-    }
-);
+    );
+
+    return {questions,}
+})();
 
 const triviaBoard = (() => {
     let gridArea = document.querySelector('#gridWrapper');
     
     console.log(gridArea)
     const createQuestionGrid = (questionTotal) =>{
+        //TODO consider adding point values later as a separate function
         //point values for rows 1-5 on the question grid. 
         let questionValues = [100,100,100,100,100,100,
                               200,200,200,200,200,200,
@@ -29,8 +42,10 @@ const triviaBoard = (() => {
             let questionDiv = document.createElement('div');
             //treat the first six boxes differently to turn them into topic headers. 
             if (i<6) {
+                //00,20,40,60,80,100
                 questionDiv.classList.add('questionTopic');
-                questionDiv.textContent = 'topic';
+                //use every second array to account for spreadsheet format
+                questionDiv.textContent = getQuestionData.questions[2*i][0];
             } else {
                 questionDiv.classList.add('question');
                 questionDiv.textContent = questionValues[i-6];
@@ -39,7 +54,6 @@ const triviaBoard = (() => {
             gridArea.appendChild(questionDiv);
         }
     }
-
 
     return {
         createQuestionGrid,
@@ -129,6 +143,6 @@ const questionModal = (()=>{
     // });
 })();
 
-triviaBoard.createQuestionGrid(36)
+// triviaBoard.createQuestionGrid(36)
 
 // document.querySelector('h1').innerHTML = '<img src=\'/img/Lunar-Eclipse-Leona.webp\'>';
