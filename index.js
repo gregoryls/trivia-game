@@ -1,13 +1,10 @@
-//TODO dynamically create 5 columns of 6 rows of boxes
-//to be clicked on and open a modal with the question
-//TODO create player iife
+
 //https://stackoverflow.com/questions/56427009/how-to-return-papa-parsed-csv-via-promise-async-await
 //https://stackoverflow.com/questions/62905933/iterating-over-results-of-papa-parse-object
 //review these for persuing await/promises with papaparse
+//TODO remove text instead of setting it to body color
 
-//add class to a clicked question to toggle a new css class to remove text and set background color to body background
 
-//also disable it from being clicked again
 
 const getQuestionData = (() =>{
     let questions = [];
@@ -154,7 +151,9 @@ const questionModal = (()=>{
 
         for (let i=0;i<questions.length;i++){
             questions[i].addEventListener('click',()=> {
-                //associated numbers are due to the format of question csv input
+                //prevent tile from being opened twice
+                if (questions[i].classList.contains('taken')) return;
+                //associated array numbers are due to the format of question csv input
                 if (i<6) modal.innerHTML = getQuestionData.questions[2*i][1];
                 if (i<12 && i>5) modal.innerHTML = getQuestionData.questions[2*i-12][2];
                 if (i<18 && i>11) modal.innerHTML = getQuestionData.questions[2*i-24][3];
@@ -171,6 +170,21 @@ const questionModal = (()=>{
                     btn.textContent = playerNames[j];
                     div.appendChild(btn);
                 }
+
+                //add an answer button to the modal that reveals the answer when clicked, button 
+                //adds before the user buttons, answer adds to bottom of modal
+                const btn = document.createElement('button');
+                btn.textContent = 'Answer';
+                btn.addEventListener('click',()=>{
+                    //associated array numbers are due to the format of question csv input
+                if (i<6) modal.innerHTML += getQuestionData.questions[2*i+1][1];
+                if (i<12 && i>5) modal.innerHTML += getQuestionData.questions[2*i-11][2];
+                if (i<18 && i>11) modal.innerHTML += getQuestionData.questions[2*i-23][3];
+                if (i<24 && i>17) modal.innerHTML += getQuestionData.questions[2*i-35][4];
+                if (i<30 && i>23) modal.innerHTML += getQuestionData.questions[2*i-47][5];
+                if (i<36 && i>29) modal.innerHTML += getQuestionData.questions[2*i-59][6];
+                });
+                modal.appendChild(btn);
                 modal.appendChild(div);
 
                 addClass(questions[i], 'taken');
