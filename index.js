@@ -148,6 +148,7 @@ const questionModal = (()=>{
 
         for (let i=0;i<questions.length;i++){
             questions[i].addEventListener('click',()=> {
+                //associated numbers are due to the format of question csv input
                 if (i<6) modal.innerHTML = getQuestionData.questions[2*i][1];
                 if (i<12 && i>5) modal.innerHTML = getQuestionData.questions[2*i-12][2];
                 if (i<18 && i>11) modal.innerHTML = getQuestionData.questions[2*i-24][3];
@@ -155,6 +156,8 @@ const questionModal = (()=>{
                 if (i<30 && i>23) modal.innerHTML = getQuestionData.questions[2*i-48][5];
                 if (i<36 && i>29) modal.innerHTML = getQuestionData.questions[2*i-60][6];
                 
+                addClass(questions[i], 'taken');
+
                 removeClass(modal,'hidden');
                 removeClass(overlay,'hidden');
             });

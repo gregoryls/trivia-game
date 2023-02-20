@@ -21,6 +21,11 @@ body{
     
 }
 
+.taken{
+    background-color: gray;
+    color: gray
+}
+
 .modal{
     width: 40%;
     background-color: white;
