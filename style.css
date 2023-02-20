@@ -1,17 +1,19 @@
 body{
     background-color: gray;
+    height: 100vh;
 }
 
 #gridWrapper{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
+    height: 50vh;
 }
 
 .question, .questionTopic{
     background-color: rgba(48, 3, 48, 0.74);
     aspect-ratio: 2/1;
-    width: auto;
+    width: min(15vw,200px);
     /* text-align appears to be needed for top left grid square...no idea why */
     text-align: center;
     display: flex;
@@ -27,7 +29,7 @@ body{
 }
 
 .modal{
-    width: 40%;
+    width: 60%;
     background-color: white;
     border: 1px black solid;
     border-radius: 4px;
@@ -37,6 +39,11 @@ body{
     top: 20%;
     left: 30%;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
  }
  
  .overlay{
@@ -61,4 +68,8 @@ body{
      display: flex;
      align-items: center;
      gap: 2px;
+ }
+
+ img {
+     height: 30vh;
  }

@@ -162,18 +162,23 @@ const questionModal = (()=>{
                 if (i<30 && i>23) modal.innerHTML = getQuestionData.questions[2*i-48][5];
                 if (i<36 && i>29) modal.innerHTML = getQuestionData.questions[2*i-60][6];
                 
+                let div = document.createElement('div')
+                div.classList.add('scoreButtons')
                 for (let j=0;j<4;j++){
                     //set loop length to number of players
                     //add buttons to the modal that will award points to the correct player(s)
                     const btn = document.createElement('button');
                     btn.textContent = playerNames[j];
-                    modal.appendChild(btn);
+                    div.appendChild(btn);
                 }
+                modal.appendChild(div);
 
                 addClass(questions[i], 'taken');
 
                 removeClass(modal,'hidden');
                 removeClass(overlay,'hidden');
+
+                
             });
         }
         
