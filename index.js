@@ -85,6 +85,8 @@ const player1 = player('Chase',1);
 const player2 = player('Ethan',2);
 const player3 = player('Stan',3);
 const player4 = player('Taylor',4);
+ 
+const playerNames = [player1.name,player2.name,player3.name,player4.name];
 
 const playerSetup = (() => {
     //display default usernames
@@ -126,6 +128,7 @@ const questionModal = (()=>{
     // const openModalButton = document.querySelector('#helpModal');
     const modal = document.querySelector('.modal');
     const overlay = document.querySelector('.overlay');
+    
 
     const removeClass = (element,className) =>{
         element.classList.remove(className);
@@ -134,6 +137,9 @@ const questionModal = (()=>{
     const addClass = (element,className) =>{
         element.classList.add(className);
     }
+
+
+
     //overlay provides a semi-transparent blur behind the modal to help focus attention on modal
     //when the overlay background is clicked anywhere, the modal regains the hidden class and disappears
     overlay.addEventListener('click', ()=>{
@@ -156,6 +162,14 @@ const questionModal = (()=>{
                 if (i<30 && i>23) modal.innerHTML = getQuestionData.questions[2*i-48][5];
                 if (i<36 && i>29) modal.innerHTML = getQuestionData.questions[2*i-60][6];
                 
+                for (let j=0;j<4;j++){
+                    //set loop length to number of players
+                    //add buttons to the modal that will award points to the correct player(s)
+                    const btn = document.createElement('button');
+                    btn.textContent = playerNames[j];
+                    modal.appendChild(btn);
+                }
+
                 addClass(questions[i], 'taken');
 
                 removeClass(modal,'hidden');
