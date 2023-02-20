@@ -172,6 +172,8 @@ const questionModal = (()=>{
                     const btn = document.createElement('button');
                     btn.textContent = playerNames[j];
                     btn.addEventListener('click',()=>{
+                        //checks for clicked class added later to prevent awarding points more than once
+                        if (btn.classList.contains('clicked')) return;
                         //get question value from the clicked tile
                         currentScore = parseInt(questions[i].textContent);
                         //add current score to the appropriate player when clicked
@@ -179,6 +181,7 @@ const questionModal = (()=>{
                         : j===1? player2.displayPlayerScore(2,currentScore)
                         : j===2? player3.displayPlayerScore(3,currentScore)
                         : player4.displayPlayerScore(4,currentScore);
+                        btn.classList.add('clicked');
                     })
                     div.appendChild(btn);
                 }
