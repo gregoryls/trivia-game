@@ -68,6 +68,7 @@ const player = (name,number) =>{
         
     }
     const displayPlayerScore = function (playerNumber, scoreToAdd) {
+        //thank about splitting this function into two functions
         this.score += scoreToAdd;
         document.querySelector(`#player${playerNumber}Score`).textContent = this.score;
     }
@@ -171,9 +172,13 @@ const questionModal = (()=>{
                     const btn = document.createElement('button');
                     btn.textContent = playerNames[j];
                     btn.addEventListener('click',()=>{
+                        //get question value from the clicked tile
                         currentScore = parseInt(questions[i].textContent);
-                        console.log(currentScore);
-                        `player${j+1}`.score +=currentScore;
+                        //add current score to the appropriate player when clicked
+                        j===0 ? player1.displayPlayerScore(1,currentScore)
+                        : j===1? player2.displayPlayerScore(2,currentScore)
+                        : j===2? player3.displayPlayerScore(3,currentScore)
+                        : player4.displayPlayerScore(4,currentScore);
                     })
                     div.appendChild(btn);
                 }
