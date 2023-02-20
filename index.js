@@ -67,7 +67,8 @@ const player = (name,number) =>{
         document.querySelector(`#player${playerNumber}`).textContent = this.name + ':';
         
     }
-    const displayPlayerScore = function (playerNumber) {
+    const displayPlayerScore = function (playerNumber, scoreToAdd) {
+        this.score += scoreToAdd;
         document.querySelector(`#player${playerNumber}Score`).textContent = this.score;
     }
     this.name = name;
@@ -92,10 +93,10 @@ const playerSetup = (() => {
     player3.displayPlayerName(3);
     player4.displayPlayerName(4);
     //display intial (zero) player scores
-    player1.displayPlayerScore(1);
-    player2.displayPlayerScore(2);
-    player3.displayPlayerScore(3);
-    player4.displayPlayerScore(4);
+    player1.displayPlayerScore(1,0);
+    player2.displayPlayerScore(2,0);
+    player3.displayPlayerScore(3,0);
+    player4.displayPlayerScore(4,0);
     //allow players to change their displayed name
     const userName = (player) =>{
         let tempName = player.name;
@@ -123,6 +124,7 @@ const questionModal = (()=>{
     //create a modal that contains a question based on the clicked question tile
     // TODO convert button to question square div
     // const openModalButton = document.querySelector('#helpModal');
+    let currentScore = 0;
     const modal = document.querySelector('.modal');
     const overlay = document.querySelector('.overlay');
     
@@ -168,6 +170,11 @@ const questionModal = (()=>{
                     //add buttons to the modal that will award points to the correct player(s)
                     const btn = document.createElement('button');
                     btn.textContent = playerNames[j];
+                    btn.addEventListener('click',()=>{
+                        currentScore = parseInt(questions[i].textContent);
+                        console.log(currentScore);
+                        `player${j+1}`.score +=currentScore;
+                    })
                     div.appendChild(btn);
                 }
 
