@@ -66,6 +66,7 @@ body{
  #playerScores{
      display: flex;
      justify-content: space-evenly;
+     font-size: 30px;
  }
  .player{
      display: flex;
