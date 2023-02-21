@@ -74,3 +74,7 @@ body{
  img {
      height: 30vh;
  }
+ .scoreButtons{
+     display: flex;
+     gap: 10px;
+ }
