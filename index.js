@@ -163,7 +163,25 @@ const questionModal = (()=>{
                 if (i<24 && i>17) modal.innerHTML = getQuestionData.questions[2*i-36][4];
                 if (i<30 && i>23) modal.innerHTML = getQuestionData.questions[2*i-48][5];
                 if (i<36 && i>29) modal.innerHTML = getQuestionData.questions[2*i-60][6];
+
+                currentScore = parseInt(questions[i].textContent);
+                console.log(currentScore)
                 
+                
+
+                //add an answer button to the modal that reveals the answer when clicked, button 
+                //adds before the user buttons, answer adds to bottom of modal
+                const btn = document.createElement('button');
+                btn.textContent = 'Answer';
+                btn.addEventListener('click',()=>{
+                    //associated array numbers are due to the format of question csv input
+                if (i<6) modal.innerHTML += getQuestionData.questions[2*i+1][1];
+                if (i<12 && i>5) modal.innerHTML += getQuestionData.questions[2*i-11][2];
+                if (i<18 && i>11) modal.innerHTML += getQuestionData.questions[2*i-23][3];
+                if (i<24 && i>17) modal.innerHTML += getQuestionData.questions[2*i-35][4];
+                if (i<30 && i>23) modal.innerHTML += getQuestionData.questions[2*i-47][5];
+                if (i<36 && i>29) modal.innerHTML += getQuestionData.questions[2*i-59][6];
+
                 let div = document.createElement('div')
                 div.classList.add('scoreButtons')
                 for (let j=0;j<4;j++){
@@ -185,22 +203,13 @@ const questionModal = (()=>{
                     })
                     div.appendChild(btn);
                 }
-
-                //add an answer button to the modal that reveals the answer when clicked, button 
-                //adds before the user buttons, answer adds to bottom of modal
-                const btn = document.createElement('button');
-                btn.textContent = 'Answer';
-                btn.addEventListener('click',()=>{
-                    //associated array numbers are due to the format of question csv input
-                if (i<6) modal.innerHTML += getQuestionData.questions[2*i+1][1];
-                if (i<12 && i>5) modal.innerHTML += getQuestionData.questions[2*i-11][2];
-                if (i<18 && i>11) modal.innerHTML += getQuestionData.questions[2*i-23][3];
-                if (i<24 && i>17) modal.innerHTML += getQuestionData.questions[2*i-35][4];
-                if (i<30 && i>23) modal.innerHTML += getQuestionData.questions[2*i-47][5];
-                if (i<36 && i>29) modal.innerHTML += getQuestionData.questions[2*i-59][6];
-                });
-                modal.appendChild(btn);
                 modal.appendChild(div);
+
+                });
+                
+                modal.appendChild(btn);
+                
+                
 
                 addClass(questions[i], 'taken');
 
@@ -215,6 +224,7 @@ const questionModal = (()=>{
         
     }
     return {addModalEventListener,
+            currentScore,
         }
 })();
 
