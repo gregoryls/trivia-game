@@ -4,7 +4,9 @@
 //review these for persuing await/promises with papaparse
 //TODO remove text instead of setting it to body color
 
+//TODO remove the various console.log debugging lines
 
+//TODO change file from source document to user uploaded via button
 
 const getQuestionData = (() =>{
     let questions = [];
