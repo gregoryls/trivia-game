@@ -7,23 +7,35 @@
 //TODO remove the various console.log debugging lines
 
 //TODO change file from source document to user uploaded via button
+//take away upload section after upload button pressed
+
+const fileInput = document.getElementById('fileInput');
+const upload = document.getElementById('upload');
+
+upload.addEventListener('click',() => {
+    getQuestionData.csvParse(fileInput);
+});
 
 const getQuestionData = (() =>{
     let questions = [];
     //TODO wrap parse into it's own function
-    Papa.parse('questions/Trivia - Questions.csv', 
-        {   
-            download:true,
-            complete: function(results){
-                getQuestionData.questions = results.data;
-                triviaBoard.createQuestionGrid(42);
-                questionModal.addModalEventListener();
-                console.log(results.data);
-            }
-        }
-    );
 
-    return {questions,}
+    const csvParse = (csvFile) =>{
+        Papa.parse(csvFile.files[0], 
+            {   
+                download:true,
+                complete: function(results){
+                    getQuestionData.questions = results.data;
+                    triviaBoard.createQuestionGrid(42);
+                    questionModal.addModalEventListener();
+                    console.log(results.data);
+                }
+            }
+        );
+    }
+    
+
+    return {questions,csvParse,}
 })();
 
 const triviaBoard = (() => {
