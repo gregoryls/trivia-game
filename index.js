@@ -14,6 +14,7 @@ const upload = document.getElementById('upload');
 
 upload.addEventListener('click',() => {
     getQuestionData.csvParse(fileInput);
+    document.getElementById('uploadWrapper').remove();
 });
 
 const getQuestionData = (() =>{
