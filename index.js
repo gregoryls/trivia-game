@@ -179,7 +179,7 @@ const questionModal = (()=>{
                 if (i<30 && i>23) modal.innerHTML = getQuestionData.questions[2*i-48][5];
                 if (i<36 && i>29) modal.innerHTML = getQuestionData.questions[2*i-60][6];
 
-                currentScore = parseInt(questions[i].textContent);
+                currentScore = parseInt(questions[i].textContent,10);
                 console.log(currentScore)
                 
                 
@@ -208,7 +208,7 @@ const questionModal = (()=>{
                         //checks for clicked class added later to prevent awarding points more than once
                         if (btn.classList.contains('clicked')) return;
                         //get question value from the clicked tile
-                        currentScore = parseInt(questions[i].textContent);
+                        currentScore = parseInt(questions[i].textContent,10);
                         //add current score to the appropriate player when clicked
                         j===0 ? player1.displayPlayerScore(1,currentScore)
                         : j===1? player2.displayPlayerScore(2,currentScore)
