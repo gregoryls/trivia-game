@@ -1,15 +1,47 @@
-<head><script defer src="index.bundle.js"></script></head>Html Webpack Plugin:
-<pre>
-Error: Child compilation failed:
-Module not found: Error: Can't resolve 'E:\Users\gregls\repos\trivia-game\node_modules\html-webpack-plugin\lib\loader.js' in 'E:\Users\gregls\repos\trivia-game'
-ModuleNotFoundError: Module not found: Error: Can't resolve 'E:\Users\gregls\repos\trivia-game\node_modules\html-webpack-plugin\lib\loader.js' in 'E:\Users\gregls\repos\trivia-game'
-    at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\Compilation.js:2022:28
-    at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:817:13
-    at eval (eval at create (E:\Users\gregls\repos\trivia-game\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
-    at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:275:22
-    at eval (eval at create (E:\Users\gregls\repos\trivia-game\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
-    at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:448:22
-    at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:118:11
-    at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:654:23
-    at E:\Users\gregls\repos\trivia-game\node_modules\neo-async\async.js:2830:7
-    at done (E:\Users\gregls\repos\trivia-game\node_modules\neo-async\async.js:2925:13)</pre>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia Friction</title>
+
+    <link rel="stylesheet" href="style.css" />
+  <script defer src="index.bundle.js"></script></head>
+  <body>
+    <header id="title">
+      <h1>Trivia Friction</h1>
+    </header>
+
+    <section id="uploadWrapper">
+      <input type="file" id="fileInput" accept=".csv" />
+      <button id="upload">Upload Questions</button>
+    </section>
+
+    <section id="playerScores">
+      <div class="player">
+        <p id="player1"></p>
+        <p class="score" id="player1Score"></p>
+      </div>
+      <div class="player">
+        <p id="player2"></p>
+        <p class="score" id="player2Score"></p>
+      </div>
+      <div class="player">
+        <p id="player3"></p>
+        <p class="score" id="player3Score"></p>
+      </div>
+      <div class="player">
+        <p id="player4"></p>
+        <p class="score" id="player4Score"></p>
+      </div>
+    </section>
+    <section id="game">
+      <div id="gridWrapper"></div>
+    </section>
+    <div class="modal hidden"></div>
+    <div class="overlay hidden"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
