@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/gregoryls/trivia-game#readme",
   "dependencies": {
-    "papaparse": "^5.3.2"
+    "papaparse": "^5.4.1"
   },
   "devDependencies": {
     "css-loader": "^6.8.1",
