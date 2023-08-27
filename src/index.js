@@ -25,7 +25,7 @@ const getQuestionData = (() => {
   //TODO wrap parse into it's own function
 
   const csvParse = (csvFile) => {
-    Papa.parse("questions/Trivia - Questions.csv", {
+    Papa.parse("../src/questions/Trivia - Questions.csv", {
       download: true,
       complete: function (results) {
         getQuestionData.questions = results.data;
