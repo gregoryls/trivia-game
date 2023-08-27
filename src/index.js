@@ -1,4 +1,5 @@
 import "./style.css";
+import { Papa } from "papaparse";
 
 //https://stackoverflow.com/questions/56427009/how-to-return-papa-parsed-csv-via-promise-async-await
 //https://stackoverflow.com/questions/62905933/iterating-over-results-of-papa-parse-object
