@@ -1,5 +1,5 @@
 import "./style.css";
-import { Papa } from "papaparse";
+import Papa from "papaparse";
 
 //https://stackoverflow.com/questions/56427009/how-to-return-papa-parsed-csv-via-promise-async-await
 //https://stackoverflow.com/questions/62905933/iterating-over-results-of-papa-parse-object
@@ -15,7 +15,8 @@ const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 
 upload.addEventListener("click", () => {
-  getQuestionData.csvParse(fileInput);
+  // getQuestionData.csvParse(fileInput);
+  getQuestionData.csvParse();
   document.getElementById("uploadWrapper").remove();
 });
 
@@ -24,7 +25,7 @@ const getQuestionData = (() => {
   //TODO wrap parse into it's own function
 
   const csvParse = (csvFile) => {
-    Papa.parse(csvFile.files[0], {
+    Papa.parse("questions/Trivia - Questions.csv", {
       download: true,
       complete: function (results) {
         getQuestionData.questions = results.data;
