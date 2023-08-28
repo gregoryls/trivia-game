@@ -14,6 +14,14 @@ import Papa from "papaparse";
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 
+const overlay = document.querySelector(".overlay");
+//overlay provides a semi-transparent blur behind the modal to help focus attention on modal
+//when the overlay background is clicked anywhere, the modal regains the hidden class and disappears
+overlay.addEventListener("click", () => {
+  addClass(modal, "hidden");
+  addClass(overlay, "hidden");
+});
+
 upload.addEventListener("click", () => {
   // getQuestionData.csvParse(fileInput);
   getQuestionData.csvParse();
