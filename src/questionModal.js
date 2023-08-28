@@ -1,4 +1,5 @@
 let currentScore = 0;
+
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 

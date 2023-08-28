@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     questionModal: "./src/questionModal.js",
+    players: "./src/players.js",
     // module1: "./src/module1.js",
   },
   devtool: "inline-source-map",
