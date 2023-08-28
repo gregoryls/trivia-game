@@ -3,25 +3,25 @@ import Papa from "papaparse";
 import * as question from "./questionModal";
 import * as players from "./players";
 
-//https://stackoverflow.com/questions/56427009/how-to-return-papa-parsed-csv-via-promise-async-await
-//https://stackoverflow.com/questions/62905933/iterating-over-results-of-papa-parse-object
-//review these for persuing await/promises with papaparse
-//TODO remove text instead of setting it to body color
+// https://stackoverflow.com/questions/56427009/how-to-return-papa-parsed-csv-via-promise-async-await
+// https://stackoverflow.com/questions/62905933/iterating-over-results-of-papa-parse-object
+// review these for persuing await/promises with papaparse
+// TODO remove text instead of setting it to body color
 
-//TODO remove the various console.log debugging lines
+// TODO remove the various console.log debugging lines
 
-//TODO change file from source document to user uploaded via button
-//take away upload section after upload button pressed
+// TODO change file from source document to user uploaded via button
+// take away upload section after upload button pressed
 
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 
 const overlay = document.querySelector(".overlay");
-//overlay provides a semi-transparent blur behind the modal to help focus attention on modal
-//when the overlay background is clicked anywhere, the modal regains the hidden class and disappears
+// overlay provides a semi-transparent blur behind the modal to help focus attention on modal
+// when the overlay background is clicked anywhere, the modal regains the hidden class and disappears
 overlay.addEventListener("click", () => {
-  addClass(modal, "hidden");
-  addClass(overlay, "hidden");
+  question.addClass(modal, "hidden");
+  question.addClass(overlay, "hidden");
 });
 
 upload.addEventListener("click", () => {
@@ -31,13 +31,13 @@ upload.addEventListener("click", () => {
 });
 
 const getQuestionData = (() => {
-  let questions = [];
-  //TODO wrap parse into it's own function
+  const questions = [];
+  // TODO wrap parse into it's own function
 
   const csvParse = (csvFile) => {
     Papa.parse("../src/questions/Trivia - Questions.csv", {
       download: true,
-      complete: function (results) {
+      complete(results) {
         getQuestionData.questions = results.data;
         triviaBoard.createQuestionGrid(42);
         questionModal.addModalEventListener();
@@ -50,13 +50,13 @@ const getQuestionData = (() => {
 })();
 
 const triviaBoard = (() => {
-  let gridArea = document.querySelector("#gridWrapper");
+  const gridArea = document.querySelector("#gridWrapper");
 
   console.log(gridArea);
   const createQuestionGrid = (questionTotal) => {
-    //TODO consider adding point values later as a separate function
-    //point values for rows 1-5 on the question grid.
-    let questionValues = [
+    // TODO consider adding point values later as a separate function
+    // point values for rows 1-5 on the question grid.
+    const questionValues = [
       100, 100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 300, 300, 300,
       300, 300, 300, 400, 400, 400, 400, 400, 400, 500, 500, 500, 500, 500, 500,
       600, 600, 600, 600, 600, 600,
@@ -65,12 +65,12 @@ const triviaBoard = (() => {
       // for (i;i<6;i++){
       //     console.log(i);
       // }
-      let questionDiv = document.createElement("div");
-      //treat the first six boxes differently to turn them into topic headers.
+      const questionDiv = document.createElement("div");
+      // treat the first six boxes differently to turn them into topic headers.
       if (i < 6) {
-        //00,20,40,60,80,100
+        // 00,20,40,60,80,100
         questionDiv.classList.add("questionTopic");
-        //use every second array to account for spreadsheet format
+        // use every second array to account for spreadsheet format
         questionDiv.innerHTML = getQuestionData.questions[2 * i][0];
       } else {
         questionDiv.classList.add("question");
@@ -88,11 +88,12 @@ const triviaBoard = (() => {
 
 const player = (name, number) => {
   const displayPlayerName = function (playerNumber) {
-    document.querySelector(`#player${playerNumber}`).textContent =
-      this.name + ":";
+    document.querySelector(
+      `#player${playerNumber}`,
+    ).textContent = `${this.name}:`;
   };
   const displayPlayerScore = function (playerNumber, scoreToAdd) {
-    //thank about splitting this function into two functions
+    // thank about splitting this function into two functions
     this.score += scoreToAdd;
     document.querySelector(`#player${playerNumber}Score`).textContent =
       this.score;
@@ -103,7 +104,7 @@ const player = (name, number) => {
   return { name, number, score, displayPlayerName, displayPlayerScore };
 };
 
-//Initialize the player objects
+// Initialize the player objects
 const player1 = player("Chase", 1);
 const player2 = player("Ethan", 2);
 const player3 = player("Stan", 3);
@@ -112,25 +113,25 @@ const player4 = player("Taylor", 4);
 const playerNames = [player1.name, player2.name, player3.name, player4.name];
 
 const playerSetup = (() => {
-  //display default usernames
+  // display default usernames
   player1.displayPlayerName(1);
   player2.displayPlayerName(2);
   player3.displayPlayerName(3);
   player4.displayPlayerName(4);
-  //display intial (zero) player scores
+  // display intial (zero) player scores
   player1.displayPlayerScore(1, 0);
   player2.displayPlayerScore(2, 0);
   player3.displayPlayerScore(3, 0);
   player4.displayPlayerScore(4, 0);
-  //allow players to change their displayed name
+  // allow players to change their displayed name
   const userName = (player) => {
-    let tempName = player.name;
+    const tempName = player.name;
     player.name = prompt("Please Enter your name", "Josh Gunson");
-    //prevent player name from disappearing by using previous name
+    // prevent player name from disappearing by using previous name
     if (player.name === null) player.name = tempName;
     player.displayPlayerName(player.number);
   };
-  //player names can be clicked to open the change dialogue
+  // player names can be clicked to open the change dialogue
   document.querySelector("#player1").addEventListener("click", () => {
     userName(player1);
   });
@@ -146,7 +147,7 @@ const playerSetup = (() => {
 })();
 
 const questionModal = (() => {
-  //create a modal that contains a question based on the clicked question tile
+  // create a modal that contains a question based on the clicked question tile
   // TODO convert button to question square div
   // const openModalButton = document.querySelector('#helpModal');
   let currentScore = 0;
@@ -161,8 +162,8 @@ const questionModal = (() => {
     element.classList.add(className);
   };
 
-  //overlay provides a semi-transparent blur behind the modal to help focus attention on modal
-  //when the overlay background is clicked anywhere, the modal regains the hidden class and disappears
+  // overlay provides a semi-transparent blur behind the modal to help focus attention on modal
+  // when the overlay background is clicked anywhere, the modal regains the hidden class and disappears
   overlay.addEventListener("click", () => {
     addClass(modal, "hidden");
     addClass(overlay, "hidden");
@@ -170,14 +171,14 @@ const questionModal = (() => {
 
   // TODO convert this into working when a question square is clicked
   const addModalEventListener = () => {
-    let questions = document.querySelectorAll(".question");
+    const questions = document.querySelectorAll(".question");
     console.log(questions);
 
     for (let i = 0; i < questions.length; i++) {
       questions[i].addEventListener("click", () => {
-        //prevent tile from being opened twice
+        // prevent tile from being opened twice
         if (questions[i].classList.contains("taken")) return;
-        //associated array numbers are due to the format of question csv input
+        // associated array numbers are due to the format of question csv input
         if (i < 6) modal.innerHTML = getQuestionData.questions[2 * i][1];
         if (i < 12 && i > 5)
           modal.innerHTML = getQuestionData.questions[2 * i - 12][2];
@@ -193,12 +194,12 @@ const questionModal = (() => {
         currentScore = parseInt(questions[i].textContent, 10);
         console.log(currentScore);
 
-        //add an answer button to the modal that reveals the answer when clicked, button
-        //adds before the user buttons, answer adds to bottom of modal
+        // add an answer button to the modal that reveals the answer when clicked, button
+        // adds before the user buttons, answer adds to bottom of modal
         const btn = document.createElement("button");
         btn.textContent = "Answer";
         btn.addEventListener("click", () => {
-          //associated array numbers are due to the format of question csv input
+          // associated array numbers are due to the format of question csv input
           if (i < 6) modal.innerHTML += getQuestionData.questions[2 * i + 1][1];
           if (i < 12 && i > 5)
             modal.innerHTML += getQuestionData.questions[2 * i - 11][2];
@@ -211,19 +212,19 @@ const questionModal = (() => {
           if (i < 36 && i > 29)
             modal.innerHTML += getQuestionData.questions[2 * i - 59][6];
 
-          let div = document.createElement("div");
+          const div = document.createElement("div");
           div.classList.add("scoreButtons");
           for (let j = 0; j < 4; j++) {
-            //set loop length to number of players
-            //add buttons to the modal that will award points to the correct player(s)
+            // set loop length to number of players
+            // add buttons to the modal that will award points to the correct player(s)
             const btn = document.createElement("button");
             btn.textContent = playerNames[j];
             btn.addEventListener("click", () => {
-              //checks for clicked class added later to prevent awarding points more than once
+              // checks for clicked class added later to prevent awarding points more than once
               if (btn.classList.contains("clicked")) return;
-              //get question value from the clicked tile
+              // get question value from the clicked tile
               currentScore = parseInt(questions[i].textContent, 10);
-              //add current score to the appropriate player when clicked
+              // add current score to the appropriate player when clicked
               j === 0
                 ? player1.displayPlayerScore(1, currentScore)
                 : j === 1
