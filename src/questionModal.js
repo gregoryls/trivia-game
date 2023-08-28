@@ -1,5 +1,5 @@
-let currentScore = 0;
-let questions = [];
+export let currentScore = 0;
+export let questions = [];
 
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -16,7 +16,7 @@ export function getQuestionData() {
   Papa.parse("../src/questions/Trivia - Questions.csv", {
     download: true,
     complete: function (results) {
-      getQuestionData.questions = results.data;
+      questions = results.data;
       triviaBoard.createQuestionGrid(42);
       questionModal.addModalEventListener();
       console.log(results.data);
