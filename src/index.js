@@ -15,6 +15,7 @@ import * as players from "./players";
 
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
+const modal = document.querySelector(".modal");
 
 const overlay = document.querySelector(".overlay");
 // overlay provides a semi-transparent blur behind the modal to help focus attention on modal
@@ -31,6 +32,7 @@ upload.addEventListener("click", () => {
 });
 
 const getQuestionData = (() => {
+  // rename this to something else, final build step
   const questions = [];
   // TODO wrap parse into it's own function
 
