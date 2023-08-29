@@ -1,5 +1,7 @@
+import board from "./board";
+
 export const currentScore = 0;
-let questionData = [];
+export let questionData = [];
 
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -22,7 +24,7 @@ export function getQuestionData() {
     download: true,
     complete(results) {
       questionData = results.data;
-      triviaBoard.createQuestionGrid(42);
+      board(42);
       addQuestionModalEventListener();
       console.log(results.data);
     },

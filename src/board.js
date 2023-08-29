@@ -1,3 +1,5 @@
+// TODO fix question data for module
+
 const gridArea = document.querySelector("#gridWrapper");
 
 export default function createQuestionGrid(gridCount) {
@@ -17,6 +19,7 @@ export default function createQuestionGrid(gridCount) {
       // 00,20,40,60,80,100
       questionDiv.classList.add("questionTopic");
       // use every second array to account for spreadsheet format
+
       questionDiv.innerHTML = getQuestionData.questions[2 * i][0];
     } else {
       questionDiv.classList.add("question");
