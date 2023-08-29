@@ -145,51 +145,14 @@ const getQuestionData = (() => {
       download: true,
       complete(results) {
         getQuestionData.questions = results.data;
-        triviaBoard.createQuestionGrid(42);
+        board(42, results.data);
         questionModal.addModalEventListener();
-        console.log(results.data);
+        // console.log(results.data);
       },
     });
   };
 
   return { questions, csvParse };
-})();
-
-const triviaBoard = (() => {
-  const gridArea = document.querySelector("#gridWrapper");
-
-  console.log(gridArea);
-  const createQuestionGrid = (questionTotal) => {
-    // TODO consider adding point values later as a separate function
-    // point values for rows 1-5 on the question grid.
-    const questionValues = [
-      100, 100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 300, 300, 300,
-      300, 300, 300, 400, 400, 400, 400, 400, 400, 500, 500, 500, 500, 500, 500,
-      600, 600, 600, 600, 600, 600,
-    ];
-    for (let i = 0; i < questionTotal; i++) {
-      // for (i;i<6;i++){
-      //     console.log(i);
-      // }
-      const questionDiv = document.createElement("div");
-      // treat the first six boxes differently to turn them into topic headers.
-      if (i < 6) {
-        // 00,20,40,60,80,100
-        questionDiv.classList.add("questionTopic");
-        // use every second array to account for spreadsheet format
-        questionDiv.innerHTML = getQuestionData.questions[2 * i][0];
-      } else {
-        questionDiv.classList.add("question");
-        questionDiv.textContent = questionValues[i - 6];
-      }
-
-      gridArea.appendChild(questionDiv);
-    }
-  };
-
-  return {
-    createQuestionGrid,
-  };
 })();
 
 const player = (name, number) => {
