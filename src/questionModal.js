@@ -2,7 +2,7 @@ import Papa from "papaparse";
 import board from "./board";
 
 export const currentScore = 0;
-export let questionData = [];
+let questionData = [];
 
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -24,17 +24,12 @@ export function addQuestionModalEventListener() {
       // prevent tile from being opened twice
       if (questions[i].classList.contains("taken")) return;
       // associated array numbers are due to the format of question csv input
-      if (i < 6) modal.innerHTML = getQuestionData.questions[2 * i][1];
-      if (i < 12 && i > 5)
-        modal.innerHTML = getQuestionData.questions[2 * i - 12][2];
-      if (i < 18 && i > 11)
-        modal.innerHTML = getQuestionData.questions[2 * i - 24][3];
-      if (i < 24 && i > 17)
-        modal.innerHTML = getQuestionData.questions[2 * i - 36][4];
-      if (i < 30 && i > 23)
-        modal.innerHTML = getQuestionData.questions[2 * i - 48][5];
-      if (i < 36 && i > 29)
-        modal.innerHTML = getQuestionData.questions[2 * i - 60][6];
+      if (i < 6) modal.innerHTML = questionData[2 * i][1];
+      if (i < 12 && i > 5) modal.innerHTML = questionData[2 * i - 12][2];
+      if (i < 18 && i > 11) modal.innerHTML = questionData[2 * i - 24][3];
+      if (i < 24 && i > 17) modal.innerHTML = questionData[2 * i - 36][4];
+      if (i < 30 && i > 23) modal.innerHTML = questionData[2 * i - 48][5];
+      if (i < 36 && i > 29) modal.innerHTML = questionData[2 * i - 60][6];
 
       currentScore = parseInt(questions[i].textContent, 10);
       console.log(currentScore);
@@ -45,17 +40,12 @@ export function addQuestionModalEventListener() {
       btn.textContent = "Answer";
       btn.addEventListener("click", () => {
         // associated array numbers are due to the format of question csv input
-        if (i < 6) modal.innerHTML += getQuestionData.questions[2 * i + 1][1];
-        if (i < 12 && i > 5)
-          modal.innerHTML += getQuestionData.questions[2 * i - 11][2];
-        if (i < 18 && i > 11)
-          modal.innerHTML += getQuestionData.questions[2 * i - 23][3];
-        if (i < 24 && i > 17)
-          modal.innerHTML += getQuestionData.questions[2 * i - 35][4];
-        if (i < 30 && i > 23)
-          modal.innerHTML += getQuestionData.questions[2 * i - 47][5];
-        if (i < 36 && i > 29)
-          modal.innerHTML += getQuestionData.questions[2 * i - 59][6];
+        if (i < 6) modal.innerHTML += questionData[2 * i + 1][1];
+        if (i < 12 && i > 5) modal.innerHTML += questionData[2 * i - 11][2];
+        if (i < 18 && i > 11) modal.innerHTML += questionData[2 * i - 23][3];
+        if (i < 24 && i > 17) modal.innerHTML += questionData[2 * i - 35][4];
+        if (i < 30 && i > 23) modal.innerHTML += questionData[2 * i - 47][5];
+        if (i < 36 && i > 29) modal.innerHTML += questionData[2 * i - 59][6];
 
         const div = document.createElement("div");
         div.classList.add("scoreButtons");
