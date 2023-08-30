@@ -1,3 +1,4 @@
+import Papa from "papaparse";
 import board from "./board";
 
 export const currentScore = 0;
