@@ -19,7 +19,7 @@ export function addQuestionModalEventListener() {
   const questions = document.querySelectorAll(".question");
   console.log(questions);
 
-  for (let i = 0; i < questions.length; i++) {
+  for (let i = 0; i < questions.length; i += 1) {
     questions[i].addEventListener("click", () => {
       // prevent tile from being opened twice
       if (questions[i].classList.contains("taken")) return;
