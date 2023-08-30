@@ -29,6 +29,7 @@ overlay.addEventListener("click", () => {
 upload.addEventListener("click", () => {
   // getQuestionData.csvParse(fileInput);
   getQuestionData.csvParse();
+  question.getQuestionData();
   document.getElementById("uploadWrapper").remove();
 });
 const questionModal = (() => {
