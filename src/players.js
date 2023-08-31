@@ -11,7 +11,7 @@ export function generatePlayer(name, number, score) {
       this.score;
   };
   this.name = name;
-  this.score = 0;
+  this.score = score;
   this.number = number;
   return { name, number, score, displayPlayerName, displayPlayerScore };
 }

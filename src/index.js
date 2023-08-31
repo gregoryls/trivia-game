@@ -15,10 +15,10 @@ import board from "./board";
 // take away upload section after upload button pressed
 
 // Initialize the player objects
-const player1 = players.generatePlayer("Chase", 1);
-const player2 = players.generatePlayer("Ethan", 2);
-const player3 = players.generatePlayer("Stan", 3);
-const player4 = players.generatePlayer("Taylor", 4);
+const player1 = players.generatePlayer("Chase", 1, 0);
+const player2 = players.generatePlayer("Ethan", 2, 0);
+const player3 = players.generatePlayer("Stan", 3, 0);
+const player4 = players.generatePlayer("Taylor", 4, 0);
 
 const playerNames = [player1.name, player2.name, player3.name, player4.name];
 
