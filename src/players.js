@@ -1,4 +1,4 @@
-export function generatePlayer(name, number) {
+export function generatePlayer(name, number, score) {
   const displayPlayerName = function (playerNumber) {
     document.querySelector(
       `#player${playerNumber}`,

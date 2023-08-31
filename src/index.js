@@ -14,6 +14,14 @@ import board from "./board";
 // TODO change file from source document to user uploaded via button
 // take away upload section after upload button pressed
 
+// Initialize the player objects
+const player1 = players.generatePlayer("Chase", 1);
+const player2 = players.generatePlayer("Ethan", 2);
+const player3 = players.generatePlayer("Stan", 3);
+const player4 = players.generatePlayer("Taylor", 4);
+
+const playerNames = [player1.name, player2.name, player3.name, player4.name];
+
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 const modal = document.querySelector(".modal");
@@ -173,14 +181,6 @@ const player = (name, number) => {
   this.number = number;
   return { name, number, score, displayPlayerName, displayPlayerScore };
 };
-
-// Initialize the player objects
-const player1 = player("Chase", 1);
-const player2 = player("Ethan", 2);
-const player3 = player("Stan", 3);
-const player4 = player("Taylor", 4);
-
-const playerNames = [player1.name, player2.name, player3.name, player4.name];
 
 const playerSetup = (() => {
   // display default usernames
