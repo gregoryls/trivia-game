@@ -1,20 +1,26 @@
 export function generatePlayer(name, number, score) {
-  const displayPlayerName = function (playerNumber) {
+  const obj = {};
+  obj.displayPlayerName = function (playerNumber) {
     document.querySelector(
       `#player${playerNumber}`,
     ).textContent = `${this.name}:`;
   };
-  const displayPlayerScore = function (playerNumber, scoreToAdd) {
+  obj.displayPlayerScore = function (playerNumber, scoreToAdd) {
     // thank about splitting this function into two functions
     this.score += scoreToAdd;
     document.querySelector(`#player${playerNumber}Score`).textContent =
       this.score;
   };
-  this.name = name;
-  this.score = score;
-  this.number = number;
-  return { name, number, score, displayPlayerName, displayPlayerScore };
+  obj.name = name;
+  obj.score = score;
+  obj.number = number;
+  return obj;
 }
+
+const player1 = generatePlayer("Chase", 1, 0);
+// const player2 = generatePlayer("Ethan", 2, 0);
+// const player3 = generatePlayer("Stan", 3, 0);
+// const player4 = generatePlayer("Taylor", 4, 0);
 
 export function initialPlayerSetup() {
   // display default usernames
@@ -49,3 +55,10 @@ export function initialPlayerSetup() {
     userName(player4);
   });
 }
+
+export const playerNames = [
+  player1.name,
+  player2.name,
+  player3.name,
+  player4.name,
+];
