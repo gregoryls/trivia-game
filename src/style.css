@@ -16,6 +16,8 @@ body {
 .question,
 .questionTopic {
   background-color: rgba(51, 103, 199, 0.63);
+  border: 2px solid black;
+  border-radius: 8px;
   aspect-ratio: 2/1;
   width: min(15vw, 200px);
   /* text-align appears to be needed for top left grid square...no idea why */
