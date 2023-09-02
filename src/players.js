@@ -1,4 +1,5 @@
 export function generatePlayer(name, number, score) {
+  // assign to obj rather than this, since this === undefined in modules
   const obj = {};
   obj.displayPlayerName = function (playerNumber) {
     document.querySelector(
@@ -17,12 +18,12 @@ export function generatePlayer(name, number, score) {
   return obj;
 }
 
-const player1 = generatePlayer("Chase", 1, 0);
+// const player1 = generatePlayer("Chase", 1, 0);
 // const player2 = generatePlayer("Ethan", 2, 0);
 // const player3 = generatePlayer("Stan", 3, 0);
 // const player4 = generatePlayer("Taylor", 4, 0);
 
-export function initialPlayerSetup() {
+export function initialPlayerSetup(player1, player2, player3, player4) {
   // display default usernames
   player1.displayPlayerName(1);
   player2.displayPlayerName(2);
