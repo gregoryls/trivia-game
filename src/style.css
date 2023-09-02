@@ -30,6 +30,7 @@ body {
 .taken {
   background-color: gray;
   color: gray;
+  border-color: gray;
 }
 
 .modal {
