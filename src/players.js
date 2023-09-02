@@ -23,6 +23,13 @@ export function generatePlayer(name, number, score) {
 // const player3 = generatePlayer("Stan", 3, 0);
 // const player4 = generatePlayer("Taylor", 4, 0);
 
+// export const playerNames = [
+//   player1.name,
+//   player2.name,
+//   player3.name,
+//   player4.name,
+// ];
+
 export function initialPlayerSetup(player1, player2, player3, player4) {
   // display default usernames
   player1.displayPlayerName(1);
@@ -56,10 +63,3 @@ export function initialPlayerSetup(player1, player2, player3, player4) {
     userName(player4);
   });
 }
-
-export const playerNames = [
-  player1.name,
-  player2.name,
-  player3.name,
-  player4.name,
-];

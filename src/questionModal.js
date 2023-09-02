@@ -1,7 +1,7 @@
 import Papa from "papaparse";
 import board from "./board";
 
-export const currentScore = 0;
+let currentScore = 0;
 let questionData = [];
 
 const modal = document.querySelector(".modal");
