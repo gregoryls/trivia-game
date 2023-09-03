@@ -89,7 +89,7 @@ export function getQuestionData() {
     download: true,
     complete(results) {
       questionData = results.data;
-      // console.log(questionData);
+      console.log(questionData);
       board(42, results.data);
       addQuestionModalEventListener();
       // console.log(results.data);

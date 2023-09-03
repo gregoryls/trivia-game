@@ -13,6 +13,7 @@ import board from "./board";
 
 // TODO change file from source document to user uploaded via button
 // expand player creation to support any number of players
+// players module remove prompt for better custom solution
 
 // Initialize the player objects
 const player1 = players.generatePlayer("Chase", 1, 0);
