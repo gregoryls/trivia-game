@@ -1,12 +1,15 @@
 export function generatePlayer(name, number, score) {
   // assign to obj rather than this, since this === undefined in modules
   const obj = {};
-  obj.displayPlayerName = function (playerNumber) {
+  obj.displayPlayerName = function displayPlayerName(playerNumber) {
     document.querySelector(
       `#player${playerNumber}`,
     ).textContent = `${this.name}:`;
   };
-  obj.displayPlayerScore = function (playerNumber, scoreToAdd) {
+  obj.displayPlayerScore = function displayPlayerScore(
+    playerNumber,
+    scoreToAdd,
+  ) {
     // thank about splitting this function into two functions
     this.score += scoreToAdd;
     document.querySelector(`#player${playerNumber}Score`).textContent =

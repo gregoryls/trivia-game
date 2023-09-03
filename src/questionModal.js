@@ -15,7 +15,7 @@ export function addClass(element, className) {
   element.classList.add(className);
 }
 
-export function addQuestionModalEventListener(playerNamesArray) {
+export function addQuestionModalEventListener() {
   const questions = document.querySelectorAll(".question");
   console.log(questions);
 
@@ -53,7 +53,7 @@ export function addQuestionModalEventListener(playerNamesArray) {
           // set loop length to number of players
           // add buttons to the modal that will award points to the correct player(s)
           const btn = document.createElement("button");
-          btn.textContent = playerNamesArray[j];
+          btn.textContent = playerNames[j];
           btn.addEventListener("click", () => {
             // checks for clicked class added later to prevent awarding points more than once
             if (btn.classList.contains("clicked")) return;
