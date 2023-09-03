@@ -170,3 +170,13 @@ const getQuestionData = (() => {
 // triviaBoard.createQuestionGrid(36);
 
 // document.querySelector('h1').innerHTML = '<img src=\'/img/Lunar-Eclipse-Leona.webp\'>';
+
+function importAll(x) {
+  const images = {};
+  x.keys().map((item, index) => {
+    images[item.replace("./", "")] = x(item);
+  });
+  return images;
+}
+const images = importAll(require.context("./img", false, /\.(png|jpe?g|svg)$/));
+console.log(images);
