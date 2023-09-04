@@ -172,10 +172,11 @@ const getQuestionData = (() => {
 
 // document.querySelector('h1').innerHTML = '<img src=\'/img/Lunar-Eclipse-Leona.webp\'>';
 
-function importAll(x) {
+function importAll(r) {
   const images = {};
-  x.keys().map((item, index) => {
-    images[item.replace("./", "")] = x(item);
+  // enclosing bracket around return to avoid ambiguous assignment in a return
+  r.keys().forEach((key) => {
+    images[key] = r(key);
   });
   return images;
 }
