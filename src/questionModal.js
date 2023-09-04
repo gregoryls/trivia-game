@@ -1,5 +1,5 @@
 import Papa from "papaparse";
-import board from "./board";
+import * as board from "./board";
 
 let currentScore = 0;
 let questionData = [];
@@ -90,7 +90,7 @@ export function getQuestionData() {
     complete(results) {
       questionData = results.data;
       console.log(questionData);
-      board(42, results.data);
+      board.createQuestionGrid(42, results.data);
       addQuestionModalEventListener();
       // console.log(results.data);
     },

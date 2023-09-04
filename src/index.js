@@ -2,7 +2,7 @@ import "./style.css";
 import Papa from "papaparse";
 import * as question from "./questionModal";
 import * as players from "./players";
-import board from "./board";
+import * as board from "./board";
 
 // https://stackoverflow.com/questions/56427009/how-to-return-papa-parsed-csv-via-promise-async-await
 // https://stackoverflow.com/questions/62905933/iterating-over-results-of-papa-parse-object
@@ -14,6 +14,7 @@ import board from "./board";
 // TODO change file from source document to user uploaded via button
 // expand player creation to support any number of players
 // players module remove prompt for better custom solution
+// one option for images, if (question data === img file name) set img
 
 // Initialize the player objects
 const player1 = players.generatePlayer("Chase", 1, 0);
@@ -157,7 +158,7 @@ const getQuestionData = (() => {
       download: true,
       complete(results) {
         getQuestionData.questions = results.data;
-        board(42, results.data);
+        board.createQuestionGrid(42, results.data);
         questionModal.addModalEventListener();
         // console.log(results.data);
       },
