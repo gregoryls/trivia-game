@@ -173,8 +173,9 @@ function importAll(r) {
   // enclosing bracket around return to avoid ambiguous assignment in a return
   r.keys().forEach((key) => {
     const temp = key.replace("./", "");
-    console.log(temp);
-    images[temp] = r(key);
+    const temp2 = temp.substr(0, temp.lastIndexOf(".")) || temp;
+    console.log(temp2);
+    images[temp2] = r(key);
   });
   // alternate map method
   // r.keys().map((item, index) => {
