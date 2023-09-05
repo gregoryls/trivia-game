@@ -12,9 +12,6 @@ export function createQuestionGrid(gridCount, questionData) {
   ];
 
   for (let i = 0; i < gridCount; i += 1) {
-    // for (i;i<6;i++){
-    //     console.log(i);
-    // }
     const questionDiv = document.createElement("div");
     // treat the first six boxes differently to turn them into topic headers.
     if (i < 6) {

@@ -168,14 +168,11 @@ const getQuestionData = (() => {
   return { questions, csvParse };
 })();
 
-// triviaBoard.createQuestionGrid(36);
-
-// document.querySelector('h1').innerHTML = '<img src=\'/img/Lunar-Eclipse-Leona.webp\'>';
-
 function importAll(r) {
   const images = {};
   // enclosing bracket around return to avoid ambiguous assignment in a return
   r.keys().forEach((key) => {
+    console.log(key);
     images[key] = r(key);
   });
   return images;
