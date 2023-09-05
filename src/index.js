@@ -172,10 +172,16 @@ function importAll(r) {
   const images = {};
   // enclosing bracket around return to avoid ambiguous assignment in a return
   r.keys().forEach((key) => {
-    console.log(key);
-    images[key] = r(key);
+    const temp = key.replace("./", "");
+    console.log(temp);
+    images[temp] = r(key);
   });
+  // alternate map method
+  // r.keys().map((item, index) => {
+  //   images[item.replace("./", "")] = r(item);
+  // });
   return images;
 }
+
 const images = importAll(require.context("./img", false, /\.(png|jpe?g|svg)$/));
 console.log(images);
