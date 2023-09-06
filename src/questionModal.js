@@ -17,13 +17,13 @@ export function addClass(element, className) {
 }
 
 export function addQuestionModalEventListener() {
-  const questions = document.querySelectorAll(".question");
-  console.log(questions);
+  const questionTiles = document.querySelectorAll(".question");
+  console.log(questionTiles);
 
-  for (let i = 0; i < questions.length; i += 1) {
-    questions[i].addEventListener("click", () => {
+  for (let i = 0; i < questionTiles.length; i += 1) {
+    questionTiles[i].addEventListener("click", () => {
       // prevent tile from being opened twice
-      if (questions[i].classList.contains("taken")) return;
+      if (questionTiles[i].classList.contains("taken")) return;
       // associated array numbers are due to the format of question csv input
       if (i < 6) modal.innerHTML = questionData[2 * i][1];
       if (i < 12 && i > 5) modal.innerHTML = questionData[2 * i - 12][2];
@@ -32,7 +32,7 @@ export function addQuestionModalEventListener() {
       if (i < 30 && i > 23) modal.innerHTML = questionData[2 * i - 48][5];
       if (i < 36 && i > 29) modal.innerHTML = questionData[2 * i - 60][6];
 
-      currentScore = parseInt(questions[i].textContent, 10);
+      currentScore = parseInt(questionTiles[i].textContent, 10);
       console.log(currentScore);
 
       // add an answer button to the modal that reveals the answer when clicked, button
@@ -59,7 +59,7 @@ export function addQuestionModalEventListener() {
             // checks for clicked class added later to prevent awarding points more than once
             if (btn.classList.contains("clicked")) return;
             // get question value from the clicked tile
-            currentScore = parseInt(questions[i].textContent, 10);
+            currentScore = parseInt(questionTiles[i].textContent, 10);
             // add current score to the appropriate player when clicked
             j === 0
               ? player1.displayPlayerScore(1, currentScore)
@@ -77,7 +77,7 @@ export function addQuestionModalEventListener() {
 
       modal.appendChild(btn);
 
-      addClass(questions[i], "taken");
+      addClass(questionTiles[i], "taken");
 
       removeClass(modal, "hidden");
       removeClass(overlay, "hidden");

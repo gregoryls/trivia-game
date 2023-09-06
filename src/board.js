@@ -2,7 +2,9 @@
 
 const gridArea = document.querySelector("#gridWrapper");
 
-export function generateQuestionObject(questionData) {}
+export function generateQuestionObject(questionData) {
+  const questionObj = {};
+}
 
 export function createQuestionGrid(gridCount, questionData) {
   const questionValues = [
