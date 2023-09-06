@@ -1,9 +1,18 @@
 import Papa from "papaparse";
 import * as board from "./board";
+import * as players from "./players";
 
 let currentScore = 0;
 let questionData = [];
-const playerNames = [1, 2, 3, 4];
+
+// convert this to a function in players module
+const playerObj = players.generatePlayersObj(4);
+const playerNames = [
+  playerObj[1].name,
+  playerObj[2].name,
+  playerObj[3].name,
+  playerObj[4].name,
+];
 
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -19,6 +28,7 @@ export function addClass(element, className) {
 export function addQuestionModalEventListener() {
   const questionTiles = document.querySelectorAll(".question");
   console.log(questionTiles);
+  console.log(playerNames);
 
   for (let i = 0; i < questionTiles.length; i += 1) {
     questionTiles[i].addEventListener("click", () => {
@@ -62,12 +72,12 @@ export function addQuestionModalEventListener() {
             currentScore = parseInt(questionTiles[i].textContent, 10);
             // add current score to the appropriate player when clicked
             j === 0
-              ? player1.displayPlayerScore(1, currentScore)
+              ? playerObj[1].displayPlayerScore(1, currentScore)
               : j === 1
-              ? player2.displayPlayerScore(2, currentScore)
+              ? playerObj[2].displayPlayerScore(2, currentScore)
               : j === 2
-              ? player3.displayPlayerScore(3, currentScore)
-              : player4.displayPlayerScore(4, currentScore);
+              ? playerObj[3].displayPlayerScore(3, currentScore)
+              : playerObj[4].displayPlayerScore(4, currentScore);
             btn.classList.add("clicked");
           });
           div.appendChild(btn);
