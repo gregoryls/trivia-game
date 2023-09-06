@@ -21,17 +21,20 @@ export function generatePlayer(name, number, score) {
   return obj;
 }
 
+export function generatePlayersObj(playerCount) {
+  const stockNames = ["Chase", "Ethan", "Stan", "Taylor"];
+  const players = {};
+  for (let i = 1; i < playerCount + 1; i += 1) {
+    players[i] = generatePlayer(stockNames[i - 1], i, 0);
+  }
+  return players;
+}
 // const player1 = generatePlayer("Chase", 1, 0);
 // const player2 = generatePlayer("Ethan", 2, 0);
 // const player3 = generatePlayer("Stan", 3, 0);
 // const player4 = generatePlayer("Taylor", 4, 0);
 
-// export const playerNames = [
-//   player1.name,
-//   player2.name,
-//   player3.name,
-//   player4.name,
-// ];
+export const playerNames = ["test"];
 
 export function initialPlayerSetup(player1, player2, player3, player4) {
   // display default usernames

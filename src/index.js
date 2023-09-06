@@ -15,12 +15,15 @@ import * as board from "./board";
 // expand player creation to support any number of players
 // players module remove prompt for better custom solution
 // one option for images, if (question data === img file name) set img
+// expand stock names
 
 // Initialize the player objects
 const player1 = players.generatePlayer("Chase", 1, 0);
 const player2 = players.generatePlayer("Ethan", 2, 0);
 const player3 = players.generatePlayer("Stan", 3, 0);
 const player4 = players.generatePlayer("Taylor", 4, 0);
+
+console.log(players.generatePlayersObj(4));
 
 const playerNames = [player1.name, player2.name, player3.name, player4.name];
 
