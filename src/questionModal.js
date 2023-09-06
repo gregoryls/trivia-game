@@ -3,6 +3,7 @@ import * as board from "./board";
 
 let currentScore = 0;
 let questionData = [];
+const playerNames = [1, 2, 3, 4];
 
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
