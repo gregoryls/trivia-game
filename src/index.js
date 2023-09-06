@@ -29,7 +29,7 @@ const playerNames = [player1.name, player2.name, player3.name, player4.name];
 
 players.initialPlayerSetup(player1, player2, player3, player4);
 
-const fileInput = document.getElementById("fileInput");
+// const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 const modal = document.querySelector(".modal");
 
@@ -52,8 +52,6 @@ const questionModal = (() => {
   // TODO convert button to question square div
   // const openModalButton = document.querySelector('#helpModal');
   let currentScore = 0;
-  const modal = document.querySelector(".modal");
-  const overlay = document.querySelector(".overlay");
 
   const removeClass = (element, className) => {
     element.classList.remove(className);
