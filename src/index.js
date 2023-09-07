@@ -122,7 +122,7 @@ const questionModal = (() => {
               // checks for clicked class added later to prevent awarding points more than once
               if (btn.classList.contains("clicked")) return;
               // get question value from the clicked tile
-              currentScore = parseInt(questionTiles[i].textContent, 10);
+              // currentScore = parseInt(questionTiles[i].textContent, 10);
               // add current score to the appropriate player when clicked
               j === 0
                 ? player1.displayPlayerScore(1, currentScore)
@@ -154,7 +154,7 @@ const getQuestionData = (() => {
   const questions = [];
   // TODO wrap parse into it's own function
 
-  const csvParse = (csvFile) => {
+  const csvParse = () => {
     Papa.parse("../src/questions/Trivia - Questions.csv", {
       download: true,
       complete(results) {
