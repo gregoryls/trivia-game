@@ -48,26 +48,6 @@ upload.addEventListener("click", () => {
   document.getElementById("uploadWrapper").classList.add("hidden");
 });
 
-const getQuestionData = (() => {
-  // rename this to something else, final build step
-  const questions = [];
-  // TODO wrap parse into it's own function
-
-  const csvParse = () => {
-    Papa.parse("../src/questions/Trivia - Questions.csv", {
-      download: true,
-      complete(results) {
-        getQuestionData.questions = results.data;
-        board.createQuestionGrid(42, results.data);
-        questionModal.addModalEventListener();
-        // console.log(results.data);
-      },
-    });
-  };
-
-  return { questions, csvParse };
-})();
-
 function importAll(r) {
   const images = {};
   // enclosing bracket around return to avoid ambiguous assignment in a return
