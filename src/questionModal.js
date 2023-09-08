@@ -32,6 +32,7 @@ export function addQuestionModalEventListener() {
 
   for (let i = 0; i < questionTiles.length; i += 1) {
     questionTiles[i].addEventListener("click", () => {
+      // modal.innerHTML = "";
       // prevent tile from being opened twice
       if (questionTiles[i].classList.contains("taken")) return;
       // associated array numbers are due to the format of question csv input

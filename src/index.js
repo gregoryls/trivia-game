@@ -45,7 +45,7 @@ upload.addEventListener("click", () => {
   // getQuestionData.csvParse(fileInput);
   getQuestionData.csvParse();
   question.getQuestionData();
-  document.getElementById("uploadWrapper").remove();
+  document.getElementById("uploadWrapper").classList.add("hidden");
 });
 const questionModal = (() => {
   // create a modal that contains a question based on the clicked question tile
