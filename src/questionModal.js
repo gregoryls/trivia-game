@@ -7,12 +7,6 @@ let questionData = [];
 
 // convert this to a function in players module
 export const playerObj = players.generatePlayersObj(4);
-const playerNames = [
-  playerObj[1].name,
-  playerObj[2].name,
-  playerObj[3].name,
-  playerObj[4].name,
-];
 
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -28,7 +22,7 @@ export function addClass(element, className) {
 export function addQuestionModalEventListener() {
   const questionTiles = document.querySelectorAll(".question");
   console.log(questionTiles);
-  console.log(playerNames);
+  // console.log(playerNames);
 
   for (let i = 0; i < questionTiles.length; i += 1) {
     questionTiles[i].addEventListener("click", () => {
@@ -51,6 +45,12 @@ export function addQuestionModalEventListener() {
       const btn = document.createElement("button");
       btn.textContent = "Answer";
       btn.addEventListener("click", () => {
+        const playerNames = [
+          playerObj[1].name,
+          playerObj[2].name,
+          playerObj[3].name,
+          playerObj[4].name,
+        ];
         // associated array numbers are due to the format of question csv input
         if (i < 6) modal.innerHTML += questionData[2 * i + 1][1];
         if (i < 12 && i > 5) modal.innerHTML += questionData[2 * i - 11][2];
