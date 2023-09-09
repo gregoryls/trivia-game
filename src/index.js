@@ -16,18 +16,25 @@ import * as board from "./board";
 // players module remove prompt for better custom solution
 // one option for images, if (question data === img file name) set img
 // expand stock names
+// update players logic in index exclusive module
 
 // Initialize the player objects
-const player1 = players.generatePlayer("Chase", 1, 0);
-const player2 = players.generatePlayer("Ethan", 2, 0);
-const player3 = players.generatePlayer("Stan", 3, 0);
-const player4 = players.generatePlayer("Taylor", 4, 0);
+// const player1 = players.generatePlayer("Chase", 1, 0);
+// const player2 = players.generatePlayer("Ethan", 2, 0);
+// const player3 = players.generatePlayer("Stan", 3, 0);
+// const player4 = players.generatePlayer("Taylor", 4, 0);
 
-console.log(players.generatePlayersObj(4));
+const { playerObj } = question;
+console.log(playerObj);
 
-const playerNames = [player1.name, player2.name, player3.name, player4.name];
+// const playerNames = [player1.name, player2.name, player3.name, player4.name];
 
-players.initialPlayerSetup(player1, player2, player3, player4);
+players.initialPlayerSetup(
+  playerObj[1],
+  playerObj[2],
+  playerObj[3],
+  playerObj[4],
+);
 
 // const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");

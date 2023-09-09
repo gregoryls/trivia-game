@@ -6,7 +6,7 @@ let currentScore = 0;
 let questionData = [];
 
 // convert this to a function in players module
-const playerObj = players.generatePlayersObj(4);
+export const playerObj = players.generatePlayersObj(4);
 const playerNames = [
   playerObj[1].name,
   playerObj[2].name,
