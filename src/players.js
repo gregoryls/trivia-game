@@ -61,12 +61,12 @@ export function initialPlayerSetup(player1, player2, player3, player4) {
     player1.changePlayerName();
   });
   document.querySelector("#player2").addEventListener("click", () => {
-    userName(player2);
+    player2.changePlayerName();
   });
   document.querySelector("#player3").addEventListener("click", () => {
-    userName(player3);
+    player3.changePlayerName();
   });
   document.querySelector("#player4").addEventListener("click", () => {
-    userName(player4);
+    player4.changePlayerName();
   });
 }
