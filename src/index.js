@@ -13,6 +13,7 @@ import * as board from "./board";
 
 // TODO change file from source document to user uploaded via button
 // expand player creation to support any number of players
+// change player name event listener to be a loop based on plaeyr count
 // players module remove prompt for better custom solution
 // one option for images, if (question data === img file name) set img
 // expand stock names

@@ -6,6 +6,14 @@ export function generatePlayer(name, number, score) {
       `#player${playerNumber}`,
     ).textContent = `${this.name}:`;
   };
+  obj.changePlayerName = function changePlayerName() {
+    const tempName = this.name;
+    this.name = prompt("Please enter your name", "Josh Gunson");
+    // prevent player name from disappearing by using previous name
+    if (this.name === null) this.name = tempName;
+    this.displayPlayerName(this.number);
+    console.log(this);
+  };
   obj.displayPlayerScore = function displayPlayerScore(
     playerNumber,
     scoreToAdd,
@@ -47,17 +55,10 @@ export function initialPlayerSetup(player1, player2, player3, player4) {
   player2.displayPlayerScore(2, 0);
   player3.displayPlayerScore(3, 0);
   player4.displayPlayerScore(4, 0);
-  // allow players to change their displayed name
-  const userName = (player) => {
-    const tempName = player.name;
-    player.name = prompt("Please Enter your name", "Josh Gunson");
-    // prevent player name from disappearing by using previous name
-    if (player.name === null) player.name = tempName;
-    player.displayPlayerName(player.number);
-  };
+
   // player names can be clicked to open the change dialogue
   document.querySelector("#player1").addEventListener("click", () => {
-    userName(player1);
+    player1.changePlayerName();
   });
   document.querySelector("#player2").addEventListener("click", () => {
     userName(player2);
