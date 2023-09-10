@@ -44,7 +44,9 @@ export function addQuestionModalEventListener() {
       // adds before the user buttons, answer adds to bottom of modal
       const btn = document.createElement("button");
       btn.textContent = "Answer";
+
       btn.addEventListener("click", () => {
+        btn.classList.add("scoreClicked");
         const playerNames = [
           playerObj[1].name,
           playerObj[2].name,

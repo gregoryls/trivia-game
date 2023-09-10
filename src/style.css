@@ -85,13 +85,13 @@ img {
   gap: 10px;
 }
 
-.scoreButtons button {
+.modal button {
   background-color: #f0f0f0;
   border: 1px solid gray;
   border-radius: 8px;
   padding: 3px 6px;
 }
-.scoreButtons button:hover {
+.modal button:hover {
   background-color: #dddcdc;
 }
 
