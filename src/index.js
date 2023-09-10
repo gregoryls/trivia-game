@@ -18,6 +18,7 @@ import * as board from "./board";
 // one option for images, if (question data === img file name) set img
 // expand stock names
 // update players logic in index exclusive module
+// grey out clicked player score buttons
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
