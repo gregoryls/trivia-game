@@ -95,10 +95,8 @@ img {
   background-color: #dddcdc;
 }
 
-.scoreClicked {
+.scoreClicked.scoreClicked {
+  background-color: #dddcdc;
   opacity: 0.5;
   cursor: not-allowed;
 }
-/* .scoreClicked:hover {
-  background-color: #f0f0f0;
-} */
