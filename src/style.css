@@ -85,6 +85,16 @@ img {
   gap: 10px;
 }
 
+.scoreButtons button {
+  background-color: #f0f0f0;
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 3px 6px;
+}
+.scoreButtons button:hover {
+  background-color: #dddcdc;
+}
+
 .scoreClicked {
   opacity: 0.5;
   cursor: not-allowed;
