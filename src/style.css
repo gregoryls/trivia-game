@@ -97,7 +97,7 @@ img {
 
 /* duplicated selector to override (.scoreButtons button) 
 selector above, 0-1-1 vs 0-2-0 */
-.scoreClicked.scoreClicked {
+.buttonDisabled.buttonDisabled {
   background-color: #dddcdc;
   opacity: 0.5;
 }

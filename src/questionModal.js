@@ -46,7 +46,7 @@ export function addQuestionModalEventListener() {
       btn.textContent = "Answer";
 
       btn.addEventListener("click", () => {
-        btn.classList.add("scoreClicked");
+        btn.classList.add("buttonDisabled");
         const playerNames = [
           playerObj[1].name,
           playerObj[2].name,
@@ -70,7 +70,7 @@ export function addQuestionModalEventListener() {
           btn.textContent = playerNames[j];
           btn.addEventListener("click", () => {
             // checks for clicked class added later to prevent awarding points more than once
-            if (btn.classList.contains("scoreClicked")) return;
+            if (btn.classList.contains("buttonDisabled")) return;
             // get question value from the clicked tile
             // currentScore = parseInt(questionTiles[i].textContent, 10);
             // add current score to the appropriate player when clicked
@@ -81,7 +81,7 @@ export function addQuestionModalEventListener() {
               : j === 2
               ? playerObj[3].displayPlayerScore(3, currentScore)
               : playerObj[4].displayPlayerScore(4, currentScore);
-            btn.classList.add("scoreClicked");
+            btn.classList.add("buttonDisabled");
           });
           div.appendChild(btn);
         }
