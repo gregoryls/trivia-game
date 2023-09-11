@@ -98,8 +98,9 @@ export function addQuestionModalEventListener() {
   }
 }
 
-export function getQuestionData() {
-  Papa.parse("../src/questions/Trivia - Questions.csv", {
+export function getQuestionData(csvFile) {
+  // "../src/questions/Trivia - Questions.csv" local filename
+  Papa.parse(csvFile.files[0], {
     download: true,
     complete(results) {
       questionData = results.data;

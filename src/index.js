@@ -19,6 +19,8 @@ import * as board from "./board";
 // expand stock names
 // update players logic in index exclusive module
 // grey out clicked player score buttons
+// go back to file upload
+// only allow upload if (fileInput) button !disabled
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
@@ -38,7 +40,7 @@ players.initialPlayerSetup(
   playerObj[4],
 );
 
-// const fileInput = document.getElementById("fileInput");
+const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 const modal = document.querySelector(".modal");
 
@@ -53,7 +55,7 @@ overlay.addEventListener("click", () => {
 upload.addEventListener("click", () => {
   // getQuestionData.csvParse(fileInput);
   // getQuestionData.csvParse();
-  question.getQuestionData();
+  question.getQuestionData(fileInput);
   document.getElementById("uploadWrapper").classList.add("hidden");
 });
 
