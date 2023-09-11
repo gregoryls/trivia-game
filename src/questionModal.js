@@ -19,9 +19,19 @@ export function addClass(element, className) {
   element.classList.add(className);
 }
 
+export function generateQuestionObject() {
+  const questionObj = {};
+
+  for (let i = 0; i < questionData.length / 2; i += 1) {
+    console.log(questionData[2 * i][0]);
+    questionObj[`category${i}`]["topic"] = questionData[2 * i][0];
+  }
+  return questionObj;
+}
+
 export function addQuestionModalEventListener() {
   const questionTiles = document.querySelectorAll(".question");
-  console.log(questionTiles);
+  // console.log(questionTiles);
   // console.log(playerNames);
 
   for (let i = 0; i < questionTiles.length; i += 1) {
@@ -106,6 +116,7 @@ export function getQuestionData(csvFile) {
       questionData = results.data;
       console.log(questionData);
       board.createQuestionGrid(42, results.data);
+      console.log(generateQuestionObject());
       addQuestionModalEventListener();
       // console.log(results.data);
     },

@@ -2,10 +2,6 @@
 
 const gridArea = document.querySelector("#gridWrapper");
 
-export function generateQuestionObject(questionData) {
-  const questionObj = {};
-}
-
 export function createQuestionGrid(gridCount, questionData) {
   const questionValues = [
     100, 100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 300, 300, 300,
