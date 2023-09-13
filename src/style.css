@@ -3,6 +3,11 @@ body {
   text-align: center;
   overflow: auto;
 }
+#title h1 {
+  font-size: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
 
 #gridWrapper {
   display: grid;
