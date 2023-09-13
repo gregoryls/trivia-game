@@ -9,6 +9,15 @@ body {
   margin-bottom: 0;
 }
 
+#uploadWrapper {
+  margin-top: 1rem;
+}
+
+#playerScores p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 #gridWrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
