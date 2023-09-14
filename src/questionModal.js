@@ -29,6 +29,7 @@ export function generateQuestionObject() {
     for (let j = 0; j < questionData[0].length; j += 1) {
       console.log(questionData[2 * i].length);
       questionObj[i][`question${j}`] = questionData[2 * i][j];
+      questionObj[i][`answer${j}`] = questionData[2 * i + 1][j];
     }
   }
   return questionObj;
