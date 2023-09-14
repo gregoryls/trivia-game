@@ -23,10 +23,13 @@ export function generateQuestionObject() {
   const questionObj = {};
 
   for (let i = 0; i < questionData.length / 2; i += 1) {
-    console.log(questionData[2 * i][0]);
     questionObj[i] = {
       topic: questionData[2 * i][0],
     };
+    for (let j = 0; j < questionData[0].length; j += 1) {
+      console.log(questionData[2 * i].length);
+      questionObj[i][`question${j}`] = questionData[2 * i][j];
+    }
   }
   return questionObj;
 }

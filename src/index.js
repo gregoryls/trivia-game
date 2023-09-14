@@ -21,6 +21,7 @@ import * as board from "./board";
 // grey out clicked player score buttons
 // go back to file upload
 // only allow upload if (fileInput) button !disabled
+// group css together better
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
