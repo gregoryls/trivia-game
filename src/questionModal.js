@@ -19,7 +19,7 @@ export function addClass(element, className) {
   element.classList.add(className);
 }
 
-export function generateQuestionObject() {
+export function generateQuestionObjectFromCSV() {
   const questionObj = {};
 
   for (let i = 0; i < questionData.length / 2; i += 1) {
@@ -126,7 +126,7 @@ export function getQuestionData(csvFile) {
       questionData = results.data;
       console.log(questionData);
       board.createQuestionGrid(42, results.data);
-      console.log(generateQuestionObject());
+      console.log(generateQuestionObjectFromCSV());
       addQuestionModalEventListener();
       // console.log(results.data);
     },
