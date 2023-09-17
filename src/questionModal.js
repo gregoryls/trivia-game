@@ -39,7 +39,11 @@ export function generateQuestionObjectFromCSV() {
   return questionObj;
 }
 
-export function addQuestionModalEventListener() {
+export function addQuestionModalEventListener(questionObject) {
+  const questionTiles = document.querySelectorAll(".question");
+}
+
+export function addQuestionModalEventListenerBackup() {
   const questionTiles = document.querySelectorAll(".question");
   // console.log(questionTiles);
   // console.log(playerNames);
