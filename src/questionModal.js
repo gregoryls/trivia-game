@@ -27,7 +27,7 @@ export function generateQuestionObjectFromCSV() {
       topic: questionData[2 * i][0],
     };
     for (let j = 0; j < questionData[0].length; j += 1) {
-      console.log(questionData[2 * i].length);
+      // console.log(questionData[2 * i].length);
       questionObj[`category${i}`][`question${j}`] = {
         question: questionData[2 * i][j],
         answer: questionData[2 * i + 1][j],
@@ -41,6 +41,12 @@ export function generateQuestionObjectFromCSV() {
 
 export function addQuestionModalEventListener(questionObject) {
   const questionTiles = document.querySelectorAll(".question");
+  for (let i = 0; i < questionTiles.length; i += 1) {
+    questionTiles[i].addEventListener("click", () => {
+      if (questionTiles[i].classList.contains("taken")) return;
+      if (i < 6) console.log(questionObject);
+    });
+  }
 }
 
 export function addQuestionModalEventListenerBackup() {
@@ -131,7 +137,7 @@ export function getQuestionData(csvFile) {
       console.log(questionData);
       board.createQuestionGrid(42, results.data);
       console.log(generateQuestionObjectFromCSV());
-      addQuestionModalEventListener();
+      addQuestionModalEventListener(generateQuestionObjectFromCSV());
       // console.log(results.data);
     },
   });
