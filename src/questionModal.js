@@ -44,7 +44,9 @@ export function addQuestionModalEventListener(questionObject) {
   for (let i = 0; i < questionTiles.length; i += 1) {
     questionTiles[i].addEventListener("click", () => {
       if (questionTiles[i].classList.contains("taken")) return;
-      if (i < 6) console.log(questionObject);
+      if (i < 6)
+        modal.innerHTML =
+          questionObject[`category${i}`][`question${i + 1}`].question;
     });
   }
 }
