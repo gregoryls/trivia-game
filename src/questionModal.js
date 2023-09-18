@@ -41,12 +41,15 @@ export function generateQuestionObjectFromCSV() {
 
 export function addQuestionModalEventListener(questionObject) {
   const questionTiles = document.querySelectorAll(".question");
+  console.log(questionTiles);
   for (let i = 0; i < questionTiles.length; i += 1) {
     questionTiles[i].addEventListener("click", () => {
       if (questionTiles[i].classList.contains("taken")) return;
       if (i < 6)
-        modal.innerHTML =
-          questionObject[`category${i}`][`question${i + 1}`].question;
+        modal.innerHTML = questionObject[`category${i}`].question1.question;
+      // if (i < 12 && i > 5)
+      //   modal.innerHTML =
+      //     questionObject[`category${i - 6}`][`question${i - 5}`].question;
     });
   }
 }
