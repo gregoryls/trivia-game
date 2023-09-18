@@ -47,9 +47,9 @@ export function addQuestionModalEventListener(questionObject) {
       if (questionTiles[i].classList.contains("taken")) return;
       if (i < 6)
         modal.innerHTML = questionObject[`category${i}`].question1.question;
-      // if (i < 12 && i > 5)
-      //   modal.innerHTML =
-      //     questionObject[`category${i - 6}`][`question${i - 5}`].question;
+      if (i < 12 && i > 5)
+        modal.innerHTML =
+          questionObject[`category${i - 6}`][`question${2}`].question;
     });
   }
 }
