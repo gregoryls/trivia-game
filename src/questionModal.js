@@ -50,6 +50,9 @@ export function addQuestionModalEventListener(questionObject) {
       if (i < 12 && i > 5)
         modal.innerHTML =
           questionObject[`category${i - 6}`][`question${2}`].question;
+      if (i < 18 && i > 11)
+        modal.innerHTML =
+          questionObject[`category${i - 12}`].question3.question;
     });
   }
 }
