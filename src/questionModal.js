@@ -48,8 +48,7 @@ export function addQuestionModalEventListener(questionObject) {
       if (i < 6)
         modal.innerHTML = questionObject[`category${i}`].question1.question;
       if (i < 12 && i > 5)
-        modal.innerHTML =
-          questionObject[`category${i - 6}`][`question${2}`].question;
+        modal.innerHTML = questionObject[`category${i - 6}`].question2.question;
       if (i < 18 && i > 11)
         modal.innerHTML =
           questionObject[`category${i - 12}`].question3.question;

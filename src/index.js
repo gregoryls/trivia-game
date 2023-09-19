@@ -23,6 +23,7 @@ import * as board from "./board";
 // only allow upload if (fileInput) button !disabled
 // group css together better
 // figure out how to collect point value from csv input
+// stop gathering question0, already covered in topic
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
