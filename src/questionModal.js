@@ -58,6 +58,9 @@ export function addQuestionModalEventListener(questionObject) {
       if (i < 30 && i > 23)
         modal.innerHTML =
           questionObject[`category${i - 24}`].question5.question;
+      if (i < 36 && i > 29)
+        modal.innerHTML =
+          questionObject[`category${i - 30}`].question6.question;
     });
   }
 }
