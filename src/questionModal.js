@@ -61,6 +61,9 @@ export function addQuestionModalEventListener(questionObject) {
       if (i < 36 && i > 29)
         modal.innerHTML =
           questionObject[`category${i - 30}`].question6.question;
+
+      currentScore = parseInt(questionTiles[i].textContent, 10);
+      console.log(currentScore);
     });
   }
 }
