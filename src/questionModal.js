@@ -64,6 +64,9 @@ export function addQuestionModalEventListener(questionObject) {
 
       currentScore = parseInt(questionTiles[i].textContent, 10);
       console.log(currentScore);
+
+      const btn = document.createElement("button");
+      btn.textContent = "Answer";
     });
   }
 }
@@ -157,8 +160,8 @@ export function getQuestionData(csvFile) {
       console.log(questionData);
       board.createQuestionGrid(42, results.data);
       console.log(generateQuestionObjectFromCSV());
-      // addQuestionModalEventListener(generateQuestionObjectFromCSV());
-      addQuestionModalEventListenerBackup();
+      addQuestionModalEventListener(generateQuestionObjectFromCSV());
+      // addQuestionModalEventListenerBackup();
       // console.log(results.data);
     },
   });
