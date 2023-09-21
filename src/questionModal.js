@@ -2,7 +2,6 @@ import Papa from "papaparse";
 import * as board from "./board";
 import * as players from "./players";
 
-let currentScore = 0;
 let questionData = [];
 
 // convert this to a function in players module
@@ -43,6 +42,7 @@ export function addQuestionModalEventListener(questionObject) {
   const questionTiles = document.querySelectorAll(".question");
   console.log(questionTiles);
   for (let i = 0; i < questionTiles.length; i += 1) {
+    let currentScore = 0;
     questionTiles[i].addEventListener("click", () => {
       if (questionTiles[i].classList.contains("taken")) return;
       if (i < 6)
@@ -74,6 +74,7 @@ export function addQuestionModalEventListenerBackup() {
   // console.log(playerNames);
 
   for (let i = 0; i < questionTiles.length; i += 1) {
+    let currentScore = 0;
     questionTiles[i].addEventListener("click", () => {
       // modal.innerHTML = "";
       // prevent tile from being opened twice
@@ -156,7 +157,8 @@ export function getQuestionData(csvFile) {
       console.log(questionData);
       board.createQuestionGrid(42, results.data);
       console.log(generateQuestionObjectFromCSV());
-      addQuestionModalEventListener(generateQuestionObjectFromCSV());
+      // addQuestionModalEventListener(generateQuestionObjectFromCSV());
+      addQuestionModalEventListenerBackup();
       // console.log(results.data);
     },
   });

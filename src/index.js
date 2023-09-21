@@ -24,6 +24,7 @@ import * as board from "./board";
 // group css together better
 // figure out how to collect point value from csv input
 // stop gathering question0, already covered in topic
+// consider moving when currentscore is defined, maybe done at addition to player total
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
