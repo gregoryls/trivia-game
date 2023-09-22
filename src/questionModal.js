@@ -96,8 +96,8 @@ export function addQuestionModalEventListener(questionObject) {
           modal.innerHTML =
             questionObject[`category${i - 30}`].question6.answer;
 
-        // const div = document.createElement("div");
-        // div.classList.add("scoreButtons");
+        const div = document.createElement("div");
+        div.classList.add("scoreButtons");
       });
     });
   }
