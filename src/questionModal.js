@@ -71,6 +71,13 @@ export function addQuestionModalEventListener(questionObject) {
       btn.addEventListener("click", () => {
         if (btn.classList.contains("buttonDisabled")) return;
         btn.classList.add("buttonDisabled");
+
+        const playerNames = [
+          playerObj[1].name,
+          playerObj[2].name,
+          playerObj[3].name,
+          playerObj[4].name,
+        ];
       });
     });
   }
