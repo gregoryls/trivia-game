@@ -98,6 +98,8 @@ export function addQuestionModalEventListener(questionObject) {
 
         const div = document.createElement("div");
         div.classList.add("scoreButtons");
+
+        for (let j = 0; j < playerNames.length; j += 0) {}
       });
     });
   }
