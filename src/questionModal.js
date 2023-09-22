@@ -102,6 +102,11 @@ export function addQuestionModalEventListener(questionObject) {
         for (let j = 0; j < playerNames.length; j += 0) {
           const scoreButton = document.createElement("button");
           scoreButton.textContent = playerNames[j];
+          scoreButton.addEventListener("click", () => {
+            if (scoreButton.classList.contains("buttonDisabled")) return;
+
+            scoreButton.classList.add("buttonDisabled");
+          });
         }
       });
     });
