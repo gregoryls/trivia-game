@@ -78,6 +78,7 @@ export function addQuestionModalEventListener(questionObject) {
           playerObj[3].name,
           playerObj[4].name,
         ];
+        const playerCount = playerNames.length;
 
         if (i < 6)
           modal.innerHTML = questionObject[`category${i}`].question1.answer;
@@ -99,7 +100,7 @@ export function addQuestionModalEventListener(questionObject) {
         const div = document.createElement("div");
         div.classList.add("scoreButtons");
 
-        for (let j = 0; j < playerNames.length; j += 0) {
+        for (let j = 0; j < playerCount; j += 0) {
           const scoreButton = document.createElement("button");
           scoreButton.textContent = playerNames[j];
           scoreButton.addEventListener("click", () => {
