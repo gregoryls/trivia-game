@@ -67,6 +67,11 @@ export function addQuestionModalEventListener(questionObject) {
 
       const btn = document.createElement("button");
       btn.textContent = "Answer";
+
+      btn.addEventListener("click", () => {
+        if (btn.classList.contains("buttonDisabled")) return;
+        btn.classList.add("buttonDisabled");
+      });
     });
   }
 }
