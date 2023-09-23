@@ -113,6 +113,11 @@ export function addQuestionModalEventListener(questionObject) {
         modal.append(div);
       });
       modal.append(btn);
+
+      addClass(questionTiles[i], "taken");
+
+      removeClass(modal, "hidden");
+      removeClass(overlay, "hidden");
     });
   }
 }
