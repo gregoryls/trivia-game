@@ -42,7 +42,6 @@ export function addQuestionModalEventListener(questionObject) {
   const questionTiles = document.querySelectorAll(".question");
   console.log(questionTiles);
   for (let i = 0; i < questionTiles.length; i += 1) {
-    let currentScore = 0;
     questionTiles[i].addEventListener("click", () => {
       if (questionTiles[i].classList.contains("taken")) return;
       if (i < 6)
@@ -61,9 +60,6 @@ export function addQuestionModalEventListener(questionObject) {
       if (i < 36 && i > 29)
         modal.innerHTML =
           questionObject[`category${i - 30}`].question6.question;
-
-      currentScore = parseInt(questionTiles[i].textContent, 10);
-      console.log(currentScore);
 
       const btn = document.createElement("button");
       btn.textContent = "Answer";
@@ -102,6 +98,8 @@ export function addQuestionModalEventListener(questionObject) {
         div.classList.add("scoreButtons");
 
         for (let j = 0; j < playerCount; j += 1) {
+          const currentScore = parseInt(questionTiles[i].textContent, 10);
+
           const scoreButton = document.createElement("button");
           scoreButton.textContent = playerNames[j];
           scoreButton.addEventListener("click", () => {

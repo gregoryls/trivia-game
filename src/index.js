@@ -17,14 +17,11 @@ import * as board from "./board";
 // players module remove prompt for better custom solution
 // one option for images, if (question data === img file name) set img
 // expand stock names
-// update players logic in index exclusive module
-// grey out clicked player score buttons
-// go back to file upload
 // only allow upload if (fileInput) button !disabled
 // group css together better
 // figure out how to collect point value from csv input
 // stop gathering question0, already covered in topic
-// consider moving when currentscore is defined, maybe done at addition to player total
+// merge back to main, host gh-page
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
