@@ -100,7 +100,7 @@ export function addQuestionModalEventListener(questionObject) {
         const div = document.createElement("div");
         div.classList.add("scoreButtons");
 
-        for (let j = 0; j < playerCount; j += 0) {
+        for (let j = 0; j < playerCount; j += 1) {
           const scoreButton = document.createElement("button");
           scoreButton.textContent = playerNames[j];
           scoreButton.addEventListener("click", () => {
