@@ -108,6 +108,7 @@ export function addQuestionModalEventListener(questionObject) {
             playerObj[j + 1].displayPlayerScore(j + 1, currentScore);
             scoreButton.classList.add("buttonDisabled");
           });
+          div.append(scoreButton);
         }
       });
     });
