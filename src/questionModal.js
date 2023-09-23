@@ -81,20 +81,21 @@ export function addQuestionModalEventListener(questionObject) {
         const playerCount = playerNames.length;
 
         if (i < 6)
-          modal.innerHTML = questionObject[`category${i}`].question1.answer;
+          modal.innerHTML += questionObject[`category${i}`].question1.answer;
         if (i < 12 && i > 5)
-          modal.innerHTML = questionObject[`category${i - 6}`].question2.answer;
+          modal.innerHTML +=
+            questionObject[`category${i - 6}`].question2.answer;
         if (i < 18 && i > 11)
-          modal.innerHTML =
+          modal.innerHTML +=
             questionObject[`category${i - 12}`].question3.answer;
         if (i < 24 && i > 17)
-          modal.innerHTML =
+          modal.innerHTML +=
             questionObject[`category${i - 18}`].question4.answer;
         if (i < 30 && i > 23)
-          modal.innerHTML =
+          modal.innerHTML +=
             questionObject[`category${i - 24}`].question5.answer;
         if (i < 36 && i > 29)
-          modal.innerHTML =
+          modal.innerHTML +=
             questionObject[`category${i - 30}`].question6.answer;
 
         const div = document.createElement("div");
