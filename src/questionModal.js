@@ -110,6 +110,7 @@ export function addQuestionModalEventListener(questionObject) {
           });
           div.append(scoreButton);
         }
+        modal.append(div);
       });
     });
   }
