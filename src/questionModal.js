@@ -112,6 +112,7 @@ export function addQuestionModalEventListener(questionObject) {
         }
         modal.append(div);
       });
+      modal.append(btn);
     });
   }
 }
