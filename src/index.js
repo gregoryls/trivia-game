@@ -21,7 +21,7 @@ import * as board from "./board";
 // group css together better
 // figure out how to collect point value from csv input
 // stop gathering question0, already covered in topic
-// merge back to main, host gh-page
+// host gh-page
 // use q-obj topic to fill board headers
 
 // Initialize the player objects
