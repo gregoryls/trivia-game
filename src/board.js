@@ -18,7 +18,9 @@ export function createQuestionGrid(gridCount, questionData) {
       // 00,20,40,60,80,100
       questionDiv.classList.add("questionTopic");
       // use every second array to account for spreadsheet format
-      questionDiv.textContent = questionData[2 * i][0];
+      const [textContent] = questionData[2 * i];
+      questionDiv.textContent = textContent;
+      // questionDiv.textContent = questionData[2 * i][0];
     } else {
       questionDiv.classList.add("question");
       questionDiv.textContent = questionValues[i - 6];
