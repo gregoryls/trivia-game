@@ -22,6 +22,7 @@ import * as board from "./board";
 // figure out how to collect point value from csv input
 // stop gathering question0, already covered in topic
 // merge back to main, host gh-page
+// delete old modal event listener
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
