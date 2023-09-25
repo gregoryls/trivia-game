@@ -128,18 +128,6 @@ export function getQuestionData(csvFile) {
     complete(results) {
       questionData = results.data;
       const questionObj = generateQuestionObjectFromCSV();
-
-      // code for downloading a json object
-      const jsonContent = JSON.stringify(questionObj);
-      const blob = new Blob([jsonContent], { type: "application/json" });
-      const blobUrl = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = blobUrl;
-      link.download = "questionObj.json";
-      link.textContent = "Download JSON";
-      document.body.append(link);
-      link.click();
-
       console.log(questionData);
       board.createQuestionGrid(42, results.data);
       console.log(questionObj);
