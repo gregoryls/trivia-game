@@ -1,0 +1,176 @@
+{
+  "category0": {
+    "topic": "Is That A Dune Reference?",
+    "question0": {
+      "question": "Is That A Dune Reference?",
+      "answer": "Is That A Dune Reference?"
+    },
+    "question1": {
+      "question": "Which Star Wars movie is the highest grossing, adjusted for inflation?",
+      "answer": "A New Hope (IV) $ 3.79 billion"
+    },
+    "question2": {
+      "question": "Globally, how many males are born per 100 females?",
+      "answer": "105 male : 100 female"
+    },
+    "question3": {
+      "question": "What is the median value of a owner-occupied home in the state of Idaho? (2017-2021)",
+      "answer": "$266,500"
+    },
+    "question4": {
+      "question": "In what year was the first quantum computer created?",
+      "answer": "1998, 2-qubit computer coherent for mere nanoseconds"
+    },
+    "question5": {
+      "question": "In which country, predominately, will you find the largest contiguous sand desert in the world?",
+      "answer": "Saudi Arabi, Rub' al-Khali (Empty Quarter)"
+    },
+    "question6": {
+      "question": "How long is the longest known worm?",
+      "answer": "180ft, Bootlace Worm"
+    }
+  },
+  "category1": {
+    "topic": "Don't Read Into It",
+    "question0": {
+      "question": "Don't Read Into It",
+      "answer": "Don't Read Into It"
+    },
+    "question1": {
+      "question": "Worldwide, what is the most profitable book genre?",
+      "answer": "Romance"
+    },
+    "question2": {
+      "question": "In the USA, 25-34 year olds spend how long reading per day on average (2021)?",
+      "answer": "7.8 minutes (16.8 minutes all ages)"
+    },
+    "question3": {
+      "question": "In which country was the first known novel written?",
+      "answer": "Japan (11th century, The Tale of Genji)"
+    },
+    "question4": {
+      "question": "Name one of the five higest rated books (on Goodreads) read in the Chanlorian book club. ",
+      "answer": "The Storyteller (4.49), Legends & lattes (4.37), Autobiography of Malcom X (4.35), A Psalm for the Wild-Built (4.3), And Then There Were None (4.28)"
+    },
+    "question5": {
+      "question": "Don Quixote is the best selling book of all time (not including religious texts).  Approximately how many sales does it have?",
+      "answer": "500 million"
+    },
+    "question6": {
+      "question": "Name one of the five lowest rated books (on Goodreads) read in the Chanlorian book club. ",
+      "answer": "We Could Be Heroes (3.44), The Clockwork Rocket (3.64), The Bees (3.71), Mr. Penumbra's 24-Hour Bookstore (3.73), Inherent Vice (3.76)"
+    }
+  },
+  "category2": {
+    "topic": "What Is That?",
+    "question0": { "question": "What Is That?", "answer": "What Is That?" },
+    "question1": {
+      "question": "<img src=\"img/boromir-funeral.png\" alt=\"\">",
+      "answer": "<img src=\"img/boromir-funeral-full.png\" alt=\"\">"
+    },
+    "question2": {
+      "question": "<img src=\"img/caitlyn-vi.png\" alt=\"\">",
+      "answer": "<img src=\"img/caitlyn-vi-full.png\" alt=\"\">"
+    },
+    "question3": {
+      "question": "<img src=\"img/jinx-flare.png\" alt=\"\">",
+      "answer": "<img src=\"img/jinx-flare-full.png\" alt=\"\">"
+    },
+    "question4": {
+      "question": "<img src=\"img/tohru.png\" alt=\"\">",
+      "answer": "小林トール <img src=\"img/tohru-answer.webp\" alt=\"\">"
+    },
+    "question5": {
+      "question": "<img src=\"img/companion-cube.png\" alt=\"\">",
+      "answer": "<img src=\"img/companion-cube-full.png\" alt=\"\">"
+    },
+    "question6": {
+      "question": "<img src=\"img/bloo.png\" alt=\"\">",
+      "answer": "Blooregard Q. Kazoo <img src=\"img/bloo-answer.png\" alt=\"\">"
+    }
+  },
+  "category3": {
+    "topic": "Groverwatch",
+    "question0": { "question": "Groverwatch", "answer": "Groverwatch" },
+    "question1": {
+      "question": "How many meters long is one minecraft block?",
+      "answer": "1 meter"
+    },
+    "question2": {
+      "question": "What is the best-selling video game franchise?",
+      "answer": "Mario (771.95 million sales)"
+    },
+    "question3": {
+      "question": "What is the record for speedrunning the League of Legends lose category?",
+      "answer": "7:49 (Season 11)"
+    },
+    "question4": {
+      "question": "Based on steam users, what percentage of players who own the game have beaten Elden Ring?",
+      "answer": "19.60%"
+    },
+    "question5": {
+      "question": "How many Tony Hawk's X games are there in the main series (no spinoffs)? ",
+      "answer": "10"
+    },
+    "question6": {
+      "question": "This is Greg's all time favorite FPS game.",
+      "answer": "Battlefield 1942"
+    }
+  },
+  "category4": {
+    "topic": "Moist-Z",
+    "question0": { "question": "Moist-Z", "answer": "Moist-Z" },
+    "question1": {
+      "question": "Which champion do I have the most S ranks (any quality) on during any A-Z?",
+      "answer": "Ahri (top S+;bot S-;mid S-) Ashe (top S; bot S-; jg S-)"
+    },
+    "question2": {
+      "question": "Which champion has been defeated the most during A-Z?",
+      "answer": "Yasuo (8)"
+    },
+    "question3": {
+      "question": "Which champion has beaten us the most during A-Z?",
+      "answer": "Yasuo (6)"
+    },
+    "question4": {
+      "question": "Has any champion never been picked in LCS?",
+      "answer": "No"
+    },
+    "question5": {
+      "question": "Which Champion has been picked or banned most in the LCS?",
+      "answer": "Thresh (1309, 43% games)"
+    },
+    "question6": {
+      "question": "On which champion do I have the most kills in A-Z?",
+      "answer": "Brand (19/10/4) vs Irelia, Nami (19/8/16) vs Yasuo "
+    }
+  },
+  "category5": {
+    "topic": "何も",
+    "question0": { "question": "何も", "answer": "何も" },
+    "question1": {
+      "question": "Between Argentina and India, which country has a larger land area?",
+      "answer": "India (1.15 million sq miles vs 1.05)"
+    },
+    "question2": {
+      "question": "Movie with the most known ticket sales worldwide, not counting movies from China. ",
+      "answer": "Titanic - 382,922,411"
+    },
+    "question3": {
+      "question": "Adjusted for inflation, which movie had the highest budget of all time?",
+      "answer": "Pirates of the Caribbean: On Stranger Tides - $456 million"
+    },
+    "question4": {
+      "question": "How tall is the world's tallest living tree?",
+      "answer": "380ft, Hyperion the Redwood"
+    },
+    "question5": {
+      "question": "What is the record for snowfall in a 24 hour period?",
+      "answer": "101 inches, Capracotta, Italy 2015"
+    },
+    "question6": {
+      "question": "Which country has the highest annual precipitation depth?",
+      "answer": "Colombia - 324cm/127.5in"
+    }
+  }
+}
