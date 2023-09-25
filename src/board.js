@@ -4,7 +4,7 @@ const gridArea = document.querySelector("#gridWrapper");
 
 // change this to use question object
 // grid count based on questionObj keys lengths, 2 dimensions, category length + question count length + topic
-export function createQuestionGrid(gridCount, questionData) {
+export function createQuestionGrid(gridCount, questionObject) {
   const questionValues = [
     100, 100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 300, 300, 300,
     300, 300, 300, 400, 400, 400, 400, 400, 400, 500, 500, 500, 500, 500, 500,
@@ -18,8 +18,10 @@ export function createQuestionGrid(gridCount, questionData) {
       // 00,20,40,60,80,100
       questionDiv.classList.add("questionTopic");
       // use every second array to account for spreadsheet format
-      const [textContent] = questionData[2 * i];
-      questionDiv.textContent = textContent;
+      questionDiv.textContent = questionObject[`category${i}`].topic;
+
+      // const [textContent] = questionObject[2 * i];
+      // questionDiv.textContent = textContent;
       // questionDiv.textContent = questionData[2 * i][0];
     } else {
       questionDiv.classList.add("question");

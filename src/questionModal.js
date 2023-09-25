@@ -38,6 +38,8 @@ export function generateQuestionObjectFromCSV() {
   return questionObj;
 }
 
+export function getQuestionCount(questionObject) {}
+
 export function addQuestionModalEventListener(questionObject) {
   const questionTiles = document.querySelectorAll(".question");
   console.log(questionTiles);
@@ -129,7 +131,7 @@ export function getQuestionData(csvFile) {
       questionData = results.data;
       const questionObj = generateQuestionObjectFromCSV();
       console.log(questionData);
-      board.createQuestionGrid(42, results.data);
+      board.createQuestionGrid(42, questionObj);
       console.log(questionObj);
       addQuestionModalEventListener(questionObj);
       // console.log(results.data);
