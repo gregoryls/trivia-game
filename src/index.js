@@ -56,7 +56,8 @@ overlay.addEventListener("click", () => {
 upload.addEventListener("click", () => {
   // getQuestionData.csvParse(fileInput);
   // getQuestionData.csvParse();
-  question.getQuestionData(fileInput);
+  const questionObj = question.generateQuestionObjectFromCSV();
+  question.getQuestionData(fileInput, questionObj);
   document.getElementById("uploadWrapper").classList.add("hidden");
 });
 
