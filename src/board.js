@@ -11,7 +11,10 @@ export function createQuestionGrid(gridCount, questionObject) {
     600, 600, 600, 600, 600, 600,
   ];
   const categoryCount = Object.keys(questionObject).length;
-  console.log(categoryCount);
+
+  // set grid column count equal to number of question categories
+  const gridWrapper = document.getElementById("gridWrapper");
+  gridWrapper.style.gridTemplateColumns = `repeat(${categoryCount},1fr)`;
 
   for (let i = 0; i < categoryCount; i += 1) {
     const questionDiv = document.createElement("div");
