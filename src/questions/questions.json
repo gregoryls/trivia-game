@@ -1,10 +1,6 @@
 {
   "category0": {
     "topic": "Is That A Dune Reference?",
-    "question0": {
-      "question": "Is That A Dune Reference?",
-      "answer": "Is That A Dune Reference?"
-    },
     "question1": {
       "value": 100,
       "question": "Which Star Wars movie is the highest grossing, adjusted for inflation?",
@@ -38,10 +34,6 @@
   },
   "category1": {
     "topic": "Don't Read Into It",
-    "question0": {
-      "question": "Don't Read Into It",
-      "answer": "Don't Read Into It"
-    },
     "question1": {
       "value": 100,
       "question": "Worldwide, what is the most profitable book genre?",
@@ -75,7 +67,6 @@
   },
   "category2": {
     "topic": "What Is That?",
-    "question0": { "question": "What Is That?", "answer": "What Is That?" },
     "question1": {
       "value": 100,
       "question": "<img src=\"img/boromir-funeral.png\" alt=\"\">",
@@ -109,7 +100,6 @@
   },
   "category3": {
     "topic": "Groverwatch",
-    "question0": { "question": "Groverwatch", "answer": "Groverwatch" },
     "question1": {
       "value": 100,
       "question": "How many meters long is one minecraft block?",
@@ -143,7 +133,6 @@
   },
   "category4": {
     "topic": "Moist-Z",
-    "question0": { "question": "Moist-Z", "answer": "Moist-Z" },
     "question1": {
       "value": 100,
       "question": "Which champion do I have the most S ranks (any quality) on during any A-Z?",
@@ -177,7 +166,6 @@
   },
   "category5": {
     "topic": "何も",
-    "question0": { "question": "何も", "answer": "何も" },
     "question1": {
       "value": 100,
       "question": "Between Argentina and India, which country has a larger land area?",
