@@ -19,36 +19,25 @@ export function createQuestionGrid(gridCount, questionObject) {
   const gridWrapper = document.getElementById("gridWrapper");
   gridWrapper.style.gridTemplateColumns = `repeat(${categoryCount},1fr)`;
 
+  // generate topic tiles
   for (let i = 0; i < categoryCount; i += 1) {
     const questionDiv = document.createElement("div");
-    // treat the first six boxes differently to turn them into topic headers.
-    // if (i < 6) {
-    //   // 00,20,40,60,80,100
-    //   questionDiv.classList.add("questionTopic");
-    //   // use every second array to account for spreadsheet format
-    //   questionDiv.textContent = questionObject[`category${i}`].topic;
 
-    //   // const [textContent] = questionObject[2 * i];
-    //   // questionDiv.textContent = textContent;
-    //   // questionDiv.textContent = questionData[2 * i][0];
-    // } else {
-    //   questionDiv.classList.add("question");
-    //   questionDiv.textContent = questionValues[i - 6];
-    // }
     questionDiv.classList.add("questionTopic");
-    // use every second array to account for spreadsheet format
     questionDiv.textContent = questionObject[`category${i}`].topic;
 
     gridArea.appendChild(questionDiv);
   }
 
+  // generate question tiles with values
   for (let i = 0; i < categoryCount; i += 1) {
     for (let j = 1; j < questionCount + 1; j += 1) {
-      const questionDiv2 = document.createElement("div");
-      questionDiv2.classList.add("question");
-      questionDiv2.textContent =
+      const questionDiv = document.createElement("div");
+      questionDiv.classList.add("question");
+      console.log(questionObject[`category${i}`][`question${j}`].value);
+      questionDiv.textContent =
         questionObject[`category${i}`][`question${j}`].value;
-      gridArea.append(questionDiv2);
+      gridArea.append(questionDiv);
     }
   }
 }
