@@ -13,7 +13,7 @@ export function createQuestionGrid(gridCount, questionObject) {
   const categoryCount = Object.keys(questionObject).length;
 
   // -1 from length to account for 'topic' key
-  const questionCount = Object.keys(questionObject.category0).length;
+  const questionCount = Object.keys(questionObject.category0).length - 1;
   console.log(questionObject);
   console.log(questionCount);
 
