@@ -14,8 +14,6 @@ export function createQuestionGrid(gridCount, questionObject) {
 
   // -1 from length to account for 'topic' key
   const questionCount = Object.keys(questionObject.category0).length - 1;
-  console.log(questionObject);
-  console.log(questionCount);
 
   // set grid column count equal to number of question categories
   const gridWrapper = document.getElementById("gridWrapper");
@@ -41,12 +39,17 @@ export function createQuestionGrid(gridCount, questionObject) {
     // use every second array to account for spreadsheet format
     questionDiv.textContent = questionObject[`category${i}`].topic;
 
-    for (let j = 1; j < questionCount; j += 1) {
-      questionDiv.textContent =
-        questionObject[`category${i}`][`question${j}`].value;
-    }
-
     gridArea.appendChild(questionDiv);
+  }
+
+  for (let i = 0; i < categoryCount; i += 1) {
+    for (let j = 1; j < questionCount + 1; j += 1) {
+      const questionDiv2 = document.createElement("div");
+      questionDiv2.classList.add("question");
+      questionDiv2.textContent =
+        questionObject[`category${i}`][`question${j}`].value;
+      gridArea.append(questionDiv2);
+    }
   }
 }
 
