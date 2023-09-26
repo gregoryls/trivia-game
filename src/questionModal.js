@@ -25,7 +25,9 @@ export function generateQuestionObjectFromCSV() {
     questionObj[`category${i}`] = {
       topic: questionData[2 * i][0],
     };
-    for (let j = 0; j < questionData[0].length; j += 1) {
+
+    // start from index 1 to account for csv topic formatting
+    for (let j = 1; j < questionData[0].length; j += 1) {
       // console.log(questionData[2 * i].length);
       questionObj[`category${i}`][`question${j}`] = {
         question: questionData[2 * i][j],
