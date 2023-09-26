@@ -34,9 +34,13 @@ export function createQuestionGrid(gridCount, questionObject) {
     for (let j = 1; j < questionCount + 1; j += 1) {
       const questionDiv = document.createElement("div");
       questionDiv.classList.add("question");
-      console.log(questionObject[`category${i}`][`question${j}`].value);
       questionDiv.textContent =
         questionObject[`category${i}`][`question${j}`].value;
+
+      if (questionObject[`category${i}`][`question${j}`].value === undefined) {
+        questionDiv.textContent = questionValues[6 * i + (j - 1)];
+        console.log(i * j);
+      }
       gridArea.append(questionDiv);
     }
   }
