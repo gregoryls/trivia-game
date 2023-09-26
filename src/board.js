@@ -37,8 +37,11 @@ export function createQuestionGrid(gridCount, questionObject) {
       questionDiv.textContent =
         questionObject[`category${i}`][`question${j}`].value;
 
+      // apply stock values of 100 increment per row if a value
+      // is not a supplied from questionObj
       if (questionObject[`category${i}`][`question${j}`].value === undefined) {
-        questionDiv.textContent = questionValues[6 * i + (j - 1)];
+        questionDiv.textContent = `${i + 1}00`;
+
         console.log(i * j);
       }
       gridArea.append(questionDiv);
