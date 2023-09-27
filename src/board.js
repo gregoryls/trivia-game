@@ -5,11 +5,6 @@ const gridArea = document.querySelector("#gridWrapper");
 // change this to use question object
 // grid count based on questionObj keys lengths, 2 dimensions, category length + question count length + topic
 export function createQuestionGrid(gridCount, questionObject) {
-  const questionValues = [
-    100, 100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 300, 300, 300,
-    300, 300, 300, 400, 400, 400, 400, 400, 400, 500, 500, 500, 500, 500, 500,
-    600, 600, 600, 600, 600, 600,
-  ];
   const categoryCount = Object.keys(questionObject).length;
 
   // -1 from length to account for 'topic' key
