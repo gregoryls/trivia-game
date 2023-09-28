@@ -44,6 +44,7 @@ players.initialPlayerSetup(
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 const modal = document.querySelector(".modal");
+const fileTypeSelect = document.getElementById("fileTypeSelect");
 
 const overlay = document.querySelector(".overlay");
 // overlay provides a semi-transparent blur behind the modal to help focus attention on modal
@@ -57,7 +58,8 @@ upload.addEventListener("click", () => {
   // getQuestionData.csvParse(fileInput);
   // getQuestionData.csvParse();
 
-  question.getQuestionData(fileInput);
+  if (fileTypeSelect.value === "csv") question.getQuestionData(fileInput);
+  if (fileTypeSelect.value === "json") console.log("json");
   document.getElementById("uploadWrapper").classList.add("hidden");
 });
 
