@@ -125,7 +125,7 @@ export function addQuestionModalEventListener(questionObject) {
   }
 }
 
-export function coverJsonToObject(json) {
+export function convertJsonToObject(json) {
   const obj = JSON.parse(json);
   return obj;
 }
