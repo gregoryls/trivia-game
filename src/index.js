@@ -33,7 +33,7 @@ import * as board from "./board";
 // const player4 = players.generatePlayer("Taylor", 4, 0);
 
 const { playerObj } = question;
-console.log(playerObj);
+// console.log(playerObj);
 
 // const playerNames = [player1.name, player2.name, player3.name, player4.name];
 
@@ -48,6 +48,14 @@ const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 const modal = document.querySelector(".modal");
 const fileTypeSelect = document.getElementById("fileTypeSelect");
+
+const reader = new FileReader();
+reader.addEventListener("load", (event) => {
+  const fileData = event.target.result;
+  console.log(fileData);
+  // const jsonObj = JSON.parse(fileData);
+});
+// reader.readAsText(fileInput.files[0]);
 
 const overlay = document.querySelector(".overlay");
 // overlay provides a semi-transparent blur behind the modal to help focus attention on modal
@@ -69,11 +77,13 @@ upload.addEventListener("click", () => {
 
   const inputFile = fileInput.files[0];
   const fileType = inputFile.type.match(/csv|json/);
+
   // match returns matched group in an array
   if (fileType[0] === "csv") question.getQuestionData(fileInput);
   if (fileType[0] === "json") {
-    board.createQuestionGrid(42, inputFile);
-    question.addQuestionModalEventListener(inputFile);
+    // board.createQuestionGrid(42, jsonObj);
+    // question.addQuestionModalEventListener(jsonObj);
+    console.log(reader.readAsText(inputFile));
   }
 
   document.getElementById("uploadWrapper").classList.add("hidden");
