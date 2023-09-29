@@ -37,7 +37,7 @@ export function createQuestionGrid(gridCount, questionObject) {
       if (questionObject[`category${i}`][`question${j}`].value === undefined) {
         questionDiv.textContent = `${i + 1}00`;
 
-        console.log(i * j);
+        // console.log(i * j);
       }
       gridArea.append(questionDiv);
     }

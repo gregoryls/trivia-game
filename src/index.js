@@ -24,6 +24,7 @@ import * as board from "./board";
 // use q-obj topic to fill board headers
 // json board building logic
 // event listener to swap file input based on select element
+// change file upload to accept csv or json, split behavior behind the scenes
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
@@ -66,8 +67,11 @@ upload.addEventListener("click", () => {
   // getQuestionData.csvParse(fileInput);
   // getQuestionData.csvParse();
 
-  if (fileTypeSelect.value === "csv") question.getQuestionData(fileInput);
-  if (fileTypeSelect.value === "json") console.log("json");
+  const inputFile = fileInput.files[0];
+  const fileType = inputFile.type.match(/csv|json/);
+  // match returns matched group in an array
+  if (fileType[0] === "csv") question.getQuestionData(fileInput);
+
   document.getElementById("uploadWrapper").classList.add("hidden");
 });
 
