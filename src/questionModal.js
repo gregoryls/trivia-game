@@ -125,6 +125,11 @@ export function addQuestionModalEventListener(questionObject) {
   }
 }
 
+export function coverJsonToObject(json) {
+  const obj = JSON.parse(json);
+  return obj;
+}
+
 export function getQuestionData(csvFile) {
   // "../src/questions/Trivia - Questions.csv" local filename
   Papa.parse(csvFile.files[0], {
