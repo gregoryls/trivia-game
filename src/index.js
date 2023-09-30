@@ -55,6 +55,8 @@ reader.addEventListener("load", (event) => {
   // console.log(fileData);
   const jsonObj = JSON.parse(fileData);
   console.log(jsonObj);
+  board.createQuestionGrid(42, jsonObj);
+  question.addQuestionModalEventListener(jsonObj);
 });
 // reader.readAsText(fileInput.files[0]);
 
