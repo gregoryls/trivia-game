@@ -52,10 +52,13 @@ const fileTypeSelect = document.getElementById("fileTypeSelect");
 const reader = new FileReader();
 reader.addEventListener("load", (event) => {
   const fileData = event.target.result;
-  console.log(fileData);
-  // const jsonObj = JSON.parse(fileData);
+  // console.log(fileData);
+  const jsonObj = JSON.parse(fileData);
+  console.log(jsonObj);
 });
 // reader.readAsText(fileInput.files[0]);
+
+// https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText
 
 const overlay = document.querySelector(".overlay");
 // overlay provides a semi-transparent blur behind the modal to help focus attention on modal
@@ -83,7 +86,7 @@ upload.addEventListener("click", () => {
   if (fileType[0] === "json") {
     // board.createQuestionGrid(42, jsonObj);
     // question.addQuestionModalEventListener(jsonObj);
-    console.log(reader.readAsText(inputFile));
+    reader.readAsText(inputFile);
   }
 
   document.getElementById("uploadWrapper").classList.add("hidden");
