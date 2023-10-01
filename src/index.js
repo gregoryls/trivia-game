@@ -25,6 +25,8 @@ import * as board from "./board";
 // json board building logic
 // event listener to swap file input based on select element
 // change file upload to accept csv or json, split behavior behind the scenes
+// cleanup index
+// consider async for .json
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
@@ -68,12 +70,6 @@ const overlay = document.querySelector(".overlay");
 overlay.addEventListener("click", () => {
   question.addClass(modal, "hidden");
   question.addClass(overlay, "hidden");
-});
-
-fileTypeSelect.addEventListener("change", () => {
-  const newFileType = fileTypeSelect.value;
-  fileInput.accept = newFileType;
-  console.log(fileInput.accept);
 });
 
 upload.addEventListener("click", () => {
