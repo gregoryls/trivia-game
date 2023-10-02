@@ -44,7 +44,7 @@ export function getQuestionCount(questionObject) {}
 
 export function addQuestionModalEventListener(questionObject) {
   const questionTiles = document.querySelectorAll(".question");
-  // console.log(questionTiles);
+  console.log(questionTiles);
   for (let i = 0; i < questionTiles.length; i += 1) {
     questionTiles[i].addEventListener("click", () => {
       if (questionTiles[i].classList.contains("taken")) return;

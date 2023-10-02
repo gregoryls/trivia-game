@@ -24,6 +24,8 @@ import * as board from "./board";
 // cleanup index
 // consider async for .json
 // change board logic to account for asymmetric categories - loop all categories to find unique question counts
+// disable overlay closing until at least answer button clicked
+// fix board build on non-square boards
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);

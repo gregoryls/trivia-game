@@ -26,7 +26,7 @@ export function createQuestionGrid(questionObject) {
   for (let i = 0; i < categoryCount; i += 1) {
     // -1 from length to account for 'topic' key
     questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
-    console.log(questionCount);
+    // console.log(questionCount);
   }
 
   // generate question tiles with values
