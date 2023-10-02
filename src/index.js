@@ -23,6 +23,7 @@ import * as board from "./board";
 // stop gathering question0, already covered in topic
 // cleanup index
 // consider async for .json
+// change board logic to account for asymmetric categories - loop all categories to find unique question counts
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
