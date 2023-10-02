@@ -21,10 +21,6 @@ import * as board from "./board";
 // group css together better
 // figure out how to collect point value from csv input
 // stop gathering question0, already covered in topic
-// use q-obj topic to fill board headers
-// json board building logic
-// event listener to swap file input based on select element
-// change file upload to accept csv or json, split behavior behind the scenes
 // cleanup index
 // consider async for .json
 
