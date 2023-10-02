@@ -25,7 +25,7 @@ export function createQuestionGrid(questionObject) {
   }
 
   for (let i = 0; i < categoryCount; i += 1) {
-    questionCount.push(Object.keys(questionObject.category0).length - 1);
+    questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
     console.log(questionCount);
   }
 
