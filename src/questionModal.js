@@ -138,7 +138,7 @@ export function getQuestionData(csvFile) {
       questionData = results.data;
       const questionObj = generateQuestionObjectFromCSV();
       // console.log(questionData);
-      board.createQuestionGrid(42, questionObj);
+      board.createQuestionGrid(questionObj);
       // console.log(questionObj);
       addQuestionModalEventListener(questionObj);
       // console.log(results.data);
