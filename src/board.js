@@ -7,7 +7,6 @@ const gridArea = document.querySelector("#gridWrapper");
 export function createQuestionGrid(questionObject) {
   const categoryCount = Object.keys(questionObject).length;
 
-  // -1 from length to account for 'topic' key
   const questionCount = [];
 
   // set grid column count equal to number of question categories
@@ -25,13 +24,14 @@ export function createQuestionGrid(questionObject) {
   }
 
   for (let i = 0; i < categoryCount; i += 1) {
+    // -1 from length to account for 'topic' key
     questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
     console.log(questionCount);
   }
 
   // generate question tiles with values
   for (let i = 0; i < categoryCount; i += 1) {
-    for (let j = 1; j < questionCount + 1; j += 1) {
+    for (let j = 1; j < questionCount[i] + 1; j += 1) {
       const questionDiv = document.createElement("div");
       questionDiv.classList.add("question");
       questionDiv.textContent =
