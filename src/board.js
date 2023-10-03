@@ -50,7 +50,7 @@ export function createQuestionGrid(questionObject) {
 
         // console.log(i * j);
       }
-      gridArea.append(tileDiv);
+      categoryDiv.append(tileDiv);
     }
   }
 }
