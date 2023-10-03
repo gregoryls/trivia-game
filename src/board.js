@@ -18,7 +18,8 @@ export function createQuestionGrid(questionObject) {
     const categoryDiv = document.createElement("div");
     const tileDiv = document.createElement("div");
 
-    categoryDiv.classList.add("categoryWrap");
+    categoryDiv.id = `category${i}`;
+    categoryDiv.classList.add("category");
     tileDiv.classList.add("questionTopic");
     tileDiv.textContent = questionObject[`category${i}`].topic;
     categoryDiv.append(tileDiv);
@@ -26,6 +27,7 @@ export function createQuestionGrid(questionObject) {
     gridArea.append(categoryDiv);
   }
 
+  // generate question counts for each category
   for (let i = 0; i < categoryCount; i += 1) {
     // -1 from length to account for 'topic' key
     questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
@@ -35,6 +37,7 @@ export function createQuestionGrid(questionObject) {
   // generate question tiles with values
   for (let i = 0; i < categoryCount; i += 1) {
     for (let j = 1; j < questionCount[i] + 1; j += 1) {
+      const categoryDiv = document.getElementById(`category${i}`);
       const tileDiv = document.createElement("div");
       tileDiv.classList.add("question");
       tileDiv.textContent =
