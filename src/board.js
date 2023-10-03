@@ -15,12 +15,15 @@ export function createQuestionGrid(questionObject) {
 
   // generate topic tiles
   for (let i = 0; i < categoryCount; i += 1) {
-    const questionDiv = document.createElement("div");
+    const categoryDiv = document.createElement("div");
+    const tileDiv = document.createElement("div");
 
-    questionDiv.classList.add("questionTopic");
-    questionDiv.textContent = questionObject[`category${i}`].topic;
+    categoryDiv.classList.add("categoryWrap");
+    tileDiv.classList.add("questionTopic");
+    tileDiv.textContent = questionObject[`category${i}`].topic;
+    categoryDiv.append(tileDiv);
 
-    gridArea.appendChild(questionDiv);
+    gridArea.append(categoryDiv);
   }
 
   for (let i = 0; i < categoryCount; i += 1) {
@@ -32,19 +35,19 @@ export function createQuestionGrid(questionObject) {
   // generate question tiles with values
   for (let i = 0; i < categoryCount; i += 1) {
     for (let j = 1; j < questionCount[i] + 1; j += 1) {
-      const questionDiv = document.createElement("div");
-      questionDiv.classList.add("question");
-      questionDiv.textContent =
+      const tileDiv = document.createElement("div");
+      tileDiv.classList.add("question");
+      tileDiv.textContent =
         questionObject[`category${i}`][`question${j}`].value;
 
       // apply stock values of 100 increment per row if a value
       // is not a supplied from questionObj
       if (questionObject[`category${i}`][`question${j}`].value === undefined) {
-        questionDiv.textContent = `${i + 1}00`;
+        tileDiv.textContent = `${i + 1}00`;
 
         // console.log(i * j);
       }
-      gridArea.append(questionDiv);
+      gridArea.append(tileDiv);
     }
   }
 }
