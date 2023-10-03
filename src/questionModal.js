@@ -123,6 +123,20 @@ export function addQuestionModalEventListener(questionObject) {
       removeClass(overlay, "hidden");
     });
   }
+
+  const categoryCount = Object.keys(questionObject).length;
+  const questionCount = [];
+  for (let i = 0; i < categoryCount; i += 1) {
+    // -1 from length to account for 'topic' key
+    questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
+
+    const categoryQuestionTiles = document.querySelectorAll(
+      `#category${i} .question`,
+    );
+    for (let j = 0; j < questionCount; j += 1) {
+      categoryQuestionTiles[j].addEventListener("click", () => {});
+    }
+  }
 }
 
 export function convertJsonToObject(json) {
