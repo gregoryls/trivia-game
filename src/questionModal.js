@@ -141,6 +141,10 @@ export function addQuestionModalEventListener(questionObject) {
         );
         modal.innerHTML =
           questionObject[`category${i}`][`question${j + 1}`].question;
+
+        const answerButton = document.createElement("button");
+        answerButton.textContent = "Answer";
+        // finish replicating old logic here
       });
     }
   }
