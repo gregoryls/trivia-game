@@ -162,7 +162,10 @@ export function addQuestionModalEventListener(questionObject) {
           div.classList.add("scoreButtons");
 
           for (let k = 0; k < playerCount; k += 1) {
-            const currentScore = parseInt(questionTiles[i].textContent, 10);
+            const currentScore = parseInt(
+              categoryQuestionTiles[j].textContent,
+              10,
+            );
 
             const scoreButton = document.createElement("button");
             scoreButton.textContent = playerNames[k];
