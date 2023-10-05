@@ -45,84 +45,84 @@ export function getQuestionCount(questionObject) {}
 export function addQuestionModalEventListener(questionObject) {
   const questionTiles = document.querySelectorAll(".question");
   console.log(questionTiles);
-  // for (let i = 0; i < questionTiles.length; i += 1) {
-  //   questionTiles[i].addEventListener("click", () => {
-  //     if (questionTiles[i].classList.contains("taken")) return;
-  //     if (i < 6)
-  //       modal.innerHTML = questionObject[`category${i}`].question1.question;
-  //     if (i < 12 && i > 5)
-  //       modal.innerHTML = questionObject[`category${i - 6}`].question2.question;
-  //     if (i < 18 && i > 11)
-  //       modal.innerHTML =
-  //         questionObject[`category${i - 12}`].question3.question;
-  //     if (i < 24 && i > 17)
-  //       modal.innerHTML =
-  //         questionObject[`category${i - 18}`].question4.question;
-  //     if (i < 30 && i > 23)
-  //       modal.innerHTML =
-  //         questionObject[`category${i - 24}`].question5.question;
-  //     if (i < 36 && i > 29)
-  //       modal.innerHTML =
-  //         questionObject[`category${i - 30}`].question6.question;
+  for (let i = 0; i < questionTiles.length; i += 1) {
+    questionTiles[i].addEventListener("click", () => {
+      if (questionTiles[i].classList.contains("taken")) return;
+      if (i < 6)
+        modal.innerHTML = questionObject[`category${i}`].question1.question;
+      if (i < 12 && i > 5)
+        modal.innerHTML = questionObject[`category${i - 6}`].question2.question;
+      if (i < 18 && i > 11)
+        modal.innerHTML =
+          questionObject[`category${i - 12}`].question3.question;
+      if (i < 24 && i > 17)
+        modal.innerHTML =
+          questionObject[`category${i - 18}`].question4.question;
+      if (i < 30 && i > 23)
+        modal.innerHTML =
+          questionObject[`category${i - 24}`].question5.question;
+      if (i < 36 && i > 29)
+        modal.innerHTML =
+          questionObject[`category${i - 30}`].question6.question;
 
-  //     const btn = document.createElement("button");
-  //     btn.textContent = "Answer";
+      const btn = document.createElement("button");
+      btn.textContent = "Answer";
 
-  //     btn.addEventListener("click", () => {
-  //       if (btn.classList.contains("buttonDisabled")) return;
-  //       btn.classList.add("buttonDisabled");
+      btn.addEventListener("click", () => {
+        if (btn.classList.contains("buttonDisabled")) return;
+        btn.classList.add("buttonDisabled");
 
-  //       const playerNames = [
-  //         playerObj[1].name,
-  //         playerObj[2].name,
-  //         playerObj[3].name,
-  //         playerObj[4].name,
-  //       ];
-  //       const playerCount = playerNames.length;
+        const playerNames = [
+          playerObj[1].name,
+          playerObj[2].name,
+          playerObj[3].name,
+          playerObj[4].name,
+        ];
+        const playerCount = playerNames.length;
 
-  //       if (i < 6)
-  //         modal.innerHTML += questionObject[`category${i}`].question1.answer;
-  //       if (i < 12 && i > 5)
-  //         modal.innerHTML +=
-  //           questionObject[`category${i - 6}`].question2.answer;
-  //       if (i < 18 && i > 11)
-  //         modal.innerHTML +=
-  //           questionObject[`category${i - 12}`].question3.answer;
-  //       if (i < 24 && i > 17)
-  //         modal.innerHTML +=
-  //           questionObject[`category${i - 18}`].question4.answer;
-  //       if (i < 30 && i > 23)
-  //         modal.innerHTML +=
-  //           questionObject[`category${i - 24}`].question5.answer;
-  //       if (i < 36 && i > 29)
-  //         modal.innerHTML +=
-  //           questionObject[`category${i - 30}`].question6.answer;
+        if (i < 6)
+          modal.innerHTML += questionObject[`category${i}`].question1.answer;
+        if (i < 12 && i > 5)
+          modal.innerHTML +=
+            questionObject[`category${i - 6}`].question2.answer;
+        if (i < 18 && i > 11)
+          modal.innerHTML +=
+            questionObject[`category${i - 12}`].question3.answer;
+        if (i < 24 && i > 17)
+          modal.innerHTML +=
+            questionObject[`category${i - 18}`].question4.answer;
+        if (i < 30 && i > 23)
+          modal.innerHTML +=
+            questionObject[`category${i - 24}`].question5.answer;
+        if (i < 36 && i > 29)
+          modal.innerHTML +=
+            questionObject[`category${i - 30}`].question6.answer;
 
-  //       const div = document.createElement("div");
-  //       div.classList.add("scoreButtons");
+        const div = document.createElement("div");
+        div.classList.add("scoreButtons");
 
-  //       for (let j = 0; j < playerCount; j += 1) {
-  //         const currentScore = parseInt(questionTiles[i].textContent, 10);
+        for (let j = 0; j < playerCount; j += 1) {
+          const currentScore = parseInt(questionTiles[i].textContent, 10);
 
-  //         const scoreButton = document.createElement("button");
-  //         scoreButton.textContent = playerNames[j];
-  //         scoreButton.addEventListener("click", () => {
-  //           if (scoreButton.classList.contains("buttonDisabled")) return;
-  //           playerObj[j + 1].displayPlayerScore(j + 1, currentScore);
-  //           scoreButton.classList.add("buttonDisabled");
-  //         });
-  //         div.append(scoreButton);
-  //       }
-  //       modal.append(div);
-  //     });
-  //     modal.append(btn);
+          const scoreButton = document.createElement("button");
+          scoreButton.textContent = playerNames[j];
+          scoreButton.addEventListener("click", () => {
+            if (scoreButton.classList.contains("buttonDisabled")) return;
+            playerObj[j + 1].displayPlayerScore(j + 1, currentScore);
+            scoreButton.classList.add("buttonDisabled");
+          });
+          div.append(scoreButton);
+        }
+        modal.append(div);
+      });
+      modal.append(btn);
 
-  //     addClass(questionTiles[i], "taken");
+      addClass(questionTiles[i], "taken");
 
-  //     removeClass(modal, "hidden");
-  //     removeClass(overlay, "hidden");
-  //   });
-  // }
+      removeClass(modal, "hidden");
+      removeClass(overlay, "hidden");
+    });
+  }
 
   const categoryCount = Object.keys(questionObject).length;
   const questionCount = [];
@@ -136,14 +136,31 @@ export function addQuestionModalEventListener(questionObject) {
     for (let j = 0; j < questionCount[i]; j += 1) {
       // console.log(categoryQuestionTiles);
       categoryQuestionTiles[j].addEventListener("click", () => {
-        console.log(
-          questionObject[`category${i}`][`question${j + 1}`].question,
-        );
+        // console.log(
+        //   questionObject[`category${i}`][`question${j + 1}`].question,
+        // );
         modal.innerHTML =
           questionObject[`category${i}`][`question${j + 1}`].question;
 
         const answerButton = document.createElement("button");
         answerButton.textContent = "Answer";
+
+        answerButton.addEventListener("click", () => {
+          if (answerButton.classList.contains("buttonDisabled")) return;
+          answerButton.classList.add("buttonDisabled");
+
+          const playerNames = [
+            playerObj[1].name,
+            playerObj[2].name,
+            playerObj[3].name,
+            playerObj[4].name,
+          ];
+          const playerCount = playerNames.length;
+
+          modal.innerHTML +=
+            questionObject[`category${i}`][`question${j + 1}`].answer;
+        });
+
         // finish replicating old logic here
       });
     }
