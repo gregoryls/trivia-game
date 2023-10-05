@@ -159,6 +159,22 @@ export function addQuestionModalEventListener(questionObject) {
 
           modal.innerHTML +=
             questionObject[`category${i}`][`question${j + 1}`].answer;
+
+          const div = document.createElement("div");
+          div.classList.add("scoreButtons");
+
+          for (let k = 0; k < playerCount; k += 1) {
+            const currentScore = parseInt(questionTiles[i].textContent, 10);
+
+            const scoreButton = document.createElement("button");
+            scoreButton.textContent = playerNames[k];
+            scoreButton.addEventListener("click", () => {
+              if (scoreButton.classList.contains("buttonDisabled")) return;
+              playerObj[k + 1].displayPlayerScore(k + 1, currentScore);
+              scoreButton.classList.add("buttonDisabled");
+            });
+            div.append(scoreButton);
+          }
         });
 
         // finish replicating old logic here
