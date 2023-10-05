@@ -136,9 +136,7 @@ export function addQuestionModalEventListener(questionObject) {
     for (let j = 0; j < questionCount[i]; j += 1) {
       // console.log(categoryQuestionTiles);
       categoryQuestionTiles[j].addEventListener("click", () => {
-        // console.log(
-        //   questionObject[`category${i}`][`question${j + 1}`].question,
-        // );
+        if (categoryQuestionTiles[j].classList.contains("taken")) return;
         modal.innerHTML =
           questionObject[`category${i}`][`question${j + 1}`].question;
 
