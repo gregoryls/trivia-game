@@ -27,6 +27,8 @@ import * as board from "./board";
 // disable overlay closing until at least answer button clicked
 // fix board build on non-square boards
 // consider exporting category/question counts from board
+// migrate to classlist vs custom function
+// delete old method in question modal EL
 
 // Initialize the player objects
 // const player1 = players.generatePlayer("Chase", 1, 0);
