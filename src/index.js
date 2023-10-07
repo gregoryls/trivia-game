@@ -43,7 +43,6 @@ players.initialPlayerSetup(
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 const modal = document.querySelector(".modal");
-const fileTypeSelect = document.getElementById("fileTypeSelect");
 
 const reader = new FileReader();
 reader.addEventListener("load", (event) => {
