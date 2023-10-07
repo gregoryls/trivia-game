@@ -28,10 +28,9 @@ import * as board from "./board";
 // fix board build on non-square boards
 // consider exporting category/question counts from board
 // migrate to classlist vs custom function
-// delete old method in question modal EL
+// merge branch
 
-// Initialize the player objects
-
+// Initialize the player object
 const { playerObj } = question;
 // console.log(playerObj);
 
