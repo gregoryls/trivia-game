@@ -100,9 +100,9 @@ export function addQuestionModalEventListener(questionObject) {
         });
         modal.append(answerButton);
 
-        addClass(categoryQuestionTiles[j], "taken");
-        removeClass(modal, "hidden");
-        removeClass(overlay, "hidden");
+        categoryQuestionTiles[j].classList.add("taken");
+        modal.classList.remove("hidden");
+        overlay.classList.remove("hidden");
       });
     }
   }
