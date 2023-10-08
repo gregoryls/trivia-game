@@ -61,8 +61,8 @@ const overlay = document.querySelector(".overlay");
 // overlay provides a semi-transparent blur behind the modal to help focus attention on modal
 // when the overlay background is clicked anywhere, the modal regains the hidden class and disappears
 overlay.addEventListener("click", () => {
-  question.addClass(modal, "hidden");
-  question.addClass(overlay, "hidden");
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
 });
 
 upload.addEventListener("click", () => {
