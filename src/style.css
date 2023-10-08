@@ -90,6 +90,9 @@ body {
   align-items: center;
   gap: 2px;
 }
+.player p:first-child {
+  cursor: pointer;
+}
 
 img {
   height: 30vh;
