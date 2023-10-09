@@ -28,6 +28,8 @@ import * as board from "./board";
 // fix board build on non-square boards
 // consider exporting category/question counts from board
 // migrate to classlist vs custom function
+// change player name by something other than prompt()
+// method to edit scores
 
 // Initialize the player object
 const { playerObj } = question;

@@ -27,6 +27,12 @@ body {
   font-weight: bold;
 }
 
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .question,
 .questionTopic {
   background-color: rgb(75, 118, 199, 0.8);

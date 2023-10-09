@@ -12,7 +12,7 @@ export function generatePlayer(name, number, score) {
     // prevent player name from disappearing by using previous name
     if (this.name === null) this.name = tempName;
     this.displayPlayerName(this.number);
-    console.log(this);
+    // console.log(this);
   };
   obj.displayPlayerScore = function displayPlayerScore(
     playerNumber,
