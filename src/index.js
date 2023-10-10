@@ -30,6 +30,7 @@ import * as board from "./board";
 // migrate to classlist vs custom function
 // change player name by something other than prompt()
 // method to edit scores
+// look into standardizing topic div height
 
 // Initialize the player object
 const { playerObj } = question;
