@@ -4,9 +4,16 @@ body {
   overflow: auto;
 }
 
+#iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
 #newGameButton {
-  height: 3%;
+  height: 30px;
   aspect-ratio: 1/1;
+  /* margin-left: auto; */
 }
 #title h1 {
   font-size: 4rem;
