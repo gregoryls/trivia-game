@@ -3,6 +3,11 @@ body {
   text-align: center;
   overflow: auto;
 }
+
+#newGameButton {
+  height: 3%;
+  aspect-ratio: 1/1;
+}
 #title h1 {
   font-size: 4rem;
   margin-top: 1rem;
