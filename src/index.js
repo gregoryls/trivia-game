@@ -56,9 +56,12 @@ reader.addEventListener("load", (event) => {
   board.createQuestionGrid(jsonObj);
   question.addQuestionModalEventListener(jsonObj);
 });
-// reader.readAsText(fileInput.files[0]);
-
 // https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText
+
+const newGameButton = document.getElementById("newGameButton");
+newGameButton.addEventListener("click", () => {
+  document.getElementById("uploadWrapper").classList.remove("hidden");
+});
 
 const overlay = document.querySelector(".overlay");
 // overlay provides a semi-transparent blur behind the modal to help focus attention on modal
