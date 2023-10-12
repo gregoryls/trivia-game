@@ -11,6 +11,8 @@ export function createQuestionGrid(questionObject) {
 
   // set grid column count equal to number of question categories
   const gridWrapper = document.getElementById("gridWrapper");
+
+  gridWrapper.innerHTML = "";
   gridWrapper.style.gridTemplateColumns = `repeat(${categoryCount},1fr)`;
 
   // generate topic tiles
