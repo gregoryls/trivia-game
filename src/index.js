@@ -34,9 +34,11 @@ import * as board from "./board";
 
 // Initialize the player object
 const { playerObj } = question;
+const playerCount = Object.keys(playerObj).length;
 // console.log(playerObj);
 
 players.initialPlayerSetup(
+  // make variable number of players here
   playerObj[1],
   playerObj[2],
   playerObj[3],
@@ -53,7 +55,7 @@ reader.addEventListener("load", (event) => {
   const fileData = event.target.result;
   // console.log(fileData);
   const jsonObj = JSON.parse(fileData);
-  console.log(jsonObj);
+  // console.log(jsonObj);
   board.createQuestionGrid(jsonObj);
   question.addQuestionModalEventListener(jsonObj);
 });
@@ -75,6 +77,11 @@ overlay.addEventListener("click", () => {
 upload.addEventListener("click", () => {
   // getQuestionData.csvParse(fileInput);
   // getQuestionData.csvParse();
+  console.log(playerObj);
+  for (let i = 1; i < playerCount + 1; i += 1) {
+    playerObj[i].score = 0;
+    playerObj[i].displayPlayerScore(i, 0);
+  }
 
   const inputFile = fileInput.files[0];
   const fileType = inputFile.type.match(/csv|json/);

@@ -33,8 +33,8 @@ export function generateQuestionObjectFromCSV() {
 }
 
 export function addQuestionModalEventListener(questionObject) {
-  const questionTiles = document.querySelectorAll(".question");
-  console.log(questionTiles);
+  // const questionTiles = document.querySelectorAll(".question");
+  // console.log(questionTiles);
 
   const categoryCount = Object.keys(questionObject).length;
   const questionCount = [];
