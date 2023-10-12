@@ -46,6 +46,7 @@ players.initialPlayerSetup(
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 const modal = document.querySelector(".modal");
+const uploadWrapper = document.getElementById("uploadWrapper");
 
 const reader = new FileReader();
 reader.addEventListener("load", (event) => {
@@ -60,7 +61,7 @@ reader.addEventListener("load", (event) => {
 
 const newGameButton = document.getElementById("newGameButton");
 newGameButton.addEventListener("click", () => {
-  document.getElementById("uploadWrapper").classList.remove("hidden");
+  uploadWrapper.classList.remove("hidden");
 });
 
 const overlay = document.querySelector(".overlay");
@@ -86,7 +87,7 @@ upload.addEventListener("click", () => {
     reader.readAsText(inputFile);
   }
 
-  document.getElementById("uploadWrapper").classList.add("hidden");
+  uploadWrapper.classList.add("hidden");
 });
 
 function importAll(r) {
