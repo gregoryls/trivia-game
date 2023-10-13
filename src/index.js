@@ -63,7 +63,7 @@ reader.addEventListener("load", (event) => {
 
 const newGameButton = document.getElementById("newGameButton");
 newGameButton.addEventListener("click", () => {
-  uploadWrapper.classList.remove("hidden");
+  uploadWrapper.classList.toggle("hidden");
 });
 
 const overlay = document.querySelector(".overlay");
