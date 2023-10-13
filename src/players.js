@@ -49,10 +49,10 @@ export function initialPlayerSetup(player1, player2, player3, player4) {
   player3.displayPlayerName(3);
   player4.displayPlayerName(4);
   // display intial (zero) player scores
-  player1.displayPlayerScore(1, 0);
-  player2.displayPlayerScore(2, 0);
-  player3.displayPlayerScore(3, 0);
-  player4.displayPlayerScore(4, 0);
+  player1.displayPlayerScore(1);
+  player2.displayPlayerScore(2);
+  player3.displayPlayerScore(3);
+  player4.displayPlayerScore(4);
 
   // player names can be clicked to open the change dialogue
   document.querySelector("#player1").addEventListener("click", () => {
