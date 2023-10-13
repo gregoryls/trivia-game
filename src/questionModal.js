@@ -83,7 +83,8 @@ export function addQuestionModalEventListener(questionObject) {
             scoreButton.textContent = playerNames[k];
             scoreButton.addEventListener("click", () => {
               if (scoreButton.classList.contains("buttonDisabled")) return;
-              playerObj[k + 1].displayPlayerScore(k + 1, currentScore);
+              playerObj[k + 1].incrementPlayerScore(currentScore);
+              playerObj[k + 1].displayPlayerScore(k + 1);
               scoreButton.classList.add("buttonDisabled");
             });
             div.append(scoreButton);
