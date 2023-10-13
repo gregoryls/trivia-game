@@ -14,12 +14,10 @@ export function generatePlayer(name, number, score) {
     this.displayPlayerName(this.number);
     // console.log(this);
   };
-  obj.displayPlayerScore = function displayPlayerScore(
-    playerNumber,
-    scoreToAdd,
-  ) {
-    // thank about splitting this function into two functions
+  obj.incrementPlayerScore = function incrementPlayerScore(scoreToAdd) {
     this.score += scoreToAdd;
+  };
+  obj.displayPlayerScore = function displayPlayerScore(playerNumber) {
     document.querySelector(`#player${playerNumber}Score`).textContent =
       this.score;
   };
