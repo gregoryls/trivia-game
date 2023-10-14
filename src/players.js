@@ -57,33 +57,9 @@ export function initialPlayerSetup(
     playerObject[i + 1].displayPlayerName(i + 1);
     playerObject[i + 1].displayPlayerScore(i + 1);
 
+    // player names can be clicked to open the change dialogue
     document.getElementById(`player${i + 1}`).addEventListener("click", () => {
       playerObject[i + 1].changePlayerName();
     });
   }
-
-  // // display default usernames
-  // player1.displayPlayerName(1);
-  // player2.displayPlayerName(2);
-  // player3.displayPlayerName(3);
-  // player4.displayPlayerName(4);
-  // display intial player scores
-  // player1.displayPlayerScore(1);
-  // player2.displayPlayerScore(2);
-  // player3.displayPlayerScore(3);
-  // player4.displayPlayerScore(4);
-
-  // // player names can be clicked to open the change dialogue
-  // document.querySelector("#player1").addEventListener("click", () => {
-  //   player1.changePlayerName();
-  // });
-  // document.querySelector("#player2").addEventListener("click", () => {
-  //   player2.changePlayerName();
-  // });
-  // document.querySelector("#player3").addEventListener("click", () => {
-  //   player3.changePlayerName();
-  // });
-  // document.querySelector("#player4").addEventListener("click", () => {
-  //   player4.changePlayerName();
-  // });
 }
