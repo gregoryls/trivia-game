@@ -42,13 +42,23 @@ export function generatePlayersObj(playerCount) {
 
 export const playerNames = ["test"];
 
-export function initialPlayerSetup(player1, player2, player3, player4) {
+export function initialPlayerSetup(
+  player1,
+  player2,
+  player3,
+  player4,
+  playerObject,
+) {
+  const playerCount = Object.keys(playerObject).length;
+
+  for (let i = 0; i < playerCount; i += 1) {}
+
   // display default usernames
   player1.displayPlayerName(1);
   player2.displayPlayerName(2);
   player3.displayPlayerName(3);
   player4.displayPlayerName(4);
-  // display intial (zero) player scores
+  // display intial player scores
   player1.displayPlayerScore(1);
   player2.displayPlayerScore(2);
   player3.displayPlayerScore(3);

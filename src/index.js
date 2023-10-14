@@ -12,7 +12,7 @@ import * as board from "./board";
 // TODO remove the various console.log debugging lines
 
 // TODO change file from source document to user uploaded via button
-// expand player creation to support any number of players
+// expand player creation to support any number of players - playersetup can be fed a player object and looped
 // change player name event listener to be a loop based on plaeyr count
 // players module remove prompt for better custom solution
 // one option for images, if (question data === img file name) set img
@@ -43,6 +43,7 @@ players.initialPlayerSetup(
   playerObj[2],
   playerObj[3],
   playerObj[4],
+  playerObj,
 );
 
 const fileInput = document.getElementById("fileInput");
