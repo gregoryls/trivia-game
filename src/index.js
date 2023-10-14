@@ -40,10 +40,7 @@ console.log(playerObj);
 
 players.initialPlayerSetup(
   // make variable number of players here
-  playerObj[1],
-  playerObj[2],
-  playerObj[3],
-  playerObj[4],
+
   playerObj,
 );
 

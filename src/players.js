@@ -42,13 +42,7 @@ export function generatePlayersObj(playerCount) {
 
 export const playerNames = ["test"];
 
-export function initialPlayerSetup(
-  player1,
-  player2,
-  player3,
-  player4,
-  playerObject,
-) {
+export function initialPlayerSetup(playerObject) {
   const playerCount = Object.keys(playerObject).length;
 
   for (let i = 0; i < playerCount; i += 1) {
