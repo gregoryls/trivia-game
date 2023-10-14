@@ -31,6 +31,7 @@ import * as board from "./board";
 // change player name by something other than prompt()
 // method to edit scores
 // look into standardizing topic div height
+// consider resetting player names on new game
 
 // Initialize the player object
 const { playerObj } = question;
