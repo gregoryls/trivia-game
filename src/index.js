@@ -35,7 +35,7 @@ import * as board from "./board";
 // Initialize the player object
 const { playerObj } = question;
 const playerCount = Object.keys(playerObj).length;
-// console.log(playerObj);
+console.log(playerObj);
 
 players.initialPlayerSetup(
   // make variable number of players here
