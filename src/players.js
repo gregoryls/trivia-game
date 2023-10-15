@@ -1,4 +1,4 @@
-import * as names from "./stockNames";
+import stockNames from "./stockNames";
 
 export function generatePlayer(name, number, score) {
   // assign to obj rather than this, since this === undefined in modules
@@ -32,7 +32,7 @@ export function generatePlayer(name, number, score) {
 export function generatePlayersObj(playerCount) {
   const players = {};
   for (let i = 1; i < playerCount + 1; i += 1) {
-    players[i] = generatePlayer(names.stockNames[i - 1], i, 0);
+    players[i] = generatePlayer(stockNames[i - 1], i, 0);
   }
   return players;
 }
