@@ -32,7 +32,7 @@ export function generatePlayer(name, number, score) {
 export function generatePlayersObj(playerCount) {
   const players = {};
   for (let i = 1; i < playerCount + 1; i += 1) {
-    players[i] = generatePlayer(names[i - 1], i, 0);
+    players[i] = generatePlayer(names.stockNames[i - 1], i, 0);
   }
   return players;
 }

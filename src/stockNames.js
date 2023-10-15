@@ -1,4 +1,4 @@
-export const stockNames = [
+const stockNames = [
   "Chase",
   "Ethan",
   "Stan",
@@ -229,3 +229,5 @@ export const stockNames = [
   "Evan",
   "Grayson",
 ];
+
+export default stockNames;
