@@ -13,7 +13,7 @@ import * as board from "./board";
 
 // TODO change file from source document to user uploaded via button
 // expand player creation to support any number of players - playersetup can be fed a player object and looped
-// change player name event listener to be a loop based on plaeyr count
+// change player name event listener to be a loop based on player count
 // players module remove prompt for better custom solution
 // one option for images, if (question data === img file name) set img
 // expand stock names
@@ -32,17 +32,13 @@ import * as board from "./board";
 // method to edit scores
 // look into standardizing topic div height
 // consider resetting player names on new game
+// file input styling
+// move initial player setup inside game start button
 
 // Initialize the player object
 const { playerObj } = question;
 const playerCount = Object.keys(playerObj).length;
 console.log(playerObj);
-
-players.initialPlayerSetup(
-  // make variable number of players here
-
-  playerObj,
-);
 
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
@@ -77,6 +73,7 @@ upload.addEventListener("click", () => {
   // getQuestionData.csvParse(fileInput);
   // getQuestionData.csvParse();
   console.log(playerObj);
+  players.initialPlayerSetup(playerObj);
   for (let i = 1; i < playerCount + 1; i += 1) {
     playerObj[i].score = 0;
     playerObj[i].displayPlayerScore(i, 0);

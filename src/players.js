@@ -50,7 +50,7 @@ export function initialPlayerSetup(playerObject) {
     // players index at 1
     // display default usernames and inital scores
     playerObject[i + 1].displayPlayerName(i + 1);
-    playerObject[i + 1].displayPlayerScore(i + 1);
+    // playerObject[i + 1].displayPlayerScore(i + 1);
 
     // player names can be clicked to open the change dialogue
     document.getElementById(`player${i + 1}`).addEventListener("click", () => {
