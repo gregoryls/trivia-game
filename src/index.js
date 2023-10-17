@@ -58,7 +58,12 @@ reader.addEventListener("load", (event) => {
 
 const newGameButton = document.getElementById("newGameButton");
 newGameButton.addEventListener("click", () => {
-  uploadWrapper.classList.toggle("hidden");
+  // show/hide new game elements
+  if (uploadWrapper.style.display === "none") {
+    uploadWrapper.style.display = "flex";
+  } else {
+    uploadWrapper.style.display = "none";
+  }
 });
 
 const overlay = document.querySelector(".overlay");
@@ -90,7 +95,7 @@ upload.addEventListener("click", () => {
     reader.readAsText(inputFile);
   }
 
-  uploadWrapper.classList.add("hidden");
+  uploadWrapper.style.display = "none";
 });
 
 function importAll(r) {
