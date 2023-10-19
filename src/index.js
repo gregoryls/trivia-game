@@ -79,6 +79,7 @@ upload.addEventListener("click", () => {
   // getQuestionData.csvParse();
   console.log(playerObj);
   players.initialPlayerSetup(playerObj);
+  players.getPlayerCountInput();
   for (let i = 1; i < playerCount + 1; i += 1) {
     playerObj[i].score = 0;
     playerObj[i].displayPlayerScore(i, 0);

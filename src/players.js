@@ -58,3 +58,9 @@ export function initialPlayerSetup(playerObject) {
     });
   }
 }
+
+export function getPlayerCountInput() {
+  const playerCount = document.getElementById("playerCount").value;
+  console.log(playerCount);
+  return playerCount;
+}
