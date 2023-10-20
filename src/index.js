@@ -37,10 +37,13 @@ import * as board from "./board";
 // move playerObj gen inside upload button
 
 // Initialize the player object
-const { playerObj } = question;
+// const { playerObj } = question;
+
+const playerObj = players.generatePlayersObj(4);
 const playerCount = Object.keys(playerObj).length;
-console.log(playerObj);
-console.log(players.getPlayerCountInput());
+
+// console.log(playerObj);
+// console.log(players.getPlayerCountInput());
 
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
