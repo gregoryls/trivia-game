@@ -94,7 +94,7 @@ upload.addEventListener("click", () => {
   const fileType = inputFile.type.match(/csv|json/);
 
   // match returns matched group in an array
-  if (fileType[0] === "csv") question.getQuestionData(fileInput);
+  if (fileType[0] === "csv") question.getQuestionData(fileInput, playerObj);
   if (fileType[0] === "json") {
     // board.createQuestionGrid(42, jsonObj);
     // question.addQuestionModalEventListener(jsonObj);

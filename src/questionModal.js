@@ -108,7 +108,7 @@ export function convertJsonToObject(json) {
   return obj;
 }
 
-export function getQuestionData(csvFile) {
+export function getQuestionData(csvFile, playerObj) {
   // "../src/questions/Trivia - Questions.csv" local filename
   Papa.parse(csvFile.files[0], {
     download: true,
