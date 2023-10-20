@@ -38,9 +38,7 @@ import * as board from "./board";
 
 // Initialize the player object
 // const { playerObj } = question;
-
-const playerObj = players.generatePlayersObj(4);
-const playerCount = Object.keys(playerObj).length;
+let playerObj;
 
 // console.log(playerObj);
 // console.log(players.getPlayerCountInput());
@@ -80,6 +78,8 @@ overlay.addEventListener("click", () => {
 });
 
 upload.addEventListener("click", () => {
+  playerObj = players.generatePlayersObj(4);
+  const playerCount = Object.keys(playerObj).length;
   // getQuestionData.csvParse(fileInput);
   // getQuestionData.csvParse();
   // console.log(playerObj);
