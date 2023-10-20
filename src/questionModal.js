@@ -5,7 +5,8 @@ import * as players from "./players";
 let questionData = [];
 
 // convert this to a function in players module
-export const playerObj = players.generatePlayersObj(4);
+// const playerCount = players.getPlayerCountInput();
+// export const playerObj = players.generatePlayersObj(2);
 
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -32,7 +33,7 @@ export function generateQuestionObjectFromCSV() {
   return questionObj;
 }
 
-export function addQuestionModalEventListener(questionObject) {
+export function addQuestionModalEventListener(questionObject, playerObj) {
   // const questionTiles = document.querySelectorAll(".question");
   // console.log(questionTiles);
 
@@ -102,6 +103,7 @@ export function addQuestionModalEventListener(questionObject) {
 }
 
 export function convertJsonToObject(json) {
+  // remove this?
   const obj = JSON.parse(json);
   return obj;
 }
@@ -116,7 +118,7 @@ export function getQuestionData(csvFile) {
       // console.log(questionData);
       board.createQuestionGrid(questionObj);
       // console.log(questionObj);
-      addQuestionModalEventListener(questionObj);
+      addQuestionModalEventListener(questionObj, playerObj);
       // console.log(results.data);
     },
   });

@@ -34,11 +34,13 @@ import * as board from "./board";
 // consider resetting player names on new game
 // file input styling
 // move initial player setup inside game start button
+// move playerObj gen inside upload button
 
 // Initialize the player object
 const { playerObj } = question;
 const playerCount = Object.keys(playerObj).length;
 console.log(playerObj);
+console.log(players.getPlayerCountInput());
 
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
@@ -52,7 +54,7 @@ reader.addEventListener("load", (event) => {
   const jsonObj = JSON.parse(fileData);
   // console.log(jsonObj);
   board.createQuestionGrid(jsonObj);
-  question.addQuestionModalEventListener(jsonObj);
+  question.addQuestionModalEventListener(jsonObj, playerObj);
 });
 // https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText
 
@@ -77,9 +79,9 @@ overlay.addEventListener("click", () => {
 upload.addEventListener("click", () => {
   // getQuestionData.csvParse(fileInput);
   // getQuestionData.csvParse();
-  console.log(playerObj);
+  // console.log(playerObj);
   players.initialPlayerSetup(playerObj);
-  players.getPlayerCountInput();
+  // players.getPlayerCountInput();
   for (let i = 1; i < playerCount + 1; i += 1) {
     playerObj[i].score = 0;
     playerObj[i].displayPlayerScore(i, 0);
