@@ -78,7 +78,9 @@ overlay.addEventListener("click", () => {
 });
 
 upload.addEventListener("click", () => {
-  playerObj = players.generatePlayersObj(4);
+  const count = document.getElementById("playerCount").value;
+  console.log(count);
+  playerObj = players.generatePlayersObj(players.getPlayerCountInput());
   const playerCount = Object.keys(playerObj).length;
   // getQuestionData.csvParse(fileInput);
   // getQuestionData.csvParse();

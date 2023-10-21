@@ -60,7 +60,7 @@ export function initialPlayerSetup(playerObject) {
 }
 
 export function getPlayerCountInput() {
-  const playerCount = document.getElementById("playerCount").value;
+  const playerCount = Number(document.getElementById("playerCount").value);
   // console.log(playerCount);
   return playerCount;
 }
