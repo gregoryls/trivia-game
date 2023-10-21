@@ -35,6 +35,7 @@ import * as board from "./board";
 // file input styling
 // move initial player setup inside game start button
 // move playerObj gen inside upload button
+// have changed player names carryover on a new game
 
 // Initialize the player object
 // const { playerObj } = question;
@@ -78,15 +79,12 @@ overlay.addEventListener("click", () => {
 });
 
 upload.addEventListener("click", () => {
-  const count = document.getElementById("playerCount").value;
-  console.log(count);
   playerObj = players.generatePlayersObj(players.getPlayerCountInput());
   const playerCount = Object.keys(playerObj).length;
-  // getQuestionData.csvParse(fileInput);
-  // getQuestionData.csvParse();
+
   // console.log(playerObj);
   players.initialPlayerSetup(playerObj);
-  // players.getPlayerCountInput();
+
   for (let i = 1; i < playerCount + 1; i += 1) {
     playerObj[i].score = 0;
     playerObj[i].displayPlayerScore(i, 0);
