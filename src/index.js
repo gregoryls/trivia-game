@@ -38,7 +38,6 @@ import * as board from "./board";
 // have changed player names carryover on a new game
 
 // Initialize the player object
-// const { playerObj } = question;
 let playerObj;
 
 // console.log(playerObj);

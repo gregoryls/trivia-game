@@ -66,7 +66,7 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
             playerObj[3].name,
             playerObj[4].name,
           ];
-          const playerCount = playerNames.length;
+          const playerCount = Object.keys(playerObj).length;
 
           modal.innerHTML +=
             questionObject[`category${i}`][`question${j + 1}`].answer;
