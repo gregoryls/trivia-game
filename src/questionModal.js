@@ -60,12 +60,12 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
           if (answerButton.classList.contains("buttonDisabled")) return;
           answerButton.classList.add("buttonDisabled");
 
-          const playerNames = [
-            playerObj[1].name,
-            playerObj[2].name,
-            playerObj[3].name,
-            playerObj[4].name,
-          ];
+          // const playerNames = [
+          //   playerObj[1].name,
+          //   playerObj[2].name,
+          //   playerObj[3].name,
+          //   playerObj[4].name,
+          // ];
           const playerCount = Object.keys(playerObj).length;
 
           modal.innerHTML +=
@@ -81,7 +81,7 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
             );
 
             const scoreButton = document.createElement("button");
-            scoreButton.textContent = playerNames[k];
+            scoreButton.textContent = playerObj[k + 1].name;
             scoreButton.addEventListener("click", () => {
               if (scoreButton.classList.contains("buttonDisabled")) return;
               playerObj[k + 1].incrementPlayerScore(currentScore);
