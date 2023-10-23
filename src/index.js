@@ -83,12 +83,14 @@ upload.addEventListener("click", () => {
   const playerCount = Object.keys(playerObj).length;
 
   const playerScores = document.getElementById("playerScores");
-
-  // console.log(playerObj);
-  // players.initialPlayerSetup(playerObj);
-
   for (let i = 1; i < playerCount + 1; i += 1) {
     playerScores.append(players.createPlayerUI(i));
+  }
+
+  // console.log(playerObj);
+  players.initialPlayerSetup(playerObj);
+
+  for (let i = 1; i < playerCount + 1; i += 1) {
     playerObj[i].score = 0;
     playerObj[i].displayPlayerScore(i, 0);
   }
