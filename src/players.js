@@ -62,3 +62,19 @@ export function initialPlayerSetup(playerObject) {
 export function getPlayerCountInput() {
   return Number(document.getElementById("playerCount").value);
 }
+export function createPlayerUI(playerNumber) {
+  const div = document.createElement("div");
+  const name = document.createElement("p");
+  const score = document.createElement("p");
+
+  div.classList.add("player");
+
+  name.id = `player${playerNumber}`;
+
+  score.classList.add("score");
+  score.id = `player${playerNumber}Score`;
+
+  div.append(name, score);
+
+  return div;
+}

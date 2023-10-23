@@ -36,6 +36,7 @@ import * as board from "./board";
 // move initial player setup inside game start button
 // move playerObj gen inside upload button
 // have changed player names carryover on a new game
+// fix html to have variable player numbers for score elements
 
 // Initialize the player object
 let playerObj;
