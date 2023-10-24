@@ -53,6 +53,22 @@ body {
   cursor: pointer;
 }
 
+#playerScores {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+.player {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.player p:first-child {
+  cursor: pointer;
+}
+
 #playerScores p {
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -124,22 +140,6 @@ body {
 }
 .hidden {
   display: none;
-}
-
-#playerScores {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
-  flex-wrap: wrap;
-  font-size: 30px;
-}
-.player {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-.player p:first-child {
-  cursor: pointer;
 }
 
 img {
