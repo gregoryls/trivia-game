@@ -64,6 +64,10 @@ body {
   display: flex;
   align-items: center;
   gap: 2px;
+  background-color: rgba(199, 38, 113, 0.384);
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 0 0.5rem;
 }
 .player p:first-child {
   cursor: pointer;
@@ -71,7 +75,7 @@ body {
 
 #playerScores p {
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #gridWrapper {
