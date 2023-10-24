@@ -17,8 +17,8 @@ body {
 }
 #title h1 {
   font-size: 4rem;
-  margin-top: 1rem;
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 #uploadWrapper {
@@ -76,6 +76,10 @@ body {
 #playerScores p {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+#game {
+  margin-top: 2rem;
 }
 
 #gridWrapper {
