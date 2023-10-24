@@ -36,10 +36,6 @@ export function generatePlayersObj(playerCount) {
   }
   return players;
 }
-// const player1 = generatePlayer("Chase", 1, 0);
-// const player2 = generatePlayer("Ethan", 2, 0);
-// const player3 = generatePlayer("Stan", 3, 0);
-// const player4 = generatePlayer("Taylor", 4, 0);
 
 export const playerNames = ["test"];
 
@@ -50,7 +46,6 @@ export function initialPlayerSetup(playerObject) {
     // players index at 1
     // display default usernames and inital scores
     playerObject[i + 1].displayPlayerName(i + 1);
-    // playerObject[i + 1].displayPlayerScore(i + 1);
 
     // player names can be clicked to open the change dialogue
     document.getElementById(`player${i + 1}`).addEventListener("click", () => {
