@@ -129,6 +129,8 @@ body {
 #playerScores {
   display: flex;
   justify-content: space-evenly;
+  gap: 1rem;
+  flex-wrap: wrap;
   font-size: 30px;
 }
 .player {
