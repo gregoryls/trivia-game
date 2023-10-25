@@ -29,9 +29,18 @@ export function generatePlayer(name, number, score) {
   return obj;
 }
 
+function getRandomIntInRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 export function generatePlayersObj(playerCount) {
   const players = {};
   for (let i = 1; i < playerCount + 1; i += 1) {
+    console.log(getRandomIntInRange(5, 10));
+    if (playerCount > 4) {
+      const max = playerCount;
+      const min = playerCount - 4;
+    }
     players[i] = generatePlayer(stockNames[i - 1], i, 0);
   }
   return players;

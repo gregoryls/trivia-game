@@ -36,7 +36,8 @@ import * as board from "./board";
 // move initial player setup inside game start button
 // move playerObj gen inside upload button
 // have changed player names carryover on a new game
-// fix html to have variable player numbers for score elements
+// think about flexwrap equal numbers on lines
+// random stockname after first 4
 
 // Initialize the player object
 let playerObj;
