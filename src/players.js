@@ -32,16 +32,24 @@ export function generatePlayer(name, number, score) {
 function getRandomIntInRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+// explore: rng stockname list, apply to player gen loop, add to used array
+// rng on new loop, check if rng used, if so, reroll, stockname is 229 long
 
 export function generatePlayersObj(playerCount) {
+  console.log(stockNames);
+  const takenNames = [];
   const players = {};
   for (let i = 1; i < playerCount + 1; i += 1) {
-    console.log(getRandomIntInRange(5, 10));
+    // console.log(getRandomIntInRange(5, 10));
     if (playerCount > 4) {
-      const max = playerCount;
-      const min = playerCount - 4;
+      const rng = getRandomIntInRange(0, 228);
+      players[i] = generatePlayer(stockNames[rng], i, 0);
+      // const max = playerCount;
+      // const min = playerCount - 4;
     }
-    players[i] = generatePlayer(stockNames[i - 1], i, 0);
+    if (playerCount <= 4) {
+      players[i] = generatePlayer(stockNames[i - 1], i, 0);
+    }
   }
   return players;
 }
