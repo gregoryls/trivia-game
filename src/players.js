@@ -34,6 +34,8 @@ function getRandomIntInRange(min, max) {
 }
 // explore: rng stockname list, apply to player gen loop, add to used array
 // rng on new loop, check if rng used, if so, reroll, stockname is 229 long
+// have a little toggle random character name box,
+// flip between static and random name generation
 
 export function generatePlayersObj(playerCount) {
   console.log(stockNames);
@@ -42,7 +44,17 @@ export function generatePlayersObj(playerCount) {
   for (let i = 1; i < playerCount + 1; i += 1) {
     // console.log(getRandomIntInRange(5, 10));
     if (playerCount > 4) {
-      const rng = getRandomIntInRange(0, 228);
+      let rng;
+      let taken = true;
+      // generate random number, check if it's been used, if not, log as used
+      while (taken === true) {
+        rng = getRandomIntInRange(0, 228);
+        if (!takenNames.includes(rng)) {
+          takenNames.push(rng);
+          console.log(takenNames);
+          taken = false;
+        }
+      }
       players[i] = generatePlayer(stockNames[rng], i, 0);
       // const max = playerCount;
       // const min = playerCount - 4;
