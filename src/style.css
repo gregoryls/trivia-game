@@ -10,7 +10,7 @@ body {
   justify-content: end;
 }
 
-#newGameButton {
+#newGameButton, #randomNamesIcon {
   height: 30px;
   aspect-ratio: 1/1;
   cursor: pointer;
