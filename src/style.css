@@ -15,8 +15,13 @@ body {
   aspect-ratio: 1/1;
   cursor: pointer;
   /* https://codepen.io/sosuke/pen/Pjoqqp */
+  
+}
+
+.green{
   filter: invert(21%) sepia(96%) saturate(3706%) hue-rotate(102deg) brightness(96%) contrast(106%);
 }
+
 #title h1 {
   font-size: 4rem;
   margin-top: 0;
