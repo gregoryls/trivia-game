@@ -38,6 +38,7 @@ import * as board from "./board";
 // have changed player names carryover on a new game
 // think about flexwrap equal numbers on lines
 // random stockname after first 4
+// click dice icon to enable/disable rng names - show this by changing color of icon
 
 // Initialize the player object
 let playerObj;

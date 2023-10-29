@@ -14,6 +14,8 @@ body {
   height: 30px;
   aspect-ratio: 1/1;
   cursor: pointer;
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(21%) sepia(96%) saturate(3706%) hue-rotate(102deg) brightness(96%) contrast(106%);
 }
 #title h1 {
   font-size: 4rem;
