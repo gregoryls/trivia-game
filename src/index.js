@@ -50,6 +50,7 @@ const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 const modal = document.querySelector(".modal");
 const uploadWrapper = document.getElementById("uploadWrapper");
+const randomNamesIcon = document.getElementById('randomNamesIcon')
 
 const reader = new FileReader();
 reader.addEventListener("load", (event) => {
@@ -61,6 +62,10 @@ reader.addEventListener("load", (event) => {
   question.addQuestionModalEventListener(jsonObj, playerObj);
 });
 // https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText
+
+randomNamesIcon.addEventListener('click',()=>{
+  randomNamesIcon.classList.toggle('green');
+})
 
 const newGameButton = document.getElementById("newGameButton");
 newGameButton.addEventListener("click", () => {
