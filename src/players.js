@@ -37,6 +37,15 @@ function getRandomIntInRange(min, max) {
 // have a little toggle random character name box,
 // flip between static and random name generation
 
+let randomNamesBool = false;
+
+export function toggleRandomNames() {
+  if (!randomNamesBool) {
+    randomNamesBool = true;
+  }
+  if (randomNamesBool) randomNamesBool = false;
+}
+
 export function generatePlayersObj(playerCount) {
   console.log(stockNames);
   const takenNames = [];

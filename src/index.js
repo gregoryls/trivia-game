@@ -62,9 +62,22 @@ reader.addEventListener("load", (event) => {
 });
 // https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText
 
+let randomNamesBool = false;
+
+function toggleRandomNames() {
+  if (!randomNamesBool) {
+    randomNamesBool = true;
+    return;
+  }
+  if (randomNamesBool) {
+    randomNamesBool = false;
+  }
+}
 const randomNamesIcon = document.getElementById("randomNamesIcon");
 randomNamesIcon.addEventListener("click", () => {
   randomNamesIcon.classList.toggle("green");
+  toggleRandomNames();
+  console.log(randomNamesBool);
 });
 
 const newGameButton = document.getElementById("newGameButton");
