@@ -39,6 +39,7 @@ import * as board from "./board";
 // think about flexwrap equal numbers on lines
 // random stockname after first 4
 // click dice icon to enable/disable rng names - show this by changing color of icon
+// feed random bool into player object args
 
 // Initialize the player object
 let playerObj;
@@ -77,7 +78,7 @@ const randomNamesIcon = document.getElementById("randomNamesIcon");
 randomNamesIcon.addEventListener("click", () => {
   randomNamesIcon.classList.toggle("green");
   toggleRandomNames();
-  console.log(randomNamesBool);
+  // console.log(randomNamesBool);
 });
 
 const newGameButton = document.getElementById("newGameButton");
@@ -99,7 +100,10 @@ overlay.addEventListener("click", () => {
 });
 
 upload.addEventListener("click", () => {
-  playerObj = players.generatePlayersObj(players.getPlayerCountInput());
+  playerObj = players.generatePlayersObj(
+    players.getPlayerCountInput(),
+    randomNamesBool,
+  );
   const playerCount = Object.keys(playerObj).length;
 
   const playerScores = document.getElementById("playerScores");
