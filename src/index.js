@@ -37,9 +37,6 @@ import * as board from "./board";
 // move playerObj gen inside upload button
 // have changed player names carryover on a new game
 // think about flexwrap equal numbers on lines
-// random stockname after first 4
-// click dice icon to enable/disable rng names - show this by changing color of icon
-// feed random bool into player object args
 
 // Initialize the player object
 let playerObj;
@@ -107,6 +104,8 @@ upload.addEventListener("click", () => {
   const playerCount = Object.keys(playerObj).length;
 
   const playerScores = document.getElementById("playerScores");
+  // clear html elements for player scores to avoid duplicates on starting new game
+  playerScores.innerHTML = "";
   for (let i = 1; i < playerCount + 1; i += 1) {
     playerScores.append(players.createPlayerUI(i));
   }
