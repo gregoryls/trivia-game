@@ -29,7 +29,7 @@ export function generatePlayer(name, number, score) {
   return obj;
 }
 
-function getRandomIntInRange(min, max) {
+export function getRandomIntInRange(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 // explore: rng stockname list, apply to player gen loop, add to used array

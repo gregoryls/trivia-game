@@ -42,9 +42,6 @@ import * as board from "./board";
 // Initialize the player object
 let playerObj;
 
-// console.log(playerObj);
-// console.log(players.getPlayerCountInput());
-
 const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 const modal = document.querySelector(".modal");
@@ -53,9 +50,9 @@ const uploadWrapper = document.getElementById("uploadWrapper");
 const reader = new FileReader();
 reader.addEventListener("load", (event) => {
   const fileData = event.target.result;
-  // console.log(fileData);
+
   const jsonObj = JSON.parse(fileData);
-  // console.log(jsonObj);
+
   board.createQuestionGrid(jsonObj);
   question.addQuestionModalEventListener(jsonObj, playerObj);
 });
@@ -76,7 +73,6 @@ const randomNamesIcon = document.getElementById("randomNamesIcon");
 randomNamesIcon.addEventListener("click", () => {
   randomNamesIcon.classList.toggle("green");
   toggleRandomNames();
-  // console.log(randomNamesBool);
 });
 
 const newGameButton = document.getElementById("newGameButton");
@@ -111,7 +107,6 @@ upload.addEventListener("click", () => {
     playerScores.append(players.createPlayerUI(i));
   }
 
-  // console.log(playerObj);
   players.initialPlayerSetup(playerObj);
 
   for (let i = 1; i < playerCount + 1; i += 1) {
@@ -153,4 +148,3 @@ function importAll(r) {
 }
 
 const images = importAll(require.context("./img", false, /\.(png|jpe?g|svg)$/));
-// console.log(images);

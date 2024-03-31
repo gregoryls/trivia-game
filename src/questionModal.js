@@ -21,7 +21,6 @@ export function generateQuestionObjectFromCSV() {
 
     // start from index 1 to account for csv topic formatting
     for (let j = 1; j < questionData[0].length; j += 1) {
-      // console.log(questionData[2 * i].length);
       questionObj[`category${i}`][`question${j}`] = {
         question: questionData[2 * i][j],
         answer: questionData[2 * i + 1][j],
@@ -35,7 +34,6 @@ export function generateQuestionObjectFromCSV() {
 
 export function addQuestionModalEventListener(questionObject, playerObj) {
   // const questionTiles = document.querySelectorAll(".question");
-  // console.log(questionTiles);
 
   const categoryCount = Object.keys(questionObject).length;
   const questionCount = [];
@@ -47,7 +45,6 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
       `#category${i} .question`,
     );
     for (let j = 0; j < questionCount[i]; j += 1) {
-      // console.log(categoryQuestionTiles);
       categoryQuestionTiles[j].addEventListener("click", () => {
         if (categoryQuestionTiles[j].classList.contains("taken")) return;
         modal.innerHTML =
