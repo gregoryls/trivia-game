@@ -9,12 +9,6 @@
   <body>
     <div id="iconWrap">
       <img
-        src='<%= require("./img/dice-outline.svg") %>'
-        alt="Random Names"
-        title="Random Player Names"
-        id="randomNamesIcon"
-      />
-      <img
         src='<%= require("./img/plus-square.svg") %>'
         alt="New Game Button"
         title="Start new game"
@@ -31,6 +25,12 @@
       <div id="inputWrap">
         <input type="file" id="fileInput" accept=".csv, .json" />
         <div id="playerCountWrap">
+          <img
+            src='<%= require("./img/dice-outline.svg") %>'
+            alt="Random Names"
+            title="Random Player Names"
+            id="randomNamesIcon"
+          />
           <label for="playerCount">Players:</label>
           <select name="playerCount" id="playerCount">
             <option value="4">4</option>

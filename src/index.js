@@ -37,6 +37,7 @@ import * as board from "./board";
 // move playerObj gen inside upload button
 // have changed player names carryover on a new game
 // think about flexwrap equal numbers on lines
+// file input label css
 
 // Initialize the player object
 let playerObj;
