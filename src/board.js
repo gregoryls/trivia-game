@@ -1,12 +1,10 @@
 // TODO fix question data for module
-import * as players from "./players"
+// consider groups by row instead of column
+import * as players from "./players";
 
 const gridArea = document.querySelector("#gridWrapper");
 
-// change this to use question object
-// grid count based on questionObj keys lengths, 2 dimensions, category length + question count length + topic
 export function createQuestionGrid(questionObject) {
-  // console.log(players.getRandomIntInRange(2,5))
   const categoryCount = Object.keys(questionObject).length;
 
   const questionCount = [];
@@ -35,7 +33,6 @@ export function createQuestionGrid(questionObject) {
   for (let i = 0; i < categoryCount; i += 1) {
     // -1 from length to account for 'topic' key
     questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
-    // console.log(questionCount);
   }
 
   // generate question tiles with values
