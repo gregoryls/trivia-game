@@ -29,6 +29,7 @@ export function generateQuestionObjectFromCSV() {
       // questionObj[i][`answer${j}`] = questionData[2 * i + 1][j];
     }
   }
+  console.log(questionObj);
   return questionObj;
 }
 

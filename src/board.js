@@ -47,7 +47,7 @@ export function createQuestionGrid(questionObject) {
       // apply stock values of 100 increment per row if a value
       // is not a supplied from questionObj
       if (questionObject[`category${i}`][`question${j}`].value === undefined) {
-        tileDiv.textContent = `${i + 1}00`;
+        tileDiv.textContent = `${j}00`;
 
         // console.log(i * j);
       }

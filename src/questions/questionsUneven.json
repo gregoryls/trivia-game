@@ -7,7 +7,6 @@
       "answer": "A New Hope (IV) $ 3.79 billion"
     },
     "question2": {
-      "value": 200,
       "question": "Globally, how many males are born per 100 females?",
       "answer": "105 male : 100 female"
     },
@@ -22,7 +21,6 @@
       "answer": "1998, 2-qubit computer coherent for mere nanoseconds"
     },
     "question5": {
-      "value": 500,
       "question": "In which country, predominately, will you find the largest contiguous sand desert in the world?",
       "answer": "Saudi Arabi, Rub' al-Khali (Empty Quarter)"
     },
