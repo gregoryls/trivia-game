@@ -1,7 +1,9 @@
 body {
   background-color: gray;
   text-align: center;
-  overflow: auto;
+  /* overflow to hidden if issues encountered.
+     currently exists for hat animation */
+  overflow: hidden;
 }
 
 #iconWrap {
@@ -193,6 +195,9 @@ selector above, 0-1-1 vs 0-2-0 */
   opacity: 0.5;
 }
 
+#hatWrap {
+  /* overflow: visible; */
+}
 #dimmDoubleHat {
   position: absolute;
   top: 50%;
@@ -211,7 +216,7 @@ selector above, 0-1-1 vs 0-2-0 */
     transform: rotate(1turn);
   }
   100% {
-    left: 95%; /* Change this value to adjust the scrolling distance */
+    left: 100%; /* Change this value to adjust the scrolling distance */
     transform: rotate(2turn); /* Rotate 360 degrees */
   }
 }

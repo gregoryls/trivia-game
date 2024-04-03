@@ -50,10 +50,18 @@ const uploadWrapper = document.getElementById("uploadWrapper");
 
 /// / testing area
 
+const hatWrap = document.createElement("div");
+hatWrap.id = "hatWrap";
+
 const dimmDoubleHat = new Image();
 dimmDoubleHat.src = hat;
 dimmDoubleHat.id = "dimmDoubleHat";
-document.querySelector("body").append(dimmDoubleHat);
+hatWrap.append(dimmDoubleHat);
+document.querySelector("body").append(hatWrap);
+
+dimmDoubleHat.addEventListener("animationend", () => {
+  dimmDoubleHat.style.display = "none";
+});
 
 /// /
 
