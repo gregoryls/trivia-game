@@ -3,7 +3,7 @@ body {
   text-align: center;
   /* overflow to hidden if issues encountered.
      currently exists for hat animation */
-  overflow: hidden;
+  overflow: auto;
 }
 
 #iconWrap {
@@ -196,19 +196,22 @@ selector above, 0-1-1 vs 0-2-0 */
 }
 
 #hatWrap {
-  /* overflow: visible; */
+  overflow: hidden;
+  position: relative;
+  /* height: 100vh; */
 }
 #dimmDoubleHat {
   position: absolute;
   top: 50%;
   left: 0;
   transform-origin: center center;
-  animation: scrollAndRotate 2s linear 3;
+  animation: scrollAndRotate 2s linear 2;
+  z-index: 2;
 }
 /* Define the keyframes for scrolling and rotating */
 @keyframes scrollAndRotate {
   0% {
-    left: 0;
+    left: 0; /* Change this value to adjust the scrolling distance */
     transform: rotate(0deg);
   }
   50% {
@@ -216,7 +219,7 @@ selector above, 0-1-1 vs 0-2-0 */
     transform: rotate(1turn);
   }
   100% {
-    left: 100%; /* Change this value to adjust the scrolling distance */
+    left: 100%;
     transform: rotate(2turn); /* Rotate 360 degrees */
   }
 }

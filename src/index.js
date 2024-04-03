@@ -39,6 +39,8 @@ import hat from "./img/hatNoBackground.png";
 // have changed player names carryover on a new game
 // think about flexwrap equal numbers on lines
 // file input label css
+// finish dimmadome double, rnadom or chosen location
+// fix image, audio, video inputs (youtube embed?)
 
 // Initialize the player object
 let playerObj;
@@ -50,14 +52,12 @@ const uploadWrapper = document.getElementById("uploadWrapper");
 
 /// / testing area
 
-const hatWrap = document.createElement("div");
-hatWrap.id = "hatWrap";
+const body = document.querySelector("body");
 
 const dimmDoubleHat = new Image();
 dimmDoubleHat.src = hat;
 dimmDoubleHat.id = "dimmDoubleHat";
-hatWrap.append(dimmDoubleHat);
-document.querySelector("body").append(hatWrap);
+body.append(dimmDoubleHat);
 
 dimmDoubleHat.addEventListener("animationend", () => {
   dimmDoubleHat.style.display = "none";
