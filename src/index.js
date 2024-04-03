@@ -3,6 +3,7 @@ import Papa from "papaparse";
 import * as question from "./questionModal";
 import * as players from "./players";
 import * as board from "./board";
+import hat from "./img/hatNoBackground.png";
 
 // https://stackoverflow.com/questions/56427009/how-to-return-papa-parsed-csv-via-promise-async-await
 // https://stackoverflow.com/questions/62905933/iterating-over-results-of-papa-parse-object
@@ -46,6 +47,15 @@ const fileInput = document.getElementById("fileInput");
 const upload = document.getElementById("upload");
 const modal = document.querySelector(".modal");
 const uploadWrapper = document.getElementById("uploadWrapper");
+
+/// / testing area
+
+const dimmDoubleHat = new Image();
+dimmDoubleHat.src = hat;
+dimmDoubleHat.id = "dimmDoubleHat";
+document.querySelector("body").append(dimmDoubleHat);
+
+/// /
 
 const reader = new FileReader();
 reader.addEventListener("load", (event) => {

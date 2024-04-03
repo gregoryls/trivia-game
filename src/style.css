@@ -192,3 +192,26 @@ selector above, 0-1-1 vs 0-2-0 */
   background-color: #dddcdc;
   opacity: 0.5;
 }
+
+#dimmDoubleHat {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin: center center;
+  animation: scrollAndRotate 2s linear 3;
+}
+/* Define the keyframes for scrolling and rotating */
+@keyframes scrollAndRotate {
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    left: 50%;
+    transform: rotate(1turn);
+  }
+  100% {
+    left: 95%; /* Change this value to adjust the scrolling distance */
+    transform: rotate(2turn); /* Rotate 360 degrees */
+  }
+}
