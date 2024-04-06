@@ -196,7 +196,7 @@ selector above, 0-1-1 vs 0-2-0 */
   top: 50%;
   left: 0;
   transform-origin: center center;
-  animation: scrollAndRotate 2s linear infinite;
+  animation: scrollAndRotate 2s linear 2;
   z-index: 3;
 }
 /* Define the keyframes for scrolling and rotating */
@@ -216,7 +216,7 @@ selector above, 0-1-1 vs 0-2-0 */
 }
 
 #dimmadome {
-  /* display: none; */
+  display: none;
   position: absolute;
   left: 0;
   right: 0;

@@ -53,6 +53,15 @@ const uploadWrapper = document.getElementById("uploadWrapper");
 /// / testing area
 
 const body = document.querySelector("body");
+const dimmadomeText = document.getElementById("dimmadome");
+
+uploadWrapper.addEventListener("click", () => {
+  dimmadomeText.style.display = "block";
+  // match interval delay with hat animation length*iterations
+  setInterval(() => {
+    dimmadomeText.style.display = "none";
+  }, 4000);
+});
 
 const dimmDoubleHat = new Image();
 dimmDoubleHat.src = hat;
