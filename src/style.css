@@ -229,7 +229,8 @@ selector above, 0-1-1 vs 0-2-0 */
   -webkit-text-stroke: 1px black;
 
   background: linear-gradient(
-      /* to right, */ rgba(255, 0, 0, 1) 0%,
+      to right,
+      rgba(255, 0, 0, 1) 0%,
       rgba(255, 154, 0, 1) 10%,
       rgba(208, 222, 33, 1) 20%,
       rgba(79, 220, 74, 1) 30%,
@@ -241,14 +242,14 @@ selector above, 0-1-1 vs 0-2-0 */
       rgba(251, 7, 217, 1) 90%,
       rgba(255, 0, 0, 1) 100%
     )
-    0 0/100% 200%;
+    0 0/200% 100%;
   -webkit-background-clip: text;
   color: transparent;
-  animation: waveAnimation 1.5s linear infinite;
+  animation: waveAnimation 3s linear infinite;
 }
 
 @keyframes waveAnimation {
   to {
-    background-position: 0 -200%;
+    background-position: -200% 0;
   }
 }
