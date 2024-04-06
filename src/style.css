@@ -192,11 +192,12 @@ selector above, 0-1-1 vs 0-2-0 */
 }
 
 #dimmDoubleHat {
+  display: none;
   position: absolute;
   top: 50%;
   left: 0;
   transform-origin: center center;
-  animation: scrollAndRotate 2s linear 2;
+  animation: scrollAndRotate 2s linear 3;
   z-index: 3;
 }
 /* Define the keyframes for scrolling and rotating */
@@ -245,7 +246,7 @@ selector above, 0-1-1 vs 0-2-0 */
     0 0/200% 100%;
   -webkit-background-clip: text;
   color: transparent;
-  animation: waveAnimation 3s linear infinite;
+  animation: waveAnimation 3s linear 2;
 }
 
 @keyframes waveAnimation {
