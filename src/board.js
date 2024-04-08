@@ -51,6 +51,15 @@ export function createQuestionGrid(questionObject) {
 
         // console.log(i * j);
       }
+
+      // apply dimmadome double effects for any marked questions.
+      if (questionObject[`category${i}`][`question${j}`].double) {
+        console.log("true test");
+        tileDiv.addEventListener("click", () => {
+          document.getElementById("dimmadome").style.display = "block";
+          document.getElementById("dimmDoubleHat").style.display = "block";
+        });
+      }
       categoryDiv.append(tileDiv);
     }
   }

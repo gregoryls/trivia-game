@@ -197,7 +197,7 @@
   "category5": {
     "topic": "何も",
     "question1": {
-      "double": false,
+      "double": true,
       "value": 100,
       "question": "Between Argentina and India, which country has a larger land area?",
       "answer": "India (1.15 million sq miles vs 1.05)"
