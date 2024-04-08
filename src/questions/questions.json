@@ -39,9 +39,9 @@
     }
   },
   "category1": {
-    "double": false,
     "topic": "Don't Read Into It",
     "question1": {
+      "double": false,
       "value": 100,
       "question": "Worldwide, what is the most profitable book genre?",
       "answer": "Romance"
@@ -197,7 +197,7 @@
   "category5": {
     "topic": "何も",
     "question1": {
-      "double": true,
+      "double": false,
       "value": 100,
       "question": "Between Argentina and India, which country has a larger land area?",
       "answer": "India (1.15 million sq miles vs 1.05)"

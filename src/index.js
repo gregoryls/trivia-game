@@ -60,14 +60,14 @@ dimmDoubleHat.src = hat;
 dimmDoubleHat.id = "dimmDoubleHat";
 body.append(dimmDoubleHat);
 
-uploadWrapper.addEventListener("click", () => {
-  dimmadomeText.style.display = "block";
-  dimmDoubleHat.style.display = "block";
-  // match interval delay with hat animation length*iterations
-  // setInterval(() => {
-  //   dimmadomeText.style.display = "none";
-  // }, 4000);
-});
+// uploadWrapper.addEventListener("click", () => {
+//   dimmadomeText.style.display = "block";
+//   dimmDoubleHat.style.display = "block";
+//   // match interval delay with hat animation length*iterations
+//   // setInterval(() => {
+//   //   dimmadomeText.style.display = "none";
+//   // }, 4000);
+// });
 dimmadomeText.addEventListener("animationend", () => {
   dimmadomeText.style.display = "none";
 });
