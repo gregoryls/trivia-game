@@ -73,10 +73,13 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
           div.classList.add("scoreButtons");
 
           for (let k = 0; k < playerCount; k += 1) {
-            const currentScore = parseInt(
-              categoryQuestionTiles[j].textContent,
-              10,
-            );
+            let currentScore;
+
+            currentScore = parseInt(categoryQuestionTiles[j].textContent, 10);
+            if (categoryQuestionTiles[j].classList.contains("dimmDouble")) {
+              currentScore =
+                parseInt(categoryQuestionTiles[j].textContent, 10) * 2;
+            }
 
             const scoreButton = document.createElement("button");
             scoreButton.textContent = playerObj[k + 1].name;
