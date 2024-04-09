@@ -48,7 +48,16 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
     for (let j = 0; j < questionCount[i]; j += 1) {
       categoryQuestionTiles[j].addEventListener("click", () => {
         if (categoryQuestionTiles[j].classList.contains("taken")) return;
-        modal.innerHTML =
+        let currentScore;
+
+        currentScore = parseInt(categoryQuestionTiles[j].textContent, 10);
+        if (categoryQuestionTiles[j].classList.contains("dimmDouble")) {
+          currentScore = parseInt(categoryQuestionTiles[j].textContent, 10) * 2;
+        }
+        const pScoreElement = document.createElement("p");
+        pScoreElement.textContent = currentScore;
+        modal.append(pScoreElement);
+        modal.innerHTML +=
           questionObject[`category${i}`][`question${j + 1}`].question;
 
         const answerButton = document.createElement("button");
@@ -73,14 +82,6 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
           div.classList.add("scoreButtons");
 
           for (let k = 0; k < playerCount; k += 1) {
-            let currentScore;
-
-            currentScore = parseInt(categoryQuestionTiles[j].textContent, 10);
-            if (categoryQuestionTiles[j].classList.contains("dimmDouble")) {
-              currentScore =
-                parseInt(categoryQuestionTiles[j].textContent, 10) * 2;
-            }
-
             const scoreButton = document.createElement("button");
             scoreButton.textContent = playerObj[k + 1].name;
             scoreButton.addEventListener("click", () => {
