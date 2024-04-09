@@ -63,7 +63,6 @@ export function createQuestionGrid(questionObject) {
 
       // apply dimmadome double effects for any marked questions.
       if (questionObject[`category${i}`][`question${j}`].double) {
-        console.log("true test");
         tileDiv.classList.add("dimmDouble");
         tileDiv.addEventListener("click", () => {
           document.getElementById("dimmadome").style.display = "block";

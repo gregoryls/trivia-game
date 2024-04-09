@@ -144,12 +144,24 @@ upload.addEventListener("click", () => {
     playerObj[i].displayPlayerScore(i, 0);
   }
 
+  // determine which file type the user has submitted based on MIME type
   const inputFile = fileInput.files[0];
-  const fileType = inputFile.type.match(/csv|json/);
+  let fileType;
+  if (
+    inputFile.type === "text/csv" ||
+    inputFile.type === "application/vnd.ms-excel"
+  ) {
+    fileType = "csv";
+  } else if (inputFile.type === "application/json") {
+    fileType = "json";
+  }
 
   // match returns matched group in an array
-  if (fileType[0] === "csv") question.getQuestionData(fileInput, playerObj);
-  if (fileType[0] === "json") {
+  if (fileType === "csv") {
+    console.log("csv");
+    question.getQuestionData(fileInput, playerObj);
+  }
+  if (fileType === "json") {
     // board.createQuestionGrid(42, jsonObj);
     // question.addQuestionModalEventListener(jsonObj);
     reader.readAsText(inputFile);
