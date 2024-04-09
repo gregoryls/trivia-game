@@ -54,6 +54,9 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
         if (categoryQuestionTiles[j].classList.contains("dimmDouble")) {
           currentScore = parseInt(categoryQuestionTiles[j].textContent, 10) * 2;
         }
+
+        modal.innerHTML = "";
+
         const pScoreElement = document.createElement("p");
         pScoreElement.textContent = currentScore;
         pScoreElement.id = "modalScore";
