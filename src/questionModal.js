@@ -56,7 +56,13 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
         }
         const pScoreElement = document.createElement("p");
         pScoreElement.textContent = currentScore;
+        pScoreElement.id = "modalScore";
         modal.append(pScoreElement);
+
+        // const pQuestionContent = document.createElement("p");
+        // pQuestionContent.textContent =
+        //   questionObject[`category${i}`][`question${j + 1}`].question;
+        // pQuestionContent.id = "modalQuestionContent";
         modal.innerHTML +=
           questionObject[`category${i}`][`question${j + 1}`].question;
 
