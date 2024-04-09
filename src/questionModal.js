@@ -55,6 +55,7 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
           currentScore = parseInt(categoryQuestionTiles[j].textContent, 10) * 2;
         }
 
+        // reset current modal content
         modal.innerHTML = "";
 
         const pScoreElement = document.createElement("p");
@@ -62,10 +63,14 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
         pScoreElement.id = "modalScore";
         modal.append(pScoreElement);
 
+        // alt method to avoid directly setting innerHTML
+
         // const pQuestionContent = document.createElement("p");
         // pQuestionContent.textContent =
         //   questionObject[`category${i}`][`question${j + 1}`].question;
         // pQuestionContent.id = "modalQuestionContent";
+
+        // set question content
         modal.innerHTML +=
           questionObject[`category${i}`][`question${j + 1}`].question;
 

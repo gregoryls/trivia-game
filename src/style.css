@@ -129,6 +129,12 @@ body {
   overflow: auto;
 }
 
+#modalScore {
+  margin: 0;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 .taken {
   background-color: gray;
   color: gray;
