@@ -6,8 +6,9 @@ const gridArea = document.querySelector("#gridWrapper");
 
 export function createQuestionGrid(questionObject) {
   const categoryCount = Object.keys(questionObject).length;
-
   const questionCount = [];
+  let randomCategory;
+  let randomQuestion;
 
   // set grid column count equal to number of question categories
   const gridWrapper = document.getElementById("gridWrapper");
@@ -35,6 +36,14 @@ export function createQuestionGrid(questionObject) {
     questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
   }
 
+  // generate random double question if supplied data doesn't specify
+  if (questionObject[`category${0}`][`question${1}`].double === undefined) {
+    // categories are 0-indexed
+    randomCategory = Math.floor(Math.random() * (categoryCount - 1));
+    randomQuestion = Math.floor(Math.random() * questionCount[randomCategory]);
+    console.log(randomCategory, randomQuestion);
+  }
+
   // generate question tiles with values
   for (let i = 0; i < categoryCount; i += 1) {
     for (let j = 1; j < questionCount[i] + 1; j += 1) {
@@ -55,6 +64,14 @@ export function createQuestionGrid(questionObject) {
       // apply dimmadome double effects for any marked questions.
       if (questionObject[`category${i}`][`question${j}`].double) {
         console.log("true test");
+        tileDiv.addEventListener("click", () => {
+          document.getElementById("dimmadome").style.display = "block";
+          document.getElementById("dimmDoubleHat").style.display = "block";
+        });
+      }
+      // apply dimmadome double effects using random generation
+      // if not specified in question set
+      if (i === randomCategory && j === randomQuestion) {
         tileDiv.addEventListener("click", () => {
           document.getElementById("dimmadome").style.display = "block";
           document.getElementById("dimmDoubleHat").style.display = "block";
