@@ -17,7 +17,7 @@ export function createQuestionGrid(questionObject) {
   gridWrapper.style.gridTemplateColumns = `repeat(${categoryCount},1fr)`;
 
   // generate topic tiles
-  for (let i = 0; i < categoryCount; i += 1) {
+  for (let i = 1; i < categoryCount + 1; i += 1) {
     const categoryDiv = document.createElement("div");
     const tileDiv = document.createElement("div");
 
@@ -31,13 +31,13 @@ export function createQuestionGrid(questionObject) {
   }
 
   // generate question counts for each category
-  for (let i = 0; i < categoryCount; i += 1) {
+  for (let i = 1; i < categoryCount + 1; i += 1) {
     // -1 from length to account for 'topic' key
     questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
   }
 
   const doubleCheck = [];
-  for (let i = 0; i < categoryCount; i += 1) {
+  for (let i = 1; i < categoryCount + 1; i += 1) {
     for (let j = 1; j < questionCount[i] + 1; j += 1) {
       doubleCheck.push(questionObject[`category${i}`][`question${j}`].double);
       console.log("test");
@@ -57,7 +57,7 @@ export function createQuestionGrid(questionObject) {
   // }
 
   // generate question tiles with values
-  for (let i = 0; i < categoryCount; i += 1) {
+  for (let i = 1; i < categoryCount + 1; i += 1) {
     for (let j = 1; j < questionCount[i] + 1; j += 1) {
       const categoryDiv = document.getElementById(`category${i}`);
       const tileDiv = document.createElement("div");
