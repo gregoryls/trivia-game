@@ -36,13 +36,25 @@ export function createQuestionGrid(questionObject) {
     questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
   }
 
-  // generate random double question if supplied data doesn't specify
-  if (questionObject[`category${0}`][`question${1}`].double === undefined) {
+  const doubleCheck = [];
+  for (let i = 0; i < categoryCount; i += 1) {
+    for (let j = 1; j < questionCount[i] + 1; j += 1) {
+      doubleCheck.push(questionObject[`category${i}`][`question${j}`].double);
+      console.log("test");
+    }
+  }
+  console.log(doubleCheck);
+  if (!doubleCheck.includes(true)) {
     // categories are 0-indexed
     randomCategory = Math.floor(Math.random() * (categoryCount - 1));
     randomQuestion = Math.floor(Math.random() * questionCount[randomCategory]);
     console.log(randomCategory, randomQuestion);
   }
+
+  // generate random double question if supplied data doesn't specify
+  // if (questionObject[`category${0}`][`question${1}`].double === undefined) {
+
+  // }
 
   // generate question tiles with values
   for (let i = 0; i < categoryCount; i += 1) {
