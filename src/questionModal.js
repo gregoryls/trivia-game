@@ -13,15 +13,17 @@ const overlay = document.querySelector(".overlay");
 
 export function generateQuestionObjectFromCSV() {
   const questionObj = {};
+  console.log(questionData);
 
   for (let i = 0; i < questionData.length / 2; i += 1) {
-    questionObj[`category${i}`] = {
+    questionObj[`category${i + 1}`] = {
       topic: questionData[2 * i][0],
     };
+    console.log(questionObj);
 
     // start from index 1 to account for csv topic formatting
     for (let j = 1; j < questionData[0].length; j += 1) {
-      questionObj[`category${i}`][`question${j}`] = {
+      questionObj[`category${i + 1}`][`question${j}`] = {
         question: questionData[2 * i][j],
         answer: questionData[2 * i + 1][j],
       };
@@ -35,6 +37,7 @@ export function generateQuestionObjectFromCSV() {
 
 export function addQuestionModalEventListener(questionObject, playerObj) {
   // const questionTiles = document.querySelectorAll(".question");
+  console.log(questionObject);
 
   const categoryCount = Object.keys(questionObject).length;
   const questionCount = [];
@@ -45,7 +48,7 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
     const categoryQuestionTiles = document.querySelectorAll(
       `#category${i} .question`,
     );
-    for (let j = 0; j < questionCount[i]; j += 1) {
+    for (let j = 0; j < questionCount[i - 1]; j += 1) {
       categoryQuestionTiles[j].addEventListener("click", () => {
         if (categoryQuestionTiles[j].classList.contains("taken")) return;
         let currentScore;
