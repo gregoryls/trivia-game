@@ -40,7 +40,6 @@ export function createQuestionGrid(questionObject) {
   for (let i = 1; i < categoryCount + 1; i += 1) {
     for (let j = 1; j < questionCount[i] + 1; j += 1) {
       doubleCheck.push(questionObject[`category${i}`][`question${j}`].double);
-      console.log("test");
     }
   }
   console.log(doubleCheck);
@@ -58,7 +57,7 @@ export function createQuestionGrid(questionObject) {
 
   // generate question tiles with values
   for (let i = 1; i < categoryCount + 1; i += 1) {
-    for (let j = 1; j < questionCount[i] + 1; j += 1) {
+    for (let j = 1; j < questionCount[i - 1] + 1; j += 1) {
       const categoryDiv = document.getElementById(`category${i}`);
       const tileDiv = document.createElement("div");
       tileDiv.classList.add("question");
