@@ -1,5 +1,5 @@
 {
-  "category0": {
+  "category1": {
     "topic": "Is That A Dune Reference?",
     "question1": {
       "value": 100,
@@ -30,7 +30,7 @@
       "answer": "180ft, Bootlace Worm"
     }
   },
-  "category1": {
+  "category2": {
     "topic": "Don't Read Into It",
     "question1": {
       "value": 100,
@@ -63,7 +63,7 @@
       "answer": "We Could Be Heroes (3.44), The Clockwork Rocket (3.64), The Bees (3.71), Mr. Penumbra's 24-Hour Bookstore (3.73), Inherent Vice (3.76)"
     }
   },
-  "category2": {
+  "category3": {
     "topic": "What Is That?",
     "question1": {
       "value": 100,
@@ -96,7 +96,7 @@
       "answer": "Blooregard Q. Kazoo <img src=\"img/bloo-answer.png\" alt=\"\">"
     }
   },
-  "category3": {
+  "category4": {
     "topic": "Groverwatch",
     "question1": {
       "value": 900,
@@ -114,7 +114,7 @@
       "answer": "7:49 (Season 11)"
     }
   },
-  "category4": {
+  "category5": {
     "topic": "Moist-Z",
     "question1": {
       "value": 100,

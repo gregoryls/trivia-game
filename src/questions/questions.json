@@ -1,5 +1,5 @@
 {
-  "category0": {
+  "category1": {
     "topic": "Is That A Dune Reference?",
     "question1": {
       "double": false,
@@ -38,7 +38,7 @@
       "answer": "180ft, Bootlace Worm"
     }
   },
-  "category1": {
+  "category2": {
     "topic": "Don't Read Into It",
     "question1": {
       "double": false,
@@ -77,7 +77,7 @@
       "answer": "We Could Be Heroes (3.44), The Clockwork Rocket (3.64), The Bees (3.71), Mr. Penumbra's 24-Hour Bookstore (3.73), Inherent Vice (3.76)"
     }
   },
-  "category2": {
+  "category3": {
     "topic": "What Is That?",
     "question1": {
       "double": false,
@@ -116,7 +116,7 @@
       "answer": "Blooregard Q. Kazoo <img src=\"img/bloo-answer.png\" alt=\"\">"
     }
   },
-  "category3": {
+  "category4": {
     "topic": "Groverwatch",
     "question1": {
       "double": false,
@@ -155,7 +155,7 @@
       "answer": "Battlefield 1942"
     }
   },
-  "category4": {
+  "category5": {
     "topic": "Moist-Z",
     "question1": {
       "double": false,
@@ -194,7 +194,7 @@
       "answer": "Brand (19/10/4) vs Irelia, Nami (19/8/16) vs Yasuo "
     }
   },
-  "category5": {
+  "category6": {
     "topic": "何も",
     "question1": {
       "double": true,
