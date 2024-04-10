@@ -38,7 +38,7 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
 
   const categoryCount = Object.keys(questionObject).length;
   const questionCount = [];
-  for (let i = 0; i < categoryCount; i += 1) {
+  for (let i = 1; i < categoryCount + 1; i += 1) {
     // -1 from length to account for 'topic' key
     questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
 
