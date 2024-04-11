@@ -46,8 +46,10 @@ export function createQuestionGrid(questionObject) {
   if (!doubleCheck.includes(true)) {
     // TODO fix floor, can't be 0
     //
-    randomCategory = Math.floor(Math.random() * categoryCount);
-    randomQuestion = Math.floor(Math.random() * questionCount[randomCategory]);
+    randomCategory = Math.floor(Math.random() * categoryCount + 1);
+    randomQuestion = Math.floor(
+      Math.random() * questionCount[randomCategory - 1],
+    );
     console.log(randomCategory, randomQuestion);
   }
 
