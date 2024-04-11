@@ -44,8 +44,9 @@ export function createQuestionGrid(questionObject) {
   }
   console.log(doubleCheck);
   if (!doubleCheck.includes(true)) {
-    // categories are 0-indexed
-    randomCategory = Math.floor(Math.random() * (categoryCount - 1));
+    // TODO fix floor, can't be 0
+    //
+    randomCategory = Math.floor(Math.random() * categoryCount);
     randomQuestion = Math.floor(Math.random() * questionCount[randomCategory]);
     console.log(randomCategory, randomQuestion);
   }

@@ -13,13 +13,11 @@ const overlay = document.querySelector(".overlay");
 
 export function generateQuestionObjectFromCSV() {
   const questionObj = {};
-  console.log(questionData);
 
   for (let i = 0; i < questionData.length / 2; i += 1) {
     questionObj[`category${i + 1}`] = {
       topic: questionData[2 * i][0],
     };
-    console.log(questionObj);
 
     // start from index 1 to account for csv topic formatting
     for (let j = 1; j < questionData[0].length; j += 1) {
@@ -31,7 +29,6 @@ export function generateQuestionObjectFromCSV() {
       // questionObj[i][`answer${j}`] = questionData[2 * i + 1][j];
     }
   }
-  console.log(questionObj);
   return questionObj;
 }
 
