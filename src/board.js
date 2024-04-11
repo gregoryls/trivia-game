@@ -36,14 +36,16 @@ export function createQuestionGrid(questionObject) {
     questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
   }
 
-  const doubleCheck = [];
+  const dimmDoubleCheck = [];
   for (let i = 1; i < categoryCount + 1; i += 1) {
     for (let j = 1; j < questionCount[i] + 1; j += 1) {
-      doubleCheck.push(questionObject[`category${i}`][`question${j}`].double);
+      dimmDoubleCheck.push(
+        questionObject[`category${i}`][`question${j}`].double,
+      );
     }
   }
-  console.log(doubleCheck);
-  if (!doubleCheck.includes(true)) {
+  console.log(dimmDoubleCheck);
+  if (!dimmDoubleCheck.includes(true)) {
     // TODO fix floor, can't be 0
     //
     randomCategory = Math.floor(Math.random() * categoryCount + 1);
