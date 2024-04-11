@@ -37,8 +37,9 @@ export function createQuestionGrid(questionObject) {
   }
 
   const dimmDoubleCheck = [];
+  console.log(categoryCount, questionCount);
   for (let i = 1; i < categoryCount + 1; i += 1) {
-    for (let j = 1; j < questionCount[i] + 1; j += 1) {
+    for (let j = 1; j < questionCount[i - 1] + 1; j += 1) {
       dimmDoubleCheck.push(
         questionObject[`category${i}`][`question${j}`].double,
       );
