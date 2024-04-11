@@ -24,9 +24,7 @@ import hat from "./img/hatNoBackground.png";
 // stop gathering question0, already covered in topic
 // cleanup index
 // consider async for .json
-// change board logic to account for asymmetric categories - loop all categories to find unique question counts
 // disable overlay closing until at least answer button clicked
-// fix board build on non-square boards
 // consider exporting category/question counts from board
 // migrate to classlist vs custom function
 // change player name by something other than prompt()
@@ -41,6 +39,8 @@ import hat from "./img/hatNoBackground.png";
 // file input label css
 // finish dimmadome double, rnadom or chosen location
 // fix image, audio, video inputs (youtube embed?)
+// make random dimmdouble an array
+// properly score random dd's
 
 // Initialize the player object
 let playerObj;

@@ -40,6 +40,7 @@ export function createQuestionGrid(questionObject) {
   console.log(categoryCount, questionCount);
   for (let i = 1; i < categoryCount + 1; i += 1) {
     for (let j = 1; j < questionCount[i - 1] + 1; j += 1) {
+      // questionCount is a standard 0-index array
       dimmDoubleCheck.push(
         questionObject[`category${i}`][`question${j}`].double,
       );
