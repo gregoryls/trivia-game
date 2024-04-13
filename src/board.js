@@ -4,6 +4,10 @@ import * as players from "./players";
 
 const gridArea = document.querySelector("#gridWrapper");
 
+function getRandomNumberInRange(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 export function createQuestionGrid(questionObject) {
   const categoryCount = Object.keys(questionObject).length;
   const questionCount = [];
@@ -47,13 +51,14 @@ export function createQuestionGrid(questionObject) {
     }
   }
   console.log(dimmDoubleCheck);
+  // check for question sets that don't have double property declared
   if (!dimmDoubleCheck.includes(true)) {
-    // TODO fix floor, can't be 0
-    //
-    randomCategory = Math.floor(Math.random() * categoryCount + 1);
-    randomQuestion = Math.floor(
-      Math.random() * questionCount[randomCategory - 1],
+    randomCategory = getRandomNumberInRange(1, categoryCount);
+    randomQuestion = getRandomNumberInRange(
+      1,
+      questionCount[randomCategory - 1],
     );
+
     console.log(randomCategory, randomQuestion);
   }
 
