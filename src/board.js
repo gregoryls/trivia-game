@@ -11,8 +11,8 @@ function getRandomNumberInRange(min, max) {
 export function createQuestionGrid(questionObject) {
   const categoryCount = Object.keys(questionObject).length;
   const questionCount = [];
-  let randomCategory;
-  let randomQuestion;
+  const randomCategory = [];
+  const randomQuestion = [];
 
   // set grid column count equal to number of question categories
   const gridWrapper = document.getElementById("gridWrapper");
@@ -53,10 +53,10 @@ export function createQuestionGrid(questionObject) {
   console.log(dimmDoubleCheck);
   // check for question sets that don't have double property declared
   if (!dimmDoubleCheck.includes(true)) {
-    randomCategory = getRandomNumberInRange(1, categoryCount);
-    randomQuestion = getRandomNumberInRange(
-      1,
-      questionCount[randomCategory - 1],
+    // TODO change to array
+    randomCategory.push(getRandomNumberInRange(1, categoryCount));
+    randomQuestion.push(
+      getRandomNumberInRange(1, questionCount[randomCategory[0] - 1]),
     );
 
     console.log(randomCategory, randomQuestion);
@@ -94,7 +94,7 @@ export function createQuestionGrid(questionObject) {
       }
       // apply dimmadome double effects using random generation
       // if not specified in question set
-      if (i === randomCategory && j === randomQuestion) {
+      if (i === randomCategory[0] && j === randomQuestion[0]) {
         tileDiv.classList.add("dimmDouble");
         tileDiv.addEventListener("click", () => {
           document.getElementById("dimmadome").style.display = "block";
