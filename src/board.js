@@ -60,11 +60,13 @@ export function createQuestionGrid(questionObject) {
   console.log(dimmDoubleCheck);
   // check for question sets that don't have double property declared
   if (!dimmDoubleCheck.includes(true)) {
-    // TODO change to array
-    randomCategory.push(getRandomNumberInRange(1, categoryCount));
-    randomQuestion.push(
-      getRandomNumberInRange(1, questionCount[randomCategory[0] - 1]),
-    );
+    // TODO fix possibility of repeats
+    for (let r = 0; r < numberofRandomDoubles; r += 1) {
+      randomCategory.push(getRandomNumberInRange(1, categoryCount));
+      randomQuestion.push(
+        getRandomNumberInRange(1, questionCount[randomCategory[0] - 1]),
+      );
+    }
 
     console.log(randomCategory, randomQuestion);
   }
