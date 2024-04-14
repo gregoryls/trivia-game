@@ -63,10 +63,14 @@ export function createQuestionGrid(questionObject) {
     // TODO fix possibility of repeats
     // fix board double assignment with for loop
     for (let r = 0; r < numberofRandomDoubles; r += 1) {
-      randomCategory.push(getRandomNumberInRange(1, categoryCount));
-      randomQuestion.push(
-        getRandomNumberInRange(1, questionCount[randomCategory[0] - 1]),
+      const getRandomCategory = getRandomNumberInRange(1, categoryCount);
+      const getRandomQuestionInCategory = getRandomNumberInRange(
+        1,
+        questionCount[getRandomCategory - 1],
       );
+      randomCategory.push(getRandomCategory);
+
+      randomQuestion.push(getRandomQuestionInCategory);
     }
 
     console.log(randomCategory, randomQuestion);
