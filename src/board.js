@@ -123,8 +123,8 @@ export function createQuestionGrid(questionObject) {
       // apply dimmadome double effects using random generation
       // if not specified in question set
 
-      for (let k = 0; k < randomCategory.length; k += 1) {
-        if (i === randomCategory[k] && j === randomQuestion[k]) {
+      for (let k = 0; k < randomCoordinates.length; k += 1) {
+        if (i === randomCoordinates[k][0] && j === randomCoordinates[k][1]) {
           tileDiv.classList.add("dimmDouble");
           tileDiv.addEventListener("click", () => {
             document.getElementById("dimmadome").style.display = "block";
