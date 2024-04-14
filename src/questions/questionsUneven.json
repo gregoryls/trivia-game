@@ -99,7 +99,7 @@
   "category4": {
     "topic": "Groverwatch",
     "question1": {
-      "value": 900,
+      "value": 100,
       "question": "How many meters long is one minecraft block?",
       "answer": "1 meter"
     },

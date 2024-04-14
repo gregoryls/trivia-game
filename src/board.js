@@ -61,6 +61,7 @@ export function createQuestionGrid(questionObject) {
   // check for question sets that don't have double property declared
   if (!dimmDoubleCheck.includes(true)) {
     // TODO fix possibility of repeats
+    // fix board double assignment with for loop
     for (let r = 0; r < numberofRandomDoubles; r += 1) {
       randomCategory.push(getRandomNumberInRange(1, categoryCount));
       randomQuestion.push(

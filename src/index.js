@@ -39,7 +39,6 @@ import hat from "./img/hatNoBackground.png";
 // file input label css
 // finish dimmadome double, rnadom or chosen location
 // fix image, audio, video inputs (youtube embed?)
-// make random dimmdouble an array
 // properly score random dd's
 
 // Initialize the player object
