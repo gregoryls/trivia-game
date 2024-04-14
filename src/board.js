@@ -104,12 +104,15 @@ export function createQuestionGrid(questionObject) {
       }
       // apply dimmadome double effects using random generation
       // if not specified in question set
-      if (i === randomCategory[0] && j === randomQuestion[0]) {
-        tileDiv.classList.add("dimmDouble");
-        tileDiv.addEventListener("click", () => {
-          document.getElementById("dimmadome").style.display = "block";
-          document.getElementById("dimmDoubleHat").style.display = "block";
-        });
+
+      for (let k = 0; k < randomCategory.length; k += 1) {
+        if (i === randomCategory[k] && j === randomQuestion[k]) {
+          tileDiv.classList.add("dimmDouble");
+          tileDiv.addEventListener("click", () => {
+            document.getElementById("dimmadome").style.display = "block";
+            document.getElementById("dimmDoubleHat").style.display = "block";
+          });
+        }
       }
       categoryDiv.append(tileDiv);
     }
