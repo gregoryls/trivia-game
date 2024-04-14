@@ -5,7 +5,7 @@ import * as players from "./players";
 const gridArea = document.querySelector("#gridWrapper");
 
 function getRandomNumberInRange(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 export function createQuestionGrid(questionObject) {
@@ -13,6 +13,7 @@ export function createQuestionGrid(questionObject) {
   const questionCount = [];
   const randomCategory = [];
   const randomQuestion = [];
+  const randomCoordinates = [];
 
   // set grid column count equal to number of question categories
   const gridWrapper = document.getElementById("gridWrapper");
@@ -68,6 +69,11 @@ export function createQuestionGrid(questionObject) {
         1,
         questionCount[getRandomCategory - 1],
       );
+      randomCoordinates.push([getRandomCategory, getRandomQuestionInCategory]);
+      console.log(randomCoordinates);
+      // while (){
+
+      // }
       randomCategory.push(getRandomCategory);
 
       randomQuestion.push(getRandomQuestionInCategory);
