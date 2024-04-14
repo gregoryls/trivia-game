@@ -34,17 +34,24 @@ export function createQuestionGrid(questionObject) {
     gridArea.append(categoryDiv);
   }
 
+  let totalQuestionCount = 0;
   // generate question counts for each category
   for (let i = 1; i < categoryCount + 1; i += 1) {
     // -1 from length to account for 'topic' key
-    questionCount.push(Object.keys(questionObject[`category${i}`]).length - 1);
+    const categoryLength =
+      Object.keys(questionObject[`category${i}`]).length - 1;
+    questionCount.push(categoryLength);
+    totalQuestionCount += categoryLength;
   }
+
+  const numberofRandomDoubles = Math.floor(totalQuestionCount / 12);
 
   const dimmDoubleCheck = [];
   console.log(categoryCount, questionCount);
   for (let i = 1; i < categoryCount + 1; i += 1) {
     for (let j = 1; j < questionCount[i - 1] + 1; j += 1) {
       // questionCount is a standard 0-index array
+      // TODO better name
       dimmDoubleCheck.push(
         questionObject[`category${i}`][`question${j}`].double,
       );
