@@ -11,8 +11,6 @@ function getRandomNumberInRange(min, max) {
 export function createQuestionGrid(questionObject) {
   const categoryCount = Object.keys(questionObject).length;
   const questionCount = [];
-  const randomCategory = [];
-  const randomQuestion = [];
   const randomCoordinates = [];
 
   // set grid column count equal to number of question categories
@@ -61,8 +59,6 @@ export function createQuestionGrid(questionObject) {
   console.log(dimmDoubleCheck);
   // check for question sets that don't have double property declared
   if (!dimmDoubleCheck.includes(true)) {
-    // TODO fix possibility of repeats
-    // fix board double assignment with for loop
     for (let r = 0; r < numberofRandomDoubles; r += 1) {
       let getRandomCategory = getRandomNumberInRange(1, categoryCount);
       let getRandomQuestionInCategory = getRandomNumberInRange(
@@ -80,14 +76,9 @@ export function createQuestionGrid(questionObject) {
         coordinatePair = [getRandomCategory, getRandomQuestionInCategory];
       }
       randomCoordinates.push(coordinatePair);
-      console.log(randomCoordinates);
-
-      randomCategory.push(getRandomCategory);
-
-      randomQuestion.push(getRandomQuestionInCategory);
     }
 
-    console.log(randomCategory, randomQuestion);
+    console.log(randomCoordinates);
   }
 
   // generate random double question if supplied data doesn't specify
