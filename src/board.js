@@ -50,12 +50,13 @@ export function createQuestionGrid(questionObject) {
   for (let i = 1; i < categoryCount + 1; i += 1) {
     for (let j = 1; j < questionCount[i - 1] + 1; j += 1) {
       // questionCount is a standard 0-index array
+      // double property is a bool, undefined if question set omits property entirely
       checkForDimmDouble.push(
         questionObject[`category${i}`][`question${j}`].double,
       );
     }
   }
-  console.log(checkForDimmDouble);
+
   // check for question sets that don't have double property declared
   if (!checkForDimmDouble.includes(true)) {
     for (let r = 0; r < numberofRandomDoubles; r += 1) {
@@ -64,8 +65,10 @@ export function createQuestionGrid(questionObject) {
         1,
         questionCount[getRandomCategory - 1],
       );
+      // store random double tiles in category, question sets
       let coordinatePair = [getRandomCategory, getRandomQuestionInCategory];
 
+      // while loop rerolls random numbers if a tile would be selected twice
       while (randomCoordinates.includes(coordinatePair)) {
         getRandomCategory = getRandomNumberInRange(1, categoryCount);
         getRandomQuestionInCategory = getRandomNumberInRange(
