@@ -45,20 +45,19 @@ export function createQuestionGrid(questionObject) {
 
   const numberofRandomDoubles = Math.floor(totalQuestionCount / 12);
 
-  const dimmDoubleCheck = [];
+  const checkForDimmDouble = [];
   console.log(categoryCount, questionCount);
   for (let i = 1; i < categoryCount + 1; i += 1) {
     for (let j = 1; j < questionCount[i - 1] + 1; j += 1) {
       // questionCount is a standard 0-index array
-      // TODO better name
-      dimmDoubleCheck.push(
+      checkForDimmDouble.push(
         questionObject[`category${i}`][`question${j}`].double,
       );
     }
   }
-  console.log(dimmDoubleCheck);
+  console.log(checkForDimmDouble);
   // check for question sets that don't have double property declared
-  if (!dimmDoubleCheck.includes(true)) {
+  if (!checkForDimmDouble.includes(true)) {
     for (let r = 0; r < numberofRandomDoubles; r += 1) {
       let getRandomCategory = getRandomNumberInRange(1, categoryCount);
       let getRandomQuestionInCategory = getRandomNumberInRange(
