@@ -24,6 +24,12 @@ module.exports = {
       minify: false,
       template: "./src/index.html",
     }),
+    new HtmlWebpackPlugin({
+      title: "Question Builder",
+      minify: false,
+      filename: "questionBuilder.html",
+      template: "./src/questionBuilder.html",
+    }),
   ],
   module: {
     rules: [
