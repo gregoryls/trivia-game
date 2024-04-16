@@ -9,6 +9,7 @@ module.exports = {
     players: "./src/players.js",
     board: "./src/board.js",
     stockNames: "./src/stockNames.js",
+    questionBuilder: "./src/questionBuilder.js",
     // module1: "./src/module1.js",
   },
   devtool: "inline-source-map",
@@ -29,6 +30,7 @@ module.exports = {
       minify: false,
       filename: "questionBuilder.html",
       template: "./src/questionBuilder.html",
+      chunks: ["questionBuilder"],
     }),
   ],
   module: {
