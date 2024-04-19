@@ -5,10 +5,10 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
-    questionModal: "./src/questionModal.js",
-    players: "./src/players.js",
-    board: "./src/board.js",
-    stockNames: "./src/stockNames.js",
+    // questionModal: "./src/questionModal.js",
+    // players: "./src/players.js",
+    // board: "./src/board.js",
+    // stockNames: "./src/stockNames.js",
     questionBuilder: "./src/questionBuilder.js",
     // module1: "./src/module1.js",
   },
@@ -24,6 +24,7 @@ module.exports = {
       title: "XXXXX",
       minify: false,
       template: "./src/index.html",
+      chunks: ["index"],
     }),
     new HtmlWebpackPlugin({
       title: "Question Builder",
