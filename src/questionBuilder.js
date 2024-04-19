@@ -1,4 +1,4 @@
-import "./style.css";
+import "./questionBuilderStyle.css";
 
 function createLabelInput(inputID, type, labelText) {
   const div = document.createElement("div");
