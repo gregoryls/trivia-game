@@ -7,7 +7,7 @@ function createLabelInput(inputID, type, labelText) {
 
   input.id = inputID;
   input.type = type;
-  label.htmlfor = inputID;
+  label.htmlFor = inputID;
   label.textContent = labelText;
   div.append(label, input);
   return div;
