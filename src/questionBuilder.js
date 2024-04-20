@@ -14,7 +14,12 @@ function createLabelInput(inputID, type, labelText) {
 }
 
 function renderCategoryInputs(categoryCount) {
-  const div = document.createElement("div");
+  const wrap = document.createElement("div");
+  for (let i = 0; i < categoryCount; i += 1) {
+    wrap.append(createLabelInput("test", "text", "testy"));
+  }
+  const categoryWrap = document.getElementById("categoryWrap");
+  categoryWrap.append(wrap);
 }
 
 const categoryNumberInput = document.getElementById("categoryNumberInput");
@@ -24,5 +29,5 @@ document
   .append(createLabelInput("test", "text", "label"));
 
 categoryNumberInput.addEventListener("change", () => {
-  console.log(categoryNumberInput.value);
+  renderCategoryInputs(categoryNumberInput.value);
 });
