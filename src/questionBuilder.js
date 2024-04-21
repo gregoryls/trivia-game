@@ -1,5 +1,9 @@
 import "./questionBuilderStyle.css";
 
+// TODO
+// change innerHTML to something less destructive, probably
+// or write existing inputs to on object
+
 function createLabelInput(inputID, type, labelText) {
   const div = document.createElement("div");
   const input = document.createElement("input");
@@ -14,11 +18,14 @@ function createLabelInput(inputID, type, labelText) {
 }
 
 function renderCategoryInputs(categoryCount) {
+  const categoryWrap = document.getElementById("categoryWrap");
+
+  categoryWrap.innerHTML = "";
   const wrap = document.createElement("div");
   for (let i = 0; i < categoryCount; i += 1) {
-    wrap.append(createLabelInput("test", "text", "testy"));
+    wrap.append(createLabelInput("test", "text", `Category ${i + 1}`));
   }
-  const categoryWrap = document.getElementById("categoryWrap");
+
   categoryWrap.append(wrap);
 }
 
