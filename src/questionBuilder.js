@@ -22,6 +22,7 @@ function renderCategoryInputs(categoryCount) {
 
   categoryWrap.innerHTML = "";
   const wrap = document.createElement("div");
+  wrap.id = "wrap";
   for (let i = 0; i < categoryCount; i += 1) {
     wrap.append(createLabelAndInput("test", "text", `Category ${i + 1}`));
   }
@@ -38,3 +39,5 @@ document
 categoryNumberInput.addEventListener("change", () => {
   renderCategoryInputs(categoryNumberInput.value);
 });
+
+renderCategoryInputs(6);
