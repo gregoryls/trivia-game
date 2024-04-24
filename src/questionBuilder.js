@@ -22,7 +22,6 @@ function renderCategoryInputs(categoryCount) {
 
   categoryWrap.innerHTML = "";
 
-  const wrap4 = document.createElement("div");
   for (let i = 0; i < categoryCount; i += 1) {
     const wrap1 = document.createElement("div");
     const wrap2 = document.createElement("div");
@@ -35,7 +34,12 @@ function renderCategoryInputs(categoryCount) {
       wrap3.textContent = j;
       wrap2.append(wrap3);
     }
-    wrap1.append(wrap2);
+    const wrap4 = document.createElement("div");
+    wrap4.style.border = "1px solid black";
+    wrap4.textContent = "+";
+
+    wrap1.append(wrap2, wrap4);
+
     categoryWrap.append(wrap1);
   }
 }
