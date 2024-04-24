@@ -21,13 +21,23 @@ function renderCategoryInputs(categoryCount) {
   const categoryWrap = document.getElementById("categoryWrap");
 
   categoryWrap.innerHTML = "";
-  const wrap = document.createElement("div");
-  wrap.id = "wrap";
-  for (let i = 0; i < categoryCount; i += 1) {
-    wrap.append(createLabelAndInput("test", "text", `Category ${i + 1}`));
-  }
 
-  categoryWrap.append(wrap);
+  const wrap4 = document.createElement("div");
+  for (let i = 0; i < categoryCount; i += 1) {
+    const wrap1 = document.createElement("div");
+    const wrap2 = document.createElement("div");
+    wrap1.append(createLabelAndInput("test", "text", `Category ${i + 1}`));
+    wrap1.id = `cat${i + 1}`;
+    wrap2.id = "questionWrap";
+    for (let j = 1; j < 7; j += 1) {
+      const wrap3 = document.createElement("div");
+      wrap3.id = `question${j}Wrap`;
+      wrap3.textContent = j;
+      wrap2.append(wrap3);
+    }
+    wrap1.append(wrap2);
+    categoryWrap.append(wrap1);
+  }
 }
 
 const categoryNumberInput = document.getElementById("categoryNumberInput");
