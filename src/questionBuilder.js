@@ -38,11 +38,11 @@ function renderCategoryInputs(categoryCount) {
 
   categoryWrap.innerHTML = "";
 
-  for (let i = 0; i < categoryCount; i += 1) {
+  for (let i = 1; i < categoryCount + 1; i += 1) {
     const wrap1 = document.createElement("div");
     const wrap2 = document.createElement("div");
-    wrap1.append(createLabelAndInput("test", "text", `Category ${i + 1}`));
-    wrap1.id = `cat${i + 1}`;
+    wrap1.append(createLabelAndInput("test", "text", `Category ${i}`));
+    wrap1.id = `cat${i}`;
     wrap2.id = "questionWrap";
     for (let j = 1; j < 7; j += 1) {
       const wrap3 = document.createElement("div");
