@@ -17,19 +17,14 @@ function createLabelAndInput(inputID, type, labelText) {
   return div;
 }
 
-function createQuestionAnswerValueInputs(question, questionCount, category) {
+function createQuestionAnswerValueInputs(question, category) {
   const wrap = document.createElement("div");
-  wrap.id = `question${questionCount}Wrap`;
+  wrap.id = `question${question}Wrap`;
 
-  for (let i = 1; i < questionCount + 1; i += 1) {
-    wrap.append(
-      createLabelAndInput(
-        `category${category}`,
-        "text",
-        `question ${question}`,
-      ),
-    );
-  }
+  wrap.append(
+    createLabelAndInput(`category${category}`, "text", `question ${question}`),
+  );
+
   return wrap;
 }
 
@@ -47,7 +42,7 @@ function renderCategoryInputs(categoryCount) {
     for (let j = 1; j < 7; j += 1) {
       const wrap3 = document.createElement("div");
       wrap3.id = `question${j}Wrap`;
-      wrap3.append(createQuestionAnswerValueInputs(j, 6, i));
+      wrap3.append(createQuestionAnswerValueInputs(j, i));
       wrap2.append(wrap3);
     }
     const wrap4 = document.createElement("div");
