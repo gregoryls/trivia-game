@@ -3,6 +3,7 @@ import "./questionBuilderStyle.css";
 // TODO
 // change innerHTML to something less destructive, probably
 // or write existing inputs to on object
+// give default values based on 'normal' distribution
 
 function createLabelAndInput(inputID, type, labelText) {
   const div = document.createElement("div");
@@ -22,7 +23,13 @@ function createQuestionAnswerValueInputs(question, category) {
   wrap.id = `question${question}Wrap`;
 
   wrap.append(
-    createLabelAndInput(`category${category}`, "text", `question ${question}`),
+    createLabelAndInput(`category${category}`, "text", `Question ${question}`),
+  );
+  wrap.append(
+    createLabelAndInput(`category${category}`, "text", `Answer ${question}`),
+  );
+  wrap.append(
+    createLabelAndInput(`category${category}`, "number", `Value ${question}`),
   );
 
   return wrap;
