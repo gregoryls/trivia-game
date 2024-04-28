@@ -22,14 +22,27 @@ function createQuestionAnswerValueInputs(question, category) {
   const wrap = document.createElement("div");
   wrap.id = `question${question}Wrap`;
 
+  // fix IDs here
   wrap.append(
-    createLabelAndInput(`category${category}`, "text", `Question ${question}`),
+    createLabelAndInput(
+      `category${category}Question`,
+      "text",
+      `Question ${question}`,
+    ),
   );
   wrap.append(
-    createLabelAndInput(`category${category}`, "text", `Answer ${question}`),
+    createLabelAndInput(
+      `category${category}Answer`,
+      "text",
+      `Answer ${question}`,
+    ),
   );
   wrap.append(
-    createLabelAndInput(`category${category}`, "number", `Value ${question}`),
+    createLabelAndInput(
+      `category${category}Value`,
+      "number",
+      `Value ${question}`,
+    ),
   );
 
   return wrap;
