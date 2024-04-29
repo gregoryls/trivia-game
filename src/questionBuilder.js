@@ -26,6 +26,7 @@ function createQuestionAnswerValueInputs(question, category) {
   // fix IDs here
   wrap.append(
     createLabelAndInput(
+      "questionInput",
       `category${category}Question`,
       "text",
       `Question ${question}`,
@@ -33,6 +34,7 @@ function createQuestionAnswerValueInputs(question, category) {
   );
   wrap.append(
     createLabelAndInput(
+      "answerInput",
       `category${category}Answer`,
       "text",
       `Answer ${question}`,
@@ -40,6 +42,7 @@ function createQuestionAnswerValueInputs(question, category) {
   );
   wrap.append(
     createLabelAndInput(
+      "valueInput",
       `category${category}Value`,
       "number",
       `Value ${question}`,
@@ -57,7 +60,9 @@ function renderCategoryInputs(categoryCount) {
   for (let i = 1; i < categoryCount + 1; i += 1) {
     const wrap1 = document.createElement("div");
     const wrap2 = document.createElement("div");
-    wrap1.append(createLabelAndInput("test", "text", `Category ${i}`));
+    wrap1.append(
+      createLabelAndInput("categoryInput", "test", "text", `Category ${i}`),
+    );
     wrap1.id = `cat${i}`;
     wrap2.id = "questionWrap";
     for (let j = 1; j < 7; j += 1) {
