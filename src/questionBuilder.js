@@ -5,12 +5,12 @@ import "./questionBuilderStyle.css";
 // or write existing inputs to on object
 // give default values based on 'normal' distribution
 
-function createLabelAndInput(inputID, type, labelText) {
+function createLabelAndInput(className, type, labelText) {
   const div = document.createElement("div");
   const input = document.createElement("input");
   const label = document.createElement("label");
 
-  input.id = inputID;
+  input.classList.add(className);
   input.type = type;
   label.htmlFor = inputID;
   label.textContent = labelText;
