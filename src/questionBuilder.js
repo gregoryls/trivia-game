@@ -63,8 +63,8 @@ function renderCategoryInputs(categoryCount) {
     wrap1.append(
       createLabelAndInput("categoryInput", "test", "text", `Category ${i}`),
     );
-    wrap1.id = `cat${i}`;
-    wrap2.id = "questionWrap";
+    wrap1.id = `category${i}Wrap`;
+    wrap2.id = `category${i}QuestionWrap`;
     for (let j = 1; j < 7; j += 1) {
       const wrap3 = document.createElement("div");
       wrap3.id = `question${j}Wrap`;
