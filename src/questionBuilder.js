@@ -64,12 +64,15 @@ function renderCategoryInputs(categoryCount) {
       createLabelAndInput("categoryInput", "test", "text", `Category ${i}`),
     );
     wrap1.id = `category${i}Wrap`;
+    wrap1.classList.add("categoryWrap");
     wrap2.id = `category${i}QuestionWrap`;
+    wrap2.classList.add("categoryQuestionData");
     for (let j = 1; j < 7; j += 1) {
       const wrap3 = document.createElement("div");
-      wrap3.id = `question${j}Wrap`;
+      // wrap3.id = `question${j}Wrap`;
+      wrap3.classList.add("questionData");
       wrap3.append(createQuestionAnswerValueInputs(j, i));
-      wrap2.append(wrap3);
+      wrap2.append(createQuestionAnswerValueInputs(j, i));
     }
     const wrap4 = document.createElement("div");
     wrap4.style.border = "1px solid black";
