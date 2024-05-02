@@ -22,6 +22,7 @@ function createLabelAndInput(className, inputID, type, labelText) {
 function createQuestionAnswerValueInputs(question, category) {
   const wrap = document.createElement("div");
   wrap.id = `question${question}Wrap`;
+  wrap.classList.add("QAVWrap");
 
   // fix IDs here
   wrap.append(
