@@ -10,7 +10,7 @@ function createLabelAndInput(className, inputID, type, labelText) {
   const input = document.createElement("input");
   const label = document.createElement("label");
 
-  input.classList.add(className);
+  div.classList.add(className);
   input.id = inputID;
   input.type = type;
   label.htmlFor = inputID;
