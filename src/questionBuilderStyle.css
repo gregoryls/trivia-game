@@ -1,3 +1,17 @@
 body {
   background-color: gray;
 }
+.categoryWrap {
+  background-color: pink;
+}
+
+.categoryInput {
+  background-color: purple;
+}
+.categoryQuestionData {
+  background-color: aqua;
+}
+
+.QAVWrap {
+  background-color: yellowgreen;
+}
