@@ -54,9 +54,9 @@ function createQuestionAnswerValueInputs(question, category) {
 }
 
 function renderCategoryInputs(categoryCount) {
-  const categoryWrap = document.getElementById("categoryWrap");
+  const allCategories = document.getElementById("allCategories");
 
-  categoryWrap.innerHTML = "";
+  allCategories.innerHTML = "";
 
   for (let i = 1; i < categoryCount + 1; i += 1) {
     const wrap1 = document.createElement("div");
@@ -77,7 +77,7 @@ function renderCategoryInputs(categoryCount) {
 
     wrap1.append(wrap2, wrap4);
 
-    categoryWrap.append(wrap1);
+    allCategories.append(wrap1);
   }
 }
 
