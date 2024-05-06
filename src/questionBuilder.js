@@ -5,6 +5,16 @@ import "./questionBuilderStyle.css";
 // or write existing inputs to on object
 // give default values based on 'normal' distribution
 
+function adjustGrid() {
+  const container = document.getElementById("allCategories");
+  const items = container.getElementsByClassName("categoryWrap");
+  const containerWidth = container.offsetWidth;
+  const itemWidth = items[0].offsetWidth;
+  const itemsPerRow = Math.floor(containerWidth / itemWidth);
+
+  container.style.gridTemplateColumns = `repeat(${itemsPerRow}, 1fr)`;
+}
+
 function createLabelAndInput(className, inputID, type, labelText) {
   const div = document.createElement("div");
   const input = document.createElement("input");
@@ -80,6 +90,11 @@ function renderCategoryInputs(categoryCount) {
     allCategories.append(wrap1);
   }
 }
+
+window.onload = function () {
+  adjustGrid();
+  window.addEventListener("resize", adjustGrid);
+};
 
 const categoryNumberInput = document.getElementById("categoryNumberInput");
 
