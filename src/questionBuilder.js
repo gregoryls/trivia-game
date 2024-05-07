@@ -5,7 +5,14 @@ import "./questionBuilderStyle.css";
 // or write existing inputs to on object
 // give default values based on 'normal' distribution
 
+function factors(number) {
+  const numbersUpToN = Array.from(Array(number + 1), (_, i) => i);
+  const factorsOfNumber = numbersUpToN.filter((i) => number % i === 0);
+  return factorsOfNumber;
+}
+
 function adjustGrid() {
+  // try some strategy with modulo on item length?
   const container = document.getElementById("allCategories");
   const items = container.getElementsByClassName("categoryWrap");
   const containerWidth = container.offsetWidth;
