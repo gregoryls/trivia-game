@@ -6,6 +6,7 @@ import "./questionBuilderStyle.css";
 // give default values based on 'normal' distribution
 
 function factors(number) {
+  // rename and add comments
   const numbersUpToN = Array.from(Array(number + 1), (_, i) => i);
   const factorsOfNumber = numbersUpToN.filter((i) => number % i === 0);
   return factorsOfNumber;
@@ -98,10 +99,10 @@ function renderCategoryInputs(categoryCount) {
   }
 }
 
-window.onload = function () {
-  adjustGrid();
-  window.addEventListener("resize", adjustGrid);
-};
+// window.onload = function () {
+//   adjustGrid();
+//   window.addEventListener("resize", adjustGrid);
+// };
 
 const categoryNumberInput = document.getElementById("categoryNumberInput");
 
