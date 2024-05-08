@@ -5,23 +5,23 @@ import "./questionBuilderStyle.css";
 // or write existing inputs to on object
 // give default values based on 'normal' distribution
 
-function factors(number) {
-  // rename and add comments
-  const numbersUpToN = Array.from(Array(number + 1), (_, i) => i);
-  const factorsOfNumber = numbersUpToN.filter((i) => number % i === 0);
-  return factorsOfNumber;
-}
+// function factors(number) {
+//   // rename and add comments
+//   const numbersUpToN = Array.from(Array(number + 1), (_, i) => i);
+//   const factorsOfNumber = numbersUpToN.filter((i) => number % i === 0);
+//   return factorsOfNumber;
+// }
 
-function adjustGrid() {
-  // try some strategy with modulo on item length?
-  const container = document.getElementById("allCategories");
-  const items = container.getElementsByClassName("categoryWrap");
-  const containerWidth = container.offsetWidth;
-  const itemWidth = items[0].offsetWidth;
-  const itemsPerRow = Math.floor(containerWidth / itemWidth);
+// function adjustGrid() {
+//   // try some strategy with modulo on item length?
+//   const container = document.getElementById("allCategories");
+//   const items = container.getElementsByClassName("categoryWrap");
+//   const containerWidth = container.offsetWidth;
+//   const itemWidth = items[0].offsetWidth;
+//   const itemsPerRow = Math.floor(containerWidth / itemWidth);
 
-  container.style.gridTemplateColumns = `repeat(${itemsPerRow}, 1fr)`;
-}
+//   container.style.gridTemplateColumns = `repeat(${itemsPerRow}, 1fr)`;
+// }
 
 function createLabelAndInput(className, inputID, type, labelText) {
   const div = document.createElement("div");
@@ -99,16 +99,7 @@ function renderCategoryInputs(categoryCount) {
   }
 }
 
-// window.onload = function () {
-//   adjustGrid();
-//   window.addEventListener("resize", adjustGrid);
-// };
-
 const categoryNumberInput = document.getElementById("categoryNumberInput");
-
-// document
-//   .querySelector("body")
-//   .append(createLabelAndInput("test", "text", "label"));
 
 categoryNumberInput.addEventListener("change", () => {
   renderCategoryInputs(categoryNumberInput.value);
