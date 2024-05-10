@@ -4,6 +4,8 @@ import "./questionBuilderStyle.css";
 // change innerHTML to something less destructive, probably
 // or write existing inputs to on object
 // give default values based on 'normal' distribution
+// probably swap to text area
+// change category number to a + card at the end and X buttons in each category
 
 // function factors(number) {
 //   // rename and add comments
@@ -37,6 +39,22 @@ function createLabelAndInput(className, inputID, type, labelText) {
   return div;
 }
 
+function createLabelAndTextarea(className, inputID, labelText) {
+  const div = document.createElement("div");
+  const input = document.createElement("texarea");
+  const label = document.createElement("label");
+
+  div.classList.add(className);
+  input.id = inputID;
+  input.rows = 5;
+  input.cols = 10;
+
+  label.htmlFor = inputID;
+  label.textContent = labelText;
+  div.append(label, input);
+  return div;
+}
+
 function createQuestionAnswerValueInputs(question, category) {
   const wrap = document.createElement("div");
   wrap.id = `question${question}Wrap`;
@@ -44,10 +62,10 @@ function createQuestionAnswerValueInputs(question, category) {
 
   // fix IDs here
   wrap.append(
-    createLabelAndInput(
+    createLabelAndTextarea(
       "questionInput",
       `category${category}Question`,
-      "text",
+
       `Question ${question}`,
     ),
   );
