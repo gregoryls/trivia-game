@@ -41,17 +41,17 @@ function createLabelAndInput(className, inputID, type, labelText) {
 
 function createLabelAndTextarea(className, inputID, labelText) {
   const div = document.createElement("div");
-  const input = document.createElement("texarea");
+  const textarea = document.createElement("texarea");
   const label = document.createElement("label");
 
   div.classList.add(className);
-  input.id = inputID;
-  input.rows = 5;
-  input.cols = 10;
+  textarea.id = inputID;
+  textarea.rows = 5;
+  textarea.cols = 10;
 
   label.htmlFor = inputID;
   label.textContent = labelText;
-  div.append(label, input);
+  div.append(label, textarea);
   return div;
 }
 
