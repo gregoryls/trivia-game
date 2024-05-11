@@ -65,15 +65,13 @@ function createQuestionAnswerValueInputs(question, category) {
     createLabelAndTextarea(
       "questionInput",
       `category${category}Question`,
-
       `Question ${question}`,
     ),
   );
   wrap.append(
-    createLabelAndInput(
+    createLabelAndTextarea(
       "answerInput",
       `category${category}Answer`,
-      "text",
       `Answer ${question}`,
     ),
   );
