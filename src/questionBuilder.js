@@ -95,7 +95,12 @@ function renderCategoryInputs(categoryCount) {
   for (let i = 1; i < categoryCount + 1; i += 1) {
     const wrap1 = document.createElement("div");
     const wrap2 = document.createElement("div");
+
+    const closeCategory = document.createElement("p");
+    closeCategory.textContent = "X";
+
     wrap1.append(
+      closeCategory,
       createLabelAndInput("categoryInput", "test", "text", `Category ${i}`),
     );
     wrap1.id = `category${i}Wrap`;
