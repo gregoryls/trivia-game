@@ -98,6 +98,7 @@ function renderCategoryInputs(categoryCount) {
 
     const closeCategory = document.createElement("p");
     closeCategory.textContent = "X";
+    closeCategory.classList.add("closeCategory");
 
     wrap1.append(
       closeCategory,

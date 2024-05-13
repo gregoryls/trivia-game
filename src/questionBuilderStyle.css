@@ -33,6 +33,11 @@ body {
   padding: 10px;
   width: 260px;
 }
+
+.closeCategory {
+  margin: 0;
+  margin-left: auto;
+}
 .categoryQuestionData {
   display: flex;
   flex-direction: column;
