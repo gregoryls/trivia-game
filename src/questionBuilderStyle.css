@@ -1,3 +1,4 @@
+/* colors */
 body {
   background-color: gray;
 }
@@ -15,12 +16,9 @@ body {
 .QAVWrap {
   background-color: yellowgreen;
 }
-/* 
-#allCategories {
-  display: flex;
-  flex-wrap: wrap;
-} */
+/*  */
 
+/* categories */
 #allCategories {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -38,6 +36,9 @@ body {
   margin: 0;
   margin-left: auto;
 }
+/*  */
+
+/* questions */
 .categoryQuestionData {
   display: flex;
   flex-direction: column;
@@ -48,3 +49,4 @@ body {
   flex-direction: column;
   gap: 5px;
 }
+/*  */
