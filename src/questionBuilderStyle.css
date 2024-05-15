@@ -35,6 +35,7 @@ body {
 .closeCategory {
   margin: 0;
   margin-left: auto;
+  cursor: pointer;
 }
 /*  */
 
