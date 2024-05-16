@@ -39,7 +39,7 @@
     }
   },
   "category2": {
-    "topic": "Don't Read Into It",
+    "topic": "Topic 2",
     "question1": {
       "double": false,
       "value": 100,
@@ -78,7 +78,7 @@
     }
   },
   "category3": {
-    "topic": "What Is That?",
+    "topic": "Topic 3",
     "question1": {
       "double": false,
       "value": 100,
@@ -117,7 +117,7 @@
     }
   },
   "category4": {
-    "topic": "Groverwatch",
+    "topic": "Topic 4",
     "question1": {
       "double": false,
       "value": 100,
@@ -156,7 +156,7 @@
     }
   },
   "category5": {
-    "topic": "Moist-Z",
+    "topic": "Topic 5",
     "question1": {
       "double": false,
       "value": 100,
@@ -195,7 +195,7 @@
     }
   },
   "category6": {
-    "topic": "何も",
+    "topic": "Topic 6",
     "question1": {
       "double": true,
       "value": 100,
@@ -205,32 +205,32 @@
     "question2": {
       "double": false,
       "value": 200,
-      "question": "Question 1",
-      "answer": "Answer 1"
+      "question": "Question 2",
+      "answer": "Answer 2"
     },
     "question3": {
       "double": false,
       "value": 300,
-      "question": "Question 1",
-      "answer": "Answer 1"
+      "question": "Question 3",
+      "answer": "Answer 3"
     },
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Question 1",
-      "answer": "Answer 1"
+      "question": "Question 4",
+      "answer": "Answer 4"
     },
     "question5": {
       "double": false,
       "value": 500,
-      "question": "Question 1",
-      "answer": "Answer 1"
+      "question": "Question 5",
+      "answer": "Answer 5"
     },
     "question6": {
       "double": false,
       "value": 600,
-      "question": "Question 1",
-      "answer": "Answer 1"
+      "question": "Question 6",
+      "answer": "Answer 6"
     }
   }
 }
