@@ -1,0 +1,236 @@
+{
+  "category1": {
+    "topic": "Topic 1",
+    "question1": {
+      "double": false,
+      "value": 100,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question2": {
+      "double": false,
+      "value": 200,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question3": {
+      "double": false,
+      "value": 300,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question4": {
+      "double": false,
+      "value": 400,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question5": {
+      "double": false,
+      "value": 500,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question6": {
+      "double": false,
+      "value": 600,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    }
+  },
+  "category2": {
+    "topic": "Don't Read Into It",
+    "question1": {
+      "double": false,
+      "value": 100,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question2": {
+      "double": false,
+      "value": 200,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question3": {
+      "double": false,
+      "value": 300,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question4": {
+      "double": false,
+      "value": 400,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question5": {
+      "double": false,
+      "value": 500,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question6": {
+      "double": false,
+      "value": 600,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    }
+  },
+  "category3": {
+    "topic": "What Is That?",
+    "question1": {
+      "double": false,
+      "value": 100,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question2": {
+      "double": false,
+      "value": 200,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question3": {
+      "double": false,
+      "value": 300,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question4": {
+      "double": false,
+      "value": 400,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question5": {
+      "double": false,
+      "value": 500,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question6": {
+      "double": false,
+      "value": 600,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    }
+  },
+  "category4": {
+    "topic": "Groverwatch",
+    "question1": {
+      "double": false,
+      "value": 100,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question2": {
+      "double": false,
+      "value": 200,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question3": {
+      "double": false,
+      "value": 300,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question4": {
+      "double": false,
+      "value": 400,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question5": {
+      "double": false,
+      "value": 500,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question6": {
+      "double": false,
+      "value": 600,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    }
+  },
+  "category5": {
+    "topic": "Moist-Z",
+    "question1": {
+      "double": false,
+      "value": 100,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question2": {
+      "double": false,
+      "value": 200,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question3": {
+      "double": false,
+      "value": 300,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question4": {
+      "double": false,
+      "value": 400,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question5": {
+      "double": false,
+      "value": 500,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question6": {
+      "double": false,
+      "value": 600,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    }
+  },
+  "category6": {
+    "topic": "何も",
+    "question1": {
+      "double": true,
+      "value": 100,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question2": {
+      "double": false,
+      "value": 200,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question3": {
+      "double": false,
+      "value": 300,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question4": {
+      "double": false,
+      "value": 400,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question5": {
+      "double": false,
+      "value": 500,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    },
+    "question6": {
+      "double": false,
+      "value": 600,
+      "question": "Question 1",
+      "answer": "Answer 1"
+    }
+  }
+}
