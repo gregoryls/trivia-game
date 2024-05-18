@@ -1,4 +1,5 @@
 import "./questionBuilderStyle.css";
+import questionsTemplate from "./questions/questionsTemplate.json";
 
 // TODO
 // change innerHTML to something less destructive, probably
@@ -6,6 +7,7 @@ import "./questionBuilderStyle.css";
 // give default values based on 'normal' distribution
 // probably swap to text area
 // change category number to a + card at the end and X buttons in each category
+// add double to inputs
 
 // function factors(number) {
 //   // rename and add comments
@@ -132,3 +134,4 @@ categoryNumberInput.addEventListener("change", () => {
 });
 
 renderCategoryInputs(6);
+console.log(questionsTemplate);
