@@ -133,5 +133,7 @@ categoryNumberInput.addEventListener("change", () => {
   renderCategoryInputs(categoryNumberInput.value);
 });
 
-renderCategoryInputs(6);
+const categoryCount = Object.keys(questionsTemplate).length;
+
+renderCategoryInputs(categoryCount);
 console.log(questionsTemplate);
