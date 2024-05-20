@@ -127,6 +127,46 @@ function renderCategoryInputs(categoryCount) {
   }
 }
 
+function render2() {
+  const allCategories = document.getElementById("allCategories");
+
+  allCategories.innerHTML = "";
+
+  const categoryCount = Object.keys(questionsTemplate).length;
+
+  for (let i = 1; i < categoryCount + 1; i += 1) {
+    const wrap1 = document.createElement("div");
+    const wrap2 = document.createElement("div");
+
+    const closeCategory = document.createElement("p");
+    closeCategory.textContent = "X";
+    closeCategory.classList.add("closeCategory");
+    closeCategory.addEventListener("click", () => {
+      console.log("x");
+      wrap1.remove();
+    });
+
+    wrap1.append(
+      closeCategory,
+      createLabelAndInput("categoryInput", "test", "text", `Category ${i}`),
+    );
+    wrap1.id = `category${i}Wrap`;
+    wrap1.classList.add("categoryWrap");
+    wrap2.id = `category${i}QuestionWrap`;
+    wrap2.classList.add("categoryQuestionData");
+    for (let j = 1; j < 7; j += 1) {
+      wrap2.append(createQuestionAnswerValueInputs(j, i));
+    }
+    const wrap4 = document.createElement("div");
+    wrap4.style.border = "1px solid black";
+    wrap4.textContent = "+";
+
+    wrap1.append(wrap2, wrap4);
+
+    allCategories.append(wrap1);
+  }
+}
+
 const categoryNumberInput = document.getElementById("categoryNumberInput");
 
 categoryNumberInput.addEventListener("change", () => {
