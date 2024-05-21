@@ -27,7 +27,13 @@ import questionsTemplate from "./questions/questionsTemplate.json";
 //   container.style.gridTemplateColumns = `repeat(${itemsPerRow}, 1fr)`;
 // }
 
-function createLabelAndInput(className, inputID, type, labelText) {
+function createLabelAndInput(
+  className,
+  inputID,
+  type,
+  labelText,
+  placeholderText,
+) {
   const div = document.createElement("div");
   const input = document.createElement("input");
   const label = document.createElement("label");
@@ -35,13 +41,19 @@ function createLabelAndInput(className, inputID, type, labelText) {
   div.classList.add(className);
   input.id = inputID;
   input.type = type;
+  input.placeholder = placeholderText;
   label.htmlFor = inputID;
   label.textContent = labelText;
   div.append(label, input);
   return div;
 }
 
-function createLabelAndTextarea(className, inputID, labelText) {
+function createLabelAndTextarea(
+  className,
+  inputID,
+  labelText,
+  placeholderText,
+) {
   const div = document.createElement("div");
   const textarea = document.createElement("textarea");
   const label = document.createElement("label");
@@ -50,6 +62,7 @@ function createLabelAndTextarea(className, inputID, labelText) {
   textarea.id = inputID;
   textarea.rows = 1;
   textarea.cols = 20;
+  textarea.placeholder = placeholderText;
 
   label.htmlFor = inputID;
   label.textContent = labelText;
