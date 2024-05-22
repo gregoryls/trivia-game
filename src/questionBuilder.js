@@ -81,6 +81,7 @@ function createQuestionAnswerValueInputs(question, category) {
       "questionInput",
       `category${category}Question`,
       `Question ${question}`,
+      "Question Text",
     ),
   );
   wrap.append(
@@ -88,6 +89,7 @@ function createQuestionAnswerValueInputs(question, category) {
       "answerInput",
       `category${category}Answer`,
       `Answer ${question}`,
+      "Answer Text",
     ),
   );
   wrap.append(
@@ -96,6 +98,7 @@ function createQuestionAnswerValueInputs(question, category) {
       `category${category}Value`,
       "number",
       `Value ${question}`,
+      `${question * 100}`,
     ),
   );
 
