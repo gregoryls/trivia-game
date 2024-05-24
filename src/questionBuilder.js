@@ -83,6 +83,14 @@ function createQuestionAnswerValueInputs(question, category) {
       `${question * 100}`,
     ),
   );
+  wrap.append(
+    createLabelAndInput(
+      "doubleCheckbox",
+      `category${category}Checkbox`,
+      "checkbox",
+      "Dimmadome Double:",
+    ),
+  );
 
   return wrap;
 }
