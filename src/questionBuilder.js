@@ -52,7 +52,7 @@ function createLabelAndTextarea(
   return div;
 }
 
-function createQuestionAnswerValueInputs(question, category) {
+function createQuestionAnswerValueDoubleInputs(question, category) {
   const wrap = document.createElement("div");
   wrap.id = `question${question}Wrap`;
   wrap.classList.add("QAVWrap");
@@ -121,7 +121,7 @@ function renderCategoryInputs(categoryCount) {
     wrap2.id = `category${i}QuestionWrap`;
     wrap2.classList.add("categoryQuestionData");
     for (let j = 1; j < 7; j += 1) {
-      wrap2.append(createQuestionAnswerValueInputs(j, i));
+      wrap2.append(createQuestionAnswerValueDoubleInputs(j, i));
     }
     const wrap4 = document.createElement("div");
     wrap4.style.border = "1px solid black";
@@ -161,7 +161,7 @@ function render2() {
     wrap2.id = `category${i}QuestionWrap`;
     wrap2.classList.add("categoryQuestionData");
     for (let j = 1; j < 7; j += 1) {
-      wrap2.append(createQuestionAnswerValueInputs(j, i));
+      wrap2.append(createQuestionAnswerValueDoubleInputs(j, i));
     }
     const wrap4 = document.createElement("div");
     wrap4.style.border = "1px solid black";
