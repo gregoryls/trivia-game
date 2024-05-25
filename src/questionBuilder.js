@@ -114,7 +114,13 @@ function renderCategoryInputs(categoryCount) {
 
     wrap1.append(
       closeCategory,
-      createLabelAndInput("categoryInput", "test", "text", `Category ${i}`),
+      createLabelAndInput(
+        "categoryInput",
+        "test",
+        "text",
+        `Category ${i}`,
+        `Category ${i}`,
+      ),
     );
     wrap1.id = `category${i}Wrap`;
     wrap1.classList.add("categoryWrap");
@@ -154,7 +160,13 @@ function render2() {
 
     wrap1.append(
       closeCategory,
-      createLabelAndInput("categoryInput", "test", "text", `Category ${i}`),
+      createLabelAndInput(
+        "categoryInput",
+        "test",
+        "text",
+        `Category ${i}`,
+        `Category ${i}`,
+      ),
     );
     wrap1.id = `category${i}Wrap`;
     wrap1.classList.add("categoryWrap");
