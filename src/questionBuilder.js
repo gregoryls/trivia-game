@@ -119,7 +119,7 @@ function renderCategoryInputs(categoryCount) {
         "test",
         "text",
         `Category ${i}`,
-        `Category ${i}`,
+        questionsTemplate[`category${i}`].topic,
       ),
     );
     wrap1.id = `category${i}Wrap`;
@@ -165,7 +165,7 @@ function render2() {
         "test",
         "text",
         `Category ${i}`,
-        `Category ${i}`,
+        questionsTemplate[`category${i}`].topic,
       ),
     );
     wrap1.id = `category${i}Wrap`;
@@ -194,4 +194,4 @@ categoryNumberInput.addEventListener("change", () => {
 const categoryCount = Object.keys(questionsTemplate).length;
 
 renderCategoryInputs(categoryCount);
-console.log(questionsTemplate);
+console.log(questionsTemplate.category1.topic);
