@@ -71,7 +71,7 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
       "answerInput",
       `category${category}Answer`,
       `Answer ${question}`,
-      "Answer Text",
+      questionsTemplate[`category${category}`][`question${question}`].answer,
     ),
   );
   wrap.append(
