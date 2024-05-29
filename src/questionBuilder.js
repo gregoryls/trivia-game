@@ -80,7 +80,7 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
       `category${category}Value`,
       "number",
       `Value ${question}`,
-      `${question * 100}`,
+      questionsTemplate[`category${category}`][`question${question}`].value,
     ),
   );
   wrap.append(
