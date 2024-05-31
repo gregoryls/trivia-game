@@ -185,6 +185,27 @@ function render2() {
   }
 }
 
+function downloadJSON(objectToDownload, filename) {
+  // Convert the object to a JSON string
+  const jsonString = JSON.stringify(objectToDownload, null, 2);
+
+  const blob = new Blob([jsonString], { type: "application/json" });
+  const link = document.createElement("a");
+
+  // Create a URL for the Blob and set it as the href attribute of the link
+  link.href = URL.createObjectURL(blob);
+
+  // Set the download attribute with the desired file name
+  link.download = filename;
+
+  // Append the link to the body (this is necessary for Firefox)
+  document.body.appendChild(link);
+
+  // click link then remove it from document.
+  link.click();
+  document.body.removeChild(link);
+}
+
 const categoryNumberInput = document.getElementById("categoryNumberInput");
 
 categoryNumberInput.addEventListener("change", () => {
@@ -195,3 +216,9 @@ const categoryCount = Object.keys(questionsTemplate).length;
 
 renderCategoryInputs(categoryCount);
 console.log(questionsTemplate.category1.topic);
+
+const downloadButton = document.getElementById("downloadQuestionDataButton");
+
+downloadButton.addEventListener("click", () => {
+  downloadJSON(questionsTemplate, "testquestions.json");
+});
