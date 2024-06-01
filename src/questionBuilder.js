@@ -185,6 +185,17 @@ function render2() {
   }
 }
 
+function imageToBase64(imageFile) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      resolve(reader.result);
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(imageFile);
+  });
+}
+
 function downloadJSON(objectToDownload, filename) {
   // Convert the object to a JSON string
   const jsonString = JSON.stringify(objectToDownload, null, 2);
