@@ -57,6 +57,20 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
   wrap.id = `question${question}Wrap`;
   wrap.classList.add("QAVWrap");
 
+  const selectElement = document.createElement("select");
+  const selectOptions = [
+    { value: "text", text: "text" },
+    { value: "image", text: "image" },
+    { value: "audio", text: "audio" },
+  ];
+  selectOptions.forEach((option) => {
+    const optionElement = document.createElement("option");
+    optionElement.value = option.value;
+    optionElement.text = option.text;
+    selectElement.append(optionElement);
+  });
+  wrap.append(selectElement);
+
   // fix IDs here
   wrap.append(
     createLabelAndTextarea(
