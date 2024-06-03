@@ -57,7 +57,10 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
   wrap.id = `question${question}Wrap`;
   wrap.classList.add("QAVWrap");
 
+  // add label
   const selectElement = document.createElement("select");
+  selectElement.id = `selectQuestion${question}Type`;
+  selectElement.classList.add("selectQuestionType");
   const selectOptions = [
     { value: "text", text: "text" },
     { value: "image", text: "image" },
