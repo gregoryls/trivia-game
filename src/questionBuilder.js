@@ -3,11 +3,12 @@ import questionsTemplate from "./questions/questionsTemplate.json";
 
 // TODO
 // change innerHTML to something less destructive, probably
-// or write existing inputs to on object
+/// / or write existing inputs to an object
 // give default values based on 'normal' distribution
 // probably swap to text area
 // change category number to a + card at the end and X buttons in each category
 // add double to inputs
+// make sure + card regenerates if clicked
 
 function createLabelAndInput(
   className,
@@ -154,6 +155,12 @@ function renderCategoryInputs(categoryCount) {
 
     allCategories.append(wrap1);
   }
+  // append one card at the end for adding new categories
+  const newCategory = document.createElement("div");
+  const plus = document.createElement("p");
+  plus.textContent = "+";
+  newCategory.append(plus);
+  allCategories.append(newCategory);
 }
 
 function render2() {
