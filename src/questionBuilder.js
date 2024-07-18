@@ -115,6 +115,7 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
 
 function generateNewCategory() {
   const newCategory = document.createElement("div");
+  newCategory.id = "newCategory";
   const plus = document.createElement("p");
   plus.textContent = "+";
   newCategory.append(plus);
