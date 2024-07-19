@@ -24,7 +24,8 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-gap: 100px;
 }
-.categoryWrap {
+.categoryWrap,
+#newCategoryButton {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -51,3 +52,8 @@ body {
   gap: 5px;
 }
 /*  */
+
+#newCategoryButton {
+  background-color: bisque;
+  text-align: center;
+}
