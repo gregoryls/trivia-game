@@ -113,7 +113,7 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
   return wrap;
 }
 
-function generateNewCategory() {
+function generateNewCategoryButton() {
   const newCategory = document.createElement("div");
   newCategory.id = "newCategory";
   const plus = document.createElement("p");
@@ -125,7 +125,7 @@ function generateNewCategory() {
 function appendNewCategory() {
   const allCategories = document.getElementById("allCategories");
 
-  const newCategory = generateNewCategory();
+  const newCategory = generateNewCategoryButton();
   // generate a new copy when + is clicked
   newCategory.addEventListener("click", () => {
     appendNewCategory();
