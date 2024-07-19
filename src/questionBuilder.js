@@ -155,7 +155,7 @@ function renderCategoryInputs(categoryCount) {
       closeCategory,
       createLabelAndInput(
         "categoryInput",
-        "test",
+        `category${i}Topic`,
         "text",
         `Category ${i}`,
         questionsTemplate[`category${i}`].topic,
