@@ -56,4 +56,5 @@ body {
 #newCategoryButton {
   background-color: bisque;
   text-align: center;
+  cursor: pointer;
 }
