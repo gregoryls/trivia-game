@@ -126,8 +126,48 @@ function appendNewCategory() {
   const allCategories = document.getElementById("allCategories");
 
   const newCategory = generateNewCategoryButton();
-  // generate a new copy when + is clicked
+
+  const i = allCategories.children.length + 1;
+
   newCategory.addEventListener("click", () => {
+    const wrap1 = document.createElement("div");
+    const wrap2 = document.createElement("div");
+
+    const closeCategory = document.createElement("p");
+    closeCategory.textContent = "X";
+    closeCategory.classList.add("closeCategory");
+    closeCategory.addEventListener("click", () => {
+      console.log("x");
+      wrap1.remove();
+    });
+
+    wrap1.append(
+      closeCategory,
+      createLabelAndInput(
+        "categoryInput",
+        `category${i}Topic`,
+        "text",
+        `Category ${i}`,
+        "test new topic",
+        // questionsTemplate[`category${i}`].topic,
+      ),
+    );
+    wrap1.id = `category${i}Wrap`;
+    wrap1.classList.add("categoryWrap");
+    wrap2.id = `category${i}QuestionWrap`;
+    wrap2.classList.add("categoryQuestionData");
+    for (let j = 1; j < 7; j += 1) {
+      wrap2.append(createQuestionAnswerValueDoubleInputs(j, i));
+    }
+    const wrap4 = document.createElement("div");
+    wrap4.style.border = "1px solid black";
+    wrap4.textContent = "+";
+
+    wrap1.append(wrap2, wrap4);
+
+    allCategories.append(wrap1);
+
+    // generate a new copy when + is clicked
     appendNewCategory();
   });
 
