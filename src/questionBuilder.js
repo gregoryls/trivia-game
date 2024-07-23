@@ -75,13 +75,20 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
   });
   wrap.append(selectElement);
 
-  // fix IDs here
+  let questionData;
+  if (!questionsTemplate[`category${category}`]) {
+    console.log("no template");
+    questionData = "dataTest";
+  } else {
+    questionData =
+      questionsTemplate[`category${category}`][`question${question}`];
+  }
   wrap.append(
     createLabelAndTextarea(
       "questionInput",
       `category${category}Question`,
       `Question ${question}`,
-      questionsTemplate[`category${category}`][`question${question}`].question,
+      questionData.question,
     ),
   );
   wrap.append(
@@ -89,7 +96,7 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
       "answerInput",
       `category${category}Answer`,
       `Answer ${question}`,
-      questionsTemplate[`category${category}`][`question${question}`].answer,
+      questionData.answer,
     ),
   );
   wrap.append(
@@ -308,7 +315,7 @@ categoryNumberInput.addEventListener("change", () => {
 const categoryCount = Object.keys(questionsTemplate).length;
 
 renderCategoryInputs(categoryCount);
-console.log(questionsTemplate.category1.topic);
+// console.log(questionsTemplate.category1.topic);
 
 const downloadButton = document.getElementById("downloadQuestionDataButton");
 
