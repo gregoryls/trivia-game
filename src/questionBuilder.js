@@ -174,7 +174,8 @@ function appendNewCategory() {
 
     allCategories.append(wrap1);
 
-    // generate a new copy when + is clicked
+    // remove old card and generate a new copy when + is clicked
+    newCategory.remove();
     appendNewCategory();
   });
 
