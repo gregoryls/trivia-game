@@ -78,7 +78,11 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
   let questionData;
   if (!questionsTemplate[`category${category}`]) {
     console.log("no template");
-    questionData = "dataTest";
+    questionData = {
+      question: `Question ${question}`,
+      answer: `Answer ${question}`,
+      value: `${question * 100}`,
+    };
   } else {
     questionData =
       questionsTemplate[`category${category}`][`question${question}`];
