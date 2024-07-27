@@ -108,7 +108,7 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
       "valueInput",
       `category${category}Value`,
       "number",
-      `Value ${question}`,
+      `Value`,
       questionData.value,
     ),
   );
