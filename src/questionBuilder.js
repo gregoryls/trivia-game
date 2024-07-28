@@ -124,6 +124,19 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
   return wrap;
 }
 
+function reNumberCategories() {
+  const categoryList = document.querySelectorAll(
+    "#allCategories .categoryInput",
+  );
+
+  for (let i = 1; i < categoryList.length + 1; i += 1) {
+    const label = categoryList[i - 1].children[0];
+    label.htmlFor = `category${i}Topic`;
+  }
+
+  // console.log(categoryList);
+}
+
 function generateNewCategoryButton() {
   const newCategory = document.createElement("div");
   newCategory.id = "newCategoryButton";
@@ -181,6 +194,8 @@ function appendNewCategory() {
     // remove old card and generate a new copy when + is clicked
     newCategory.remove();
     appendNewCategory();
+
+    reNumberCategories();
   });
 
   allCategories.append(newCategory);
