@@ -92,7 +92,7 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
       "questionInput",
       `category${category}Question`,
       `Question ${question}`,
-      questionData.question,
+      "Question",
     ),
   );
   wrap.append(
@@ -100,7 +100,7 @@ function createQuestionAnswerValueDoubleInputs(question, category) {
       "answerInput",
       `category${category}Answer`,
       `Answer ${question}`,
-      questionData.answer,
+      "Answer",
     ),
   );
   wrap.append(
@@ -228,7 +228,7 @@ function renderCategoryInputs(categoryCount) {
         `category${i}Topic`,
         "text",
         `Category ${i}`,
-        questionsTemplate[`category${i}`].topic,
+        "Topic",
       ),
     );
     wrap1.id = `category${i}Wrap`;
