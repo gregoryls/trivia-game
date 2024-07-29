@@ -132,6 +132,7 @@ function reNumberCategories() {
   for (let i = 1; i < categoryList.length + 1; i += 1) {
     const label = categoryList[i - 1].children[0];
     label.htmlFor = `category${i}Topic`;
+    // label.textContent = `Category ${i}`;
 
     const input = categoryList[i - 1].children[1];
     input.id = `category${i}Topic`;
@@ -166,6 +167,7 @@ function appendNewCategory() {
     closeCategory.addEventListener("click", () => {
       console.log("x");
       wrap1.remove();
+      reNumberCategories();
     });
 
     wrap1.append(
@@ -219,6 +221,7 @@ function renderCategoryInputs(categoryCount) {
     closeCategory.addEventListener("click", () => {
       console.log("x");
       wrap1.remove();
+      reNumberCategories();
     });
 
     wrap1.append(
