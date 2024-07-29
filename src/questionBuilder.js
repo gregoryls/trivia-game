@@ -132,6 +132,9 @@ function reNumberCategories() {
   for (let i = 1; i < categoryList.length + 1; i += 1) {
     const label = categoryList[i - 1].children[0];
     label.htmlFor = `category${i}Topic`;
+
+    const input = categoryList[i - 1].children[1];
+    input.id = `category${i}Topic`;
   }
 
   // console.log(categoryList);
