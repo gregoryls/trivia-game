@@ -55,6 +55,9 @@ body {
 
 #newCategoryButton {
   background-color: bisque;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  height: 260px;
 }
