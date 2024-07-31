@@ -335,7 +335,7 @@ function downloadJSON(objectToDownload, filename) {
 const categoryNumberInput = document.getElementById("categoryNumberInput");
 
 categoryNumberInput.addEventListener("change", () => {
-  renderCategoryInputs(categoryNumberInput.value);
+  renderCategoryInputs(Number(categoryNumberInput.value));
 });
 
 const categoryCount = Object.keys(questionsTemplate).length;
