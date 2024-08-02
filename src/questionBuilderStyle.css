@@ -51,6 +51,10 @@ body {
   flex-direction: column;
   gap: 5px;
 }
+
+.newQAVButton {
+  border: 1px solid black;
+}
 /*  */
 
 #newCategoryButton {

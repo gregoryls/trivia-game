@@ -189,7 +189,7 @@ function appendNewCategory() {
       wrap2.append(createQuestionAnswerValueDoubleInputs(j, i));
     }
     const wrap4 = document.createElement("div");
-    wrap4.style.border = "1px solid black";
+    wrap4.classList.add("newQAVButton");
     wrap4.textContent = "+";
 
     wrap1.append(wrap2, wrap4);
