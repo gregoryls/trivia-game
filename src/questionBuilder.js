@@ -190,7 +190,9 @@ function appendNewCategory() {
     }
     const wrap4 = document.createElement("div");
     wrap4.classList.add("newQAVButton");
-    wrap4.textContent = "+";
+    const plus = document.createElement("p");
+    plus.textContent = "+";
+    wrap4.append(plus);
 
     wrap1.append(wrap2, wrap4);
 
@@ -242,8 +244,10 @@ function renderCategoryInputs(categoryCount) {
       wrap2.append(createQuestionAnswerValueDoubleInputs(j, i));
     }
     const wrap4 = document.createElement("div");
-    wrap4.style.border = "1px solid black";
-    wrap4.textContent = "+";
+    wrap4.classList.add("newQAVButton");
+    const plus = document.createElement("p");
+    plus.textContent = "+";
+    wrap4.append(plus);
 
     wrap1.append(wrap2, wrap4);
 
