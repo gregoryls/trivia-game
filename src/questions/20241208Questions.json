@@ -61,14 +61,14 @@
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Question 4",
-      "answer": "Answer 4"
+      "question": "If you find yourself beneath Skull Rock near Lover's Lake, where are you?",
+      "answer": "Hawkins, Indiana"
     },
     "question5": {
       "double": false,
       "value": 500,
-      "question": "Question 5",
-      "answer": "Answer 5"
+      "question": "Which country borders the greatest number of other soverign nations?",
+      "answer": "China/Russia, 14"
     },
     "question6": {
       "double": false,
