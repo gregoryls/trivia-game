@@ -78,18 +78,18 @@
     }
   },
   "category3": {
-    "topic": "Topic 3",
+    "topic": "Show Some Skin",
     "question1": {
       "double": false,
       "value": 100,
       "question": "Question 1",
-      "answer": "Answer 1"
+      "answer": "Bees - Beemo"
     },
     "question2": {
       "double": false,
       "value": 200,
       "question": "Question 2",
-      "answer": "Answer 2"
+      "answer": "Cafe Cuties - Sivir + Soraka"
     },
     "question3": {
       "double": false,
@@ -107,13 +107,13 @@
       "double": false,
       "value": 500,
       "question": "Question 5",
-      "answer": "Answer 5"
+      "answer": "Arcade - Demacia Vice Garen"
     },
     "question6": {
       "double": false,
       "value": 600,
       "question": "Question 6",
-      "answer": "Answer 6"
+      "answer": "Anima Squad - Battle Bear Illaoi"
     }
   },
   "category4": {
