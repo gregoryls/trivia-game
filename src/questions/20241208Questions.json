@@ -28,7 +28,7 @@
     "question5": {
       "double": false,
       "value": 500,
-      "question": "How many pentominoes are possible?",
+      "question": "How many pentominoes exist?",
       "answer": "12"
     },
     "question6": {
@@ -117,42 +117,42 @@
     }
   },
   "category4": {
-    "topic": "Topic 4",
+    "topic": "First",
     "question1": {
       "double": false,
       "value": 100,
-      "question": "Question 1",
-      "answer": "Answer 1"
+      "question": "Byzantine Empire | Samurai",
+      "answer": "Byzantine Empire [300-500AD] | Samurai [~900AD]"
     },
     "question2": {
       "double": false,
-      "value": 200,
-      "question": "Question 2",
-      "answer": "Answer 2"
+      "value": 300,
+      "question": "Challenger Space Shuttle Disaster | Fall of the Berlin Wall",
+      "answer": "Challenger Space Shuttle Disaster [1986] | Fall of the Berlin Wall [1989]"
     },
     "question3": {
       "double": false,
-      "value": 300,
-      "question": "Question 3",
-      "answer": "Answer 3"
+      "value": 200,
+      "question": "TCP/IP Internet | Compact Disc (CD)",
+      "answer": "TCP/IP Internet [January 1, 1983]  | Compact Disc (CD) [1982]"
     },
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Question 4",
-      "answer": "Answer 4"
+      "question": "3D Printer | Hubble Telescope Launch",
+      "answer": "3D Printer [1984] | Hubble Telescope Launch [1990]"
     },
     "question5": {
       "double": false,
       "value": 500,
-      "question": "Question 5",
-      "answer": "Answer 5"
+      "question": "Google | Harry Potter and the Philosopher's Stone",
+      "answer": "Google [1998] | Harry Potter and the Philosopher's Stone [1997]"
     },
     "question6": {
       "double": false,
       "value": 600,
-      "question": "Question 6",
-      "answer": "Answer 6"
+      "question": "Polio Vaccine | Disneyland",
+      "answer": "Polio Vaccine [April 12, 1955] | Disneyland [July 17, 1955]"
     }
   },
   "category5": {
