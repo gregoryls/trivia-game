@@ -160,38 +160,38 @@
     "question1": {
       "double": false,
       "value": 100,
-      "question": "IMDB Top Rated Movie",
-      "answer": "The Shawshank Redemption (2. The Godfather, 3. The Dark Knight)"
+      "question": "IMDB Second Rated Movie",
+      "answer": "1. The Shawshank Redemption 2. The Godfather, 3. The Dark Knight"
     },
     "question2": {
       "double": false,
       "value": 200,
-      "question": "IMDB Top Rated Show",
-      "answer": "Breaking Bad (2. Planet Earth II, 3. Planet Earth)"
+      "question": "IMDB Second Rated Show",
+      "answer": "1. Breaking Bad, 2. Planet Earth II, 3. Planet Earth"
     },
     "question3": {
       "double": false,
       "value": 300,
       "question": "Top Rated on Steam (Positive to Negative Ratio)",
-      "answer": "Portal 2 (2. Stardew, 3. People Playground)"
+      "answer": "1. Portal 2, 2. Stardew Valley, 3. People Playground"
     },
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Question 4",
-      "answer": "Answer 4"
+      "question": "Which Blade Runner Movie has a higher rating?",
+      "answer": "Blade Runner 1982"
     },
     "question5": {
       "double": false,
       "value": 500,
-      "question": "Question 5",
-      "answer": "Answer 5"
+      "question": "Any of Top 3 Rated Game on Google Play Store Dec. 15, 2024",
+      "answer": "1. Balatro, 2. Stardew Valley, 3. Slay the Spire"
     },
     "question6": {
       "double": false,
       "value": 600,
-      "question": "Goodreads Top Rated Book (minimum 10,000 ratings)",
-      "answer": "Words of Radiance (2. HP Deathly Hallows, 3. Crooked Kingdom)"
+      "question": "Any Goodreads Top 3 Rated Book (minimum 10,000 ratings)",
+      "answer": "1. Words of Radiance, 2. HP Deathly Hallows, 3. Crooked Kingdom"
     }
   },
   "category6": {
