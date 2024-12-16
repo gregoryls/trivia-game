@@ -34,7 +34,7 @@
     "question6": {
       "double": false,
       "value": 600,
-      "question": "99/2=X",
+      "question": "99/2 = ?",
       "answer": "92"
     }
   },
@@ -184,8 +184,8 @@
     "question5": {
       "double": false,
       "value": 500,
-      "question": "Any of Top 3 Rated Game on Google Play Store Dec. 15, 2024",
-      "answer": "1. Balatro, 2. Stardew Valley, 3. Slay the Spire"
+      "question": "Any of Top 3 Rated Paid Game on Google Play Store Dec. 15, 2024",
+      "answer": "1. Balatro, 2. Minecraft, 3. Animal Crossing: Pocket Camp C"
     },
     "question6": {
       "double": false,
