@@ -10,8 +10,8 @@
     "question2": {
       "double": false,
       "value": 200,
-      "question": "Question 2",
-      "answer": "Answer 2"
+      "question": "The atmospheric CO2 in 1924 was 304.5ppm. How many times greater is it today?",
+      "answer": "~1.38X, 421.8ppm"
     },
     "question3": {
       "double": false,
