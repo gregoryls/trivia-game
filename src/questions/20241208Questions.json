@@ -195,12 +195,12 @@
     }
   },
   "category6": {
-    "topic": "Topic 6",
+    "topic": "God's Land",
     "question1": {
       "double": true,
       "value": 100,
-      "question": "Question 1",
-      "answer": "Answer 1"
+      "question": "Which city has a higher official elevation, Salt Lake City or Provo?",
+      "answer": "Provo (4,551ft) SLC (4,265ft)"
     },
     "question2": {
       "double": false,
@@ -211,7 +211,7 @@
     "question3": {
       "double": false,
       "value": 300,
-      "question": "Question 3",
+      "question": "On Average, is annual snowfall in Salt Lake City up, down, or neutral since 1884?",
       "answer": "Answer 3"
     },
     "question4": {
