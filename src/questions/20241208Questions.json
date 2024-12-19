@@ -16,20 +16,20 @@
     "question3": {
       "double": false,
       "value": 300,
-      "question": "Question 3",
-      "answer": "Answer 3"
+      "question": "Maximum squares can a queen can move to.",
+      "answer": "27"
     },
     "question4": {
-      "double": false,
-      "value": 400,
-      "question": "Question 4",
-      "answer": "Answer 4"
-    },
-    "question5": {
       "double": false,
       "value": 500,
       "question": "How many pentominoes exist?",
       "answer": "12"
+    },
+    "question5": {
+      "double": false,
+      "value": 400,
+      "question": "405/2 = ?",
+      "answer": "225"
     },
     "question6": {
       "double": true,
