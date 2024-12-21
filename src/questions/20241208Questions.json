@@ -223,8 +223,8 @@
     "question5": {
       "double": false,
       "value": 500,
-      "question": "Question 5",
-      "answer": "Answer 5"
+      "question": "Compared with Misery and Miseryland, which state has the highest percentage of cat ownership?",
+      "answer": "Misery, 28.6%"
     },
     "question6": {
       "double": false,
