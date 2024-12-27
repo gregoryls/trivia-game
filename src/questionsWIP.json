@@ -28,14 +28,14 @@
     "question5": {
       "double": false,
       "value": 500,
-      "question": "Question 5",
-      "answer": "Answer 5"
+      "question": "M*A*S*H, My Little Pony Friendship is Magic Episode Count",
+      "answer": "MASH, 256 vs 230"
     },
     "question6": {
       "double": false,
       "value": 600,
-      "question": "Question 6",
-      "answer": "Answer 6"
+      "question": "U15 boy, open female powerlifting total",
+      "answer": "Female, 1620.4 vs 1592.8 lbs"
     }
   },
   "category2": {
