@@ -16,14 +16,14 @@
     "question3": {
       "double": false,
       "value": 300,
-      "question": "Question 3",
-      "answer": "Answer 3"
+      "question": "Asia, North America GDP",
+      "answer": "Asia, 39.8 vs 34 billions USD"
     },
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Question 4",
-      "answer": "Answer 4"
+      "question": "Africa, South America GDP",
+      "answer": "South America, 4.2 vs 2.8 billions USD"
     },
     "question5": {
       "double": false,
