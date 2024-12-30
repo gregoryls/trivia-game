@@ -39,24 +39,24 @@
     }
   },
   "category2": {
-    "topic": "Topic 2",
+    "topic": "Legal Legends",
     "question1": {
       "double": false,
       "value": 100,
-      "question": "Question 1",
-      "answer": "Answer 1"
+      "question": "How many professional games has Faker played?",
+      "answer": "1,434 (87 champions)"
     },
     "question2": {
       "double": false,
       "value": 200,
-      "question": "Question 2",
-      "answer": "Answer 2"
+      "question": "Doublelift's highest winrate champion, excluding pick rates below 10.",
+      "answer": "Xayah, 30-10"
     },
     "question3": {
       "double": false,
       "value": 300,
-      "question": "Question 3",
-      "answer": "Answer 3"
+      "question": "Does Sneaky have more instagram posts, or games as Lucian?",
+      "answer": "Instagram, 75 vs 68"
     },
     "question4": {
       "double": false,
