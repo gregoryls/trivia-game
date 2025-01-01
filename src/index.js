@@ -11,7 +11,7 @@ import hat from "./img/hatNoBackground.png";
 // TODO remove text instead of setting it to body color
 
 // TODO remove the various console.log debugging lines
-
+// Blur behind dimmadouble
 // TODO change file from source document to user uploaded via button
 // expand player creation to support any number of players - playersetup can be fed a player object and looped
 // change player name event listener to be a loop based on player count

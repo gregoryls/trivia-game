@@ -71,8 +71,17 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
         // pQuestionContent.id = "modalQuestionContent";
 
         // set question content
-        modal.innerHTML +=
-          questionObject[`category${i}`][`question${j + 1}`].question;
+        if (
+          questionObject[`category${i}`][`question${j + 1}`].question[1] ===
+          true
+        ) {
+          console.log("arraytest");
+          modal.innerHTML +=
+            "<img src=questionObject[`category${i}`][`question${j + 1}`].question[0]";
+        } else {
+          modal.innerHTML +=
+            questionObject[`category${i}`][`question${j + 1}`].question;
+        }
 
         const answerButton = document.createElement("button");
         answerButton.textContent = "Answer";

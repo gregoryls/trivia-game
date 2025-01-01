@@ -82,7 +82,7 @@
     "question1": {
       "double": false,
       "value": 100,
-      "question": "Question 1",
+      "question": ["test", true],
       "answer": "Bees - Beemo"
     },
     "question2": {
