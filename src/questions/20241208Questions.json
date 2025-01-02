@@ -82,7 +82,7 @@
     "question1": {
       "double": false,
       "value": 100,
-      "question": ["test", true],
+      "question": ["src/img/20241208/Teemo_BeemoSkin.webp", true],
       "answer": "Bees - Beemo"
     },
     "question2": {

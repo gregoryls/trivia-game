@@ -76,8 +76,10 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
           true
         ) {
           console.log("arraytest");
-          modal.innerHTML +=
-            "<img src=questionObject[`category${i}`][`question${j + 1}`].question[0]";
+          const img = document.createElement("img");
+          img.src =
+            questionObject[`category${i}`][`question${j + 1}`].question[0];
+          modal.append(img);
         } else {
           modal.innerHTML +=
             questionObject[`category${i}`][`question${j + 1}`].question;

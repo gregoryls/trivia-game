@@ -180,4 +180,7 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(require.context("./img", false, /\.(png|jpe?g|svg)$/));
+const images = importAll(
+  require.context("./img/20241208", false, /\.(png|jpe?g|svg|webp)$/),
+);
+console.log(images);
