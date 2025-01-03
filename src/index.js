@@ -161,26 +161,4 @@ upload.addEventListener("click", () => {
   uploadWrapper.style.display = "none";
 });
 
-function importAll(r) {
-  const images = {};
-  // enclosing bracket around return to avoid ambiguous assignment in a return
-  r.keys().forEach((key) => {
-    // remove leading ./ from file names
-    const temp = key.replace("./", "");
-    // or option fix case where lastIndexOf === -1
-    // remove trailing file extensions from file names (e.g. .png)
-    const temp2 = temp.substr(0, temp.lastIndexOf(".")) || temp;
-    // console.log(temp2);
-    images[temp2] = r(key);
-  });
-  // alternate map method
-  // r.keys().map((item, index) => {
-  //   images[item.replace("./", "")] = r(item);
-  // });
-  return images;
-}
-
-const images = importAll(
-  require.context("./img/20241208", false, /\.(png|jpe?g|svg|webp)$/),
-);
-console.log(images);
+// console.log(images);
