@@ -30,10 +30,6 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(
-  require.context("./img/20241208", false, /\.(png|jpe?g|svg|webp)$/),
-);
-
 export function generateQuestionObjectFromCSV() {
   const questionObj = {};
 
@@ -56,6 +52,12 @@ export function generateQuestionObjectFromCSV() {
 }
 
 export function addQuestionModalEventListener(questionObject, playerObj) {
+  // gather images from src for dist/
+  const images = importAll(
+    require.context("./img/20241208", false, /\.(png|jpe?g|svg|webp)$/),
+  );
+
+  console.log(images);
   // const questionTiles = document.querySelectorAll(".question");
   console.log(questionObject);
 
