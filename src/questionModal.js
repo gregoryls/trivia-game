@@ -95,17 +95,20 @@ export function addQuestionModalEventListener(questionObject, playerObj) {
         //   questionObject[`category${i}`][`question${j + 1}`].question;
         // pQuestionContent.id = "modalQuestionContent";
 
-        // set question content
+        // check for image question
         if (
           questionObject[`category${i}`][`question${j + 1}`].question[1] ===
           true
         ) {
-          console.log("arraytest");
+          // append image from imported images object
           const img = document.createElement("img");
           img.src =
-            questionObject[`category${i}`][`question${j + 1}`].question[0];
+            images[
+              questionObject[`category${i}`][`question${j + 1}`].question[0]
+            ];
           modal.append(img);
         } else {
+          // standard non-image questions
           modal.innerHTML +=
             questionObject[`category${i}`][`question${j + 1}`].question;
         }
