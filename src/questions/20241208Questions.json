@@ -88,31 +88,31 @@
     "question2": {
       "double": false,
       "value": 200,
-      "question": "Question 2",
+      "question": ["imgCat3Q2", true],
       "answer": "Cafe Cuties - Sivir + Soraka"
     },
     "question3": {
       "double": false,
       "value": 300,
-      "question": "Question 3",
+      "question": ["imgCat3Q3", true],
       "answer": "Winter Sports - Vancouver Amumu"
     },
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Question 4",
+      "question": ["imgCat3Q4", true],
       "answer": "Storybook - Big Bad Warwick"
     },
     "question5": {
       "double": false,
       "value": 500,
-      "question": "Question 5",
+      "question": ["imgCat3Q5", true],
       "answer": "Arcade - Demacia Vice Garen"
     },
     "question6": {
       "double": false,
       "value": 600,
-      "question": "Question 6",
+      "question": ["imgCat3Q6", true],
       "answer": "Anima Squad - Battle Bear Illaoi"
     }
   },
