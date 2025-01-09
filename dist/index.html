@@ -1,63 +1,111 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trivia Friction</title>
-  <script defer src="index.bundle.js"></script></head>
-  <body>
-    <a href="questionBuilder.html">Builder Link</a>
-    <h1 id="dimmadome">DIMMADOME DOUBLE</h1>
-    <div id="iconWrap">
-      <img
-        src='1254f9745b42217d16e8.svg'
-        alt="New Game Button"
-        title="Start new game"
-        id="newGameButton"
-      />
-    </div>
-
-    <header id="title">
-      <h1>Trivia Friction</h1>
-    </header>
-
-    <section id="uploadWrapper">
-      <!-- rename upload to game start -->
-      <div id="inputWrap">
-        <input type="file" id="fileInput" accept=".csv, .json" />
-        <div id="playerCountWrap">
-          <img
-            src='5997dfbff24644bd2a46.svg'
-            alt="Random Names"
-            title="Random Player Names"
-            id="randomNamesIcon"
-          />
-          <label for="playerCount">Players:</label>
-          <select name="playerCount" id="playerCount">
-            <option value="4">4</option>
-            <option value="">--</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-        </div>
-      </div>
-      <button id="upload">Start Game</button>
-      <!-- change id -->
-    </section>
-
-    <section id="playerScores"></section>
-    <section id="game">
-      <div id="gridWrapper"></div>
-    </section>
-    <div class="modal hidden"></div>
-    <div class="overlay hidden"></div>
-  </body>
-</html>
+<head><script defer src="index.bundle.js"></script></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+  ModuleNotFoundError: Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\Compilation.js:2022:28
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:817:13
+      at eval (eval at create (E:\Users\gregls\repos\trivia-game\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:275:22
+      at eval (eval at create (E:\Users\gregls\repos\trivia-game\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:560:15
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:118:11
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:631:8
+      at E:\Users\gregls\repos\trivia-game\node_modules\neo-async\async.js:2830:7
+      at done (E:\Users\gregls\repos\trivia-game\node_modules\neo-async\async.js:2925:13)
+  Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+  ModuleNotFoundError: Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\Compilation.js:2022:28
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:817:13
+      at eval (eval at create (E:\Users\gregls\repos\trivia-game\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:275:22
+      at eval (eval at create (E:\Users\gregls\repos\trivia-game\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:560:15
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:118:11
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:631:8
+      at E:\Users\gregls\repos\trivia-game\node_modules\neo-async\async.js:2830:7
+      at done (E:\Users\gregls\repos\trivia-game\node_modules\neo-async\async.js:2925:13)
+  
+  - Compilation.js:2022 
+    [trivia-game]/[webpack]/lib/Compilation.js:2022:28
+  
+  - NormalModuleFactory.js:817 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:817:13
+  
+  
+  - NormalModuleFactory.js:275 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:275:22
+  
+  
+  - NormalModuleFactory.js:560 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:560:15
+  
+  - NormalModuleFactory.js:118 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:118:11
+  
+  - NormalModuleFactory.js:631 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:631:8
+  
+  - async.js:2830 
+    [trivia-game]/[neo-async]/async.js:2830:7
+  
+  - async.js:2925 done
+    [trivia-game]/[neo-async]/async.js:2925:13
+  
+  - Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+  
+  - ModuleNotFoundError: Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+  
+  - Compilation.js:2022 
+    [trivia-game]/[webpack]/lib/Compilation.js:2022:28
+  
+  - NormalModuleFactory.js:817 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:817:13
+  
+  
+  - NormalModuleFactory.js:275 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:275:22
+  
+  
+  - NormalModuleFactory.js:560 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:560:15
+  
+  - NormalModuleFactory.js:118 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:118:11
+  
+  - NormalModuleFactory.js:631 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:631:8
+  
+  - async.js:2830 
+    [trivia-game]/[neo-async]/async.js:2830:7
+  
+  - async.js:2925 done
+    [trivia-game]/[neo-async]/async.js:2925:13
+  
+  - child-compiler.js:169 
+    [trivia-game]/[html-webpack-plugin]/lib/child-compiler.js:169:18
+  
+  - Compiler.js:551 finalCallback
+    [trivia-game]/[webpack]/lib/Compiler.js:551:5
+  
+  - Compiler.js:577 
+    [trivia-game]/[webpack]/lib/Compiler.js:577:11
+  
+  - Compiler.js:1200 
+    [trivia-game]/[webpack]/lib/Compiler.js:1200:17
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [trivia-game]/[tapable]/lib/Hook.js:18:14
+  
+  - Compiler.js:1196 
+    [trivia-game]/[webpack]/lib/Compiler.js:1196:33
+  
+  - Compilation.js:2795 finalCallback
+    [trivia-game]/[webpack]/lib/Compilation.js:2795:11
+  
+  - Compilation.js:3100 
+    [trivia-game]/[webpack]/lib/Compilation.js:3100:11
+  
+  
+</pre>

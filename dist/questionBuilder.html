@@ -1,18 +1,111 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question Builder</title>
-  <script defer src="questionBuilder.bundle.js"></script></head>
-  <body>
-    <a href="index.html">Return to Game</a>
-
-    <div>
-      <label for="categoryNumberInput">Number of Categories</label>
-      <input type="number" id="categoryNumberInput" value="6" />
-    </div>
-    <button id="downloadQuestionDataButton">Download Questions</button>
-    <div id="allCategories"></div>
-  </body>
-</html>
+<head><script defer src="questionBuilder.bundle.js"></script></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+  ModuleNotFoundError: Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\Compilation.js:2022:28
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:817:13
+      at eval (eval at create (E:\Users\gregls\repos\trivia-game\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:275:22
+      at eval (eval at create (E:\Users\gregls\repos\trivia-game\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:560:15
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:118:11
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:631:8
+      at E:\Users\gregls\repos\trivia-game\node_modules\neo-async\async.js:2830:7
+      at done (E:\Users\gregls\repos\trivia-game\node_modules\neo-async\async.js:2925:13)
+  Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+  ModuleNotFoundError: Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\Compilation.js:2022:28
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:817:13
+      at eval (eval at create (E:\Users\gregls\repos\trivia-game\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:10:1)
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:275:22
+      at eval (eval at create (E:\Users\gregls\repos\trivia-game\node_modules\tapable\lib\HookCodeFactory.js:33:10), <anonymous>:9:1)
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:560:15
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:118:11
+      at E:\Users\gregls\repos\trivia-game\node_modules\webpack\lib\NormalModuleFactory.js:631:8
+      at E:\Users\gregls\repos\trivia-game\node_modules\neo-async\async.js:2830:7
+      at done (E:\Users\gregls\repos\trivia-game\node_modules\neo-async\async.js:2925:13)
+  
+  - Compilation.js:2022 
+    [trivia-game]/[webpack]/lib/Compilation.js:2022:28
+  
+  - NormalModuleFactory.js:817 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:817:13
+  
+  
+  - NormalModuleFactory.js:275 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:275:22
+  
+  
+  - NormalModuleFactory.js:560 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:560:15
+  
+  - NormalModuleFactory.js:118 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:118:11
+  
+  - NormalModuleFactory.js:631 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:631:8
+  
+  - async.js:2830 
+    [trivia-game]/[neo-async]/async.js:2830:7
+  
+  - async.js:2925 done
+    [trivia-game]/[neo-async]/async.js:2925:13
+  
+  - Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+  
+  - ModuleNotFoundError: Module not found: Error: Can't resolve 'html-loader' in 'E:\Users\gregls\repos\trivia-game'
+  
+  - Compilation.js:2022 
+    [trivia-game]/[webpack]/lib/Compilation.js:2022:28
+  
+  - NormalModuleFactory.js:817 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:817:13
+  
+  
+  - NormalModuleFactory.js:275 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:275:22
+  
+  
+  - NormalModuleFactory.js:560 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:560:15
+  
+  - NormalModuleFactory.js:118 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:118:11
+  
+  - NormalModuleFactory.js:631 
+    [trivia-game]/[webpack]/lib/NormalModuleFactory.js:631:8
+  
+  - async.js:2830 
+    [trivia-game]/[neo-async]/async.js:2830:7
+  
+  - async.js:2925 done
+    [trivia-game]/[neo-async]/async.js:2925:13
+  
+  - child-compiler.js:169 
+    [trivia-game]/[html-webpack-plugin]/lib/child-compiler.js:169:18
+  
+  - Compiler.js:551 finalCallback
+    [trivia-game]/[webpack]/lib/Compiler.js:551:5
+  
+  - Compiler.js:577 
+    [trivia-game]/[webpack]/lib/Compiler.js:577:11
+  
+  - Compiler.js:1200 
+    [trivia-game]/[webpack]/lib/Compiler.js:1200:17
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [trivia-game]/[tapable]/lib/Hook.js:18:14
+  
+  - Compiler.js:1196 
+    [trivia-game]/[webpack]/lib/Compiler.js:1196:33
+  
+  - Compilation.js:2795 finalCallback
+    [trivia-game]/[webpack]/lib/Compilation.js:2795:11
+  
+  - Compilation.js:3100 
+    [trivia-game]/[webpack]/lib/Compilation.js:3100:11
+  
+  
+</pre>
