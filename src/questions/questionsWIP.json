@@ -88,14 +88,14 @@
     "question2": {
       "double": false,
       "value": 200,
-      "question": "Question 2",
-      "answer": "Answer 2"
+      "question": "DOTA 2 dominates esport prizewinnings. For the top earning players, which game shows up first after DOTA 2?",
+      "answer": "Fortnite, Bugha, #22 alltime earner"
     },
     "question3": {
       "double": false,
       "value": 300,
-      "question": "Question 3",
-      "answer": "Answer 3"
+      "question": "Of the top 50 all time esport prize winning earners, how many play DOTA 2?",
+      "answer": "45"
     },
     "question4": {
       "double": false,
