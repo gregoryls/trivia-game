@@ -55,26 +55,26 @@
     "question3": {
       "double": false,
       "value": 300,
-      "question": "Does Sneaky have more instagram posts, or games as Lucian?",
+      "question": "Does Sneaky have more instagram posts, or professional games as Lucian?",
       "answer": "Instagram, 75 vs 68"
     },
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Question 4",
-      "answer": "Answer 4"
+      "question": "Name a player with a pentakill in more than one role.",
+      "answer": "Caps, Optimus, BeBe, SofM, Zz1tai"
     },
     "question5": {
       "double": false,
       "value": 500,
-      "question": "Question 5",
-      "answer": "Answer 5"
+      "question": "Who has played more professional games, Faker or the current 100T roster?",
+      "answer": "100T (387 more games)"
     },
     "question6": {
       "double": false,
       "value": 600,
-      "question": "Question 6",
-      "answer": "Answer 6"
+      "question": "Which champion has the highest pentakill rate?",
+      "answer": "Smolder, 4.88 games/penta"
     }
   },
   "category3": {
