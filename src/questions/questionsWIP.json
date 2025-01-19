@@ -100,8 +100,8 @@
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Question 4",
-      "answer": "Answer 4"
+      "question": "How much prize money has been won between all Farming Simulator (any edition) tournaments?",
+      "answer": "871,281.29 from 40 events"
     },
     "question5": {
       "double": false,
