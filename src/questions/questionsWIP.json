@@ -160,8 +160,8 @@
     "question1": {
       "double": false,
       "value": 100,
-      "question": "Question 1",
-      "answer": "Answer 1"
+      "question": "Who is the consensus GOAT of Starcraft Broodwar?",
+      "answer": "Flash"
     },
     "question2": {
       "double": false,
