@@ -117,42 +117,42 @@
     }
   },
   "category4": {
-    "topic": "Um, Actually",
+    "topic": "God's Land",
     "question1": {
       "double": false,
       "value": 100,
-      "question": "Halo installations are overseen by Forerunner monitors, usually identified with a series of numbers followed by a name. 343 Guilty Spark is the monitor assigned to Installation 04, though before becoming a monitor 343 Guilty Spark was the Florian known as Riser from Erde-Tyrene. ",
-      "answer": "343 Guilty Spark was built from Chakas, a human."
+      "question": "Which city has a higher official elevation, Salt Lake City or Provo?",
+      "answer": "Provo (4,551ft) SLC (4,265ft)"
     },
     "question2": {
       "double": false,
       "value": 200,
-      "question": "Titus Groan is the heir of Lord Sepulchrave, the seventy-sixth Earl of Groan, in the castle Gormenghast. Titus has three sisters, Violet, and the twins Cora and Clarice. Finally, the mother Countess Gertrude can be seen roaming the grounds with her birds and cats.",
-      "answer": "The first sister is named Fuchsia, not Violet."
+      "question": "Question 2",
+      "answer": "Answer 2"
     },
     "question3": {
       "double": false,
       "value": 300,
-      "question": "August Kitko, titular character, is an excellent saxophonist who finds himself merged with one of the Vanguard Mechas from space. Using his musical ability he is able to communicate with the Mechas and act as a conduit in an effort to save the Earth.",
-      "answer": "August Kitko plays piano"
+      "question": "On Average, is annual snowfall in Salt Lake City up, down, or neutral since 1884?",
+      "answer": "Neutral"
     },
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Sonic and Tails are from Christmas Island, a real island in the Indian Ocean that served as the original inspiration for the series due to the unique geography and extensive nuclear testing during the WW2 era.",
-      "answer": "Tails is from West Side Island, the westernmost point of Earth."
+      "question": "Greater or less than 80% white (2020 census)",
+      "answer": "Less, 78.7%"
     },
     "question5": {
       "double": false,
       "value": 500,
-      "question": "Bill, Zoey, Franic, and Louis were in Fairfield, Pennsylvavia at the outbreak of the Green Flu, which caused significantly increased aggression and the loss of many higher brain functions. After discovering and defeating unusal new Infected strains, they make their way to the top of the Mercy Hospital and catch a ride on a helicopter. Unfortunately, the helicopter had little fuel remaining and it crashed just outside the city, leaving the group to make their way to Riverside on foot.",
-      "answer": "Zoey shot the pilot because the pilot became infected. "
+      "question": "Compared with Misery and Miseryland, which state has the highest percentage of cat ownership?",
+      "answer": "Misery, 28.6%"
     },
     "question6": {
       "double": false,
       "value": 600,
-      "question": "Gordon Freeman earned a theoretical physics Ph.D. from MIT before eventually taking a job at the Black Mesa Research Facility with the hope of working on advancing teleportation. One of his experiments goes wrong, triggering a Resonance Cascade that ruptures space-time and allows Xen aliens to enter the facility. After defeating the aliens Gordon is taken by G-Man offered an ultimatum to die on Xen or work for him. Gordon accepts, and G-Man transports him shortly back to Combine-controlled Earth.",
-      "answer": "Gordon was held in stasis for at least 20 years before the events of Half-Life 2."
+      "question": "Question 6",
+      "answer": "Answer 6"
     }
   },
   "category5": {
