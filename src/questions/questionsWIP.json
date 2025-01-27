@@ -139,7 +139,7 @@
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Greater or less than 80% white (2020 census)",
+      "question": "Utah is greater or less than 80% white (2020 census)",
       "answer": "Less, 78.7%"
     },
     "question5": {
