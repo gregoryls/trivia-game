@@ -127,8 +127,8 @@
     "question2": {
       "double": false,
       "value": 200,
-      "question": "Question 2",
-      "answer": "Answer 2"
+      "question": "Of the three candidate states, which boasts the highest religiosity amongst its population?",
+      "answer": "Misery 79%, Miserland, Utah 77%"
     },
     "question3": {
       "double": false,
