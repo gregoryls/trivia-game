@@ -151,8 +151,8 @@
     "question6": {
       "double": false,
       "value": 600,
-      "question": "Question 6",
-      "answer": "Answer 6"
+      "question": "Do Utah and Miseryland have more total lane miles than Misery?",
+      "answer": "Misery 268,201 | Miseryland 68,889  + Utah 93,914 = 162,803"
     }
   },
   "category5": {
