@@ -195,7 +195,7 @@
     }
   },
   "category6": {
-    "topic": "Topic 6",
+    "topic": "My Picks",
     "question1": {
       "double": true,
       "value": 100,
@@ -229,8 +229,8 @@
     "question6": {
       "double": false,
       "value": 600,
-      "question": "Question 6",
-      "answer": "Answer 6"
+      "question": "Best athlete of all time",
+      "answer": "Aleksander Karelin, Russian Greco-Roman wrestler. 887-2 record, both losses by a single point. 3 olympic gold, 9 world championship gold. "
     }
   }
 }
