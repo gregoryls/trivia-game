@@ -172,8 +172,8 @@
     "question3": {
       "double": false,
       "value": 300,
-      "question": "Question 3",
-      "answer": "Answer 3"
+      "question": "on Jan 29, 2025 an American Airlines jet collided with a helicopter. How many times would this event need to happen per year to match highway auto fatalities in the USA?",
+      "answer": "579, ~1.6 times per day"
     },
     "question4": {
       "double": false,
