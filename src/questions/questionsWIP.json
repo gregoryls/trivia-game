@@ -199,8 +199,8 @@
     "question1": {
       "double": true,
       "value": 100,
-      "question": "Question 1",
-      "answer": "Answer 1"
+      "question": "Favorite league champion",
+      "answer": "Morgana"
     },
     "question2": {
       "double": false,
