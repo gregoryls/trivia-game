@@ -205,8 +205,8 @@
     "question2": {
       "double": false,
       "value": 200,
-      "question": "Question 2",
-      "answer": "Answer 2"
+      "question": "Favorite book",
+      "answer": "Infinite Jest"
     },
     "question3": {
       "double": false,
