@@ -211,8 +211,8 @@
     "question3": {
       "double": false,
       "value": 300,
-      "question": "Question 3",
-      "answer": "Answer 3"
+      "question": "Favorite fruit",
+      "answer": "Mango"
     },
     "question4": {
       "double": false,
