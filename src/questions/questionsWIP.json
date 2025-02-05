@@ -195,7 +195,7 @@
     }
   },
   "category6": {
-    "topic": "My Picks",
+    "topic": "Me",
     "question1": {
       "double": true,
       "value": 100,
@@ -217,8 +217,8 @@
     "question4": {
       "double": false,
       "value": 400,
-      "question": "Question 4",
-      "answer": "Answer 4"
+      "question": "Starcraft race",
+      "answer": "Protoss"
     },
     "question5": {
       "double": false,
